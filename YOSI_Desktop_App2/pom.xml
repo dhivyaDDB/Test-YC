@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>YOSI_Desktop_App</groupId>
-  <artifactId>YOSI_Desktop_App</artifactId>
+  <artifactId>YOSI_Desktop_App2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -21,7 +21,7 @@
 
                     <plugin>
                         <groupId>Yosi_Package</groupId>
-                        <artifactId>Yosi_Desktop_Application</artifactId>
+                        <artifactId>YOSI_Desktop_App2</artifactId>
                         <version>0.0.1-SNAPSHOT</version>
                         <configuration>
                             <suiteXmlFiles>
