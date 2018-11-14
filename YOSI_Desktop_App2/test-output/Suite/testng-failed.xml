@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.yosi.testscript.Desktop_Appoinment_Type1">
+        <methods>
+          <include name="afterClass"/>
+          <include name="signature_page"/>
+          <include name="patient_rx_info"/>
+          <include name="policy2_page"/>
+          <include name="beforeClass"/>
+          <include name="policy1_page"/>
+        </methods>
+      </class> <!-- com.yosi.testscript.Desktop_Appoinment_Type1 -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

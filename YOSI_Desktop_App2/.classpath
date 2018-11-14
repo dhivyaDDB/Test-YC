@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Dreams/.p2/pool/plugins/org.testng_6.13.1.r201712040515.jar" sourcepath="C:/Users/Dreams/.p2/pool/plugins/org.testng.source_6.13.1.r201712040515.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/poi-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/poi-examples-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/poi-excelant-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/poi-ooxml-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/poi-ooxml-schemas-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/poi-scratchpad-3.17-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/ooxml-lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="D:/poi-3.17-beta1/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
