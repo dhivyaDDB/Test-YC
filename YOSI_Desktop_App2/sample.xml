@@ -1,0 +1,73 @@
+[INFO] 2018-11-15 17:10:06,448 com.yosi.util.Log info - Landing Page
+[INFO] 2018-11-15 17:10:06,450 com.yosi.util.Log info - Appoinment Time 
+Appointment Confirmed
+11/15/2018 @ 4:45 PM
+90 Broad St - 1002, New York, NY 10004
+
+View map
+[INFO] 2018-11-15 17:10:17,892 com.yosi.util.Log info - Doctor is selected
+[INFO] 2018-11-15 17:10:18,896 com.yosi.util.Log info - Adult is clicked
+[INFO] 2018-11-15 17:10:18,899 com.yosi.util.Log info - Patient verification Page
+[INFO] 2018-11-15 17:10:18,904 com.yosi.util.Log info - DOG entered: 02/02/1992
+[INFO] 2018-11-15 17:10:18,904 com.yosi.util.Log info - Gender entered:Female
+[INFO] 2018-11-15 17:10:20,663 com.yosi.util.Log info - PATIENT INFORMATION
+[INFO] 2018-11-15 17:10:21,467 com.yosi.util.Log info - First Name of the patient Taylor
+[INFO] 2018-11-15 17:10:21,468 com.yosi.util.Log info -  First Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-15 17:10:21,515 com.yosi.util.Log info -  Last Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-15 17:10:21,515 com.yosi.util.Log info - Last Name of the patient Test
+[INFO] 2018-11-15 17:10:21,546 com.yosi.util.Log info - Gender: Male
+[INFO] 2018-11-15 17:10:21,593 com.yosi.util.Log info - DOB: 02/02/1992
+[INFO] 2018-11-15 17:10:21,593 com.yosi.util.Log info - Patient Details 
+Taylor
+Test
+Male
+02/02/1992
+[INFO] 2018-11-15 17:10:23,579 com.yosi.util.Log info - Address of the patient 
+31, River cross road,Texas,10036.
+[INFO] 2018-11-15 17:10:25,300 com.yosi.util.Log info - INSURANCE PAGE
+[INFO] 2018-11-15 17:10:25,309 com.yosi.util.Log info - PATIENT LIFESTYLE
+[INFO] 2018-11-15 17:10:25,320 com.yosi.util.Log info - PATIENT PAST MEDICAL HX
+[INFO] 2018-11-15 17:10:25,331 com.yosi.util.Log info - PATIENT RX INFO
+[INFO] 2018-11-15 17:10:25,339 com.yosi.util.Log info - ADDITIONAL SOCIAL HISTORY
+[INFO] 2018-11-15 17:10:25,347 com.yosi.util.Log info - MEDICAL HISTORY FORM
+[INFO] 2018-11-15 17:10:25,362 com.yosi.util.Log info - PHQ-9
+[INFO] 2018-11-15 17:10:25,373 com.yosi.util.Log info - GAD-7
+[INFO] 2018-11-15 17:10:25,383 com.yosi.util.Log info - ENCOUNTER QUESTIONNAIRE 
+[INFO] 2018-11-15 17:10:25,389 com.yosi.util.Log info - POILCY PAGE 
+[INFO] 2018-11-15 17:10:25,445 com.yosi.util.Log info - Signature Page
+[DEBUG] 2018-11-15 17:10:25,633 freemarker.cache debug - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2018-11-15 17:10:25,633 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+[DEBUG] 2018-11-15 17:10:25,633 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+[DEBUG] 2018-11-15 17:10:25,633 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+[DEBUG] 2018-11-15 17:10:25,633 freemarker.cache debug - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Dreams/.m2/repository/com/relevantcodes/extentreports/2.41.1/extentreports-2.41.1.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+[DEBUG] 2018-11-15 17:10:26,960 freemarker.cache debug - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2018-11-15 17:10:26,960 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+[DEBUG] 2018-11-15 17:10:26,960 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+[DEBUG] 2018-11-15 17:10:26,960 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+[DEBUG] 2018-11-15 17:10:26,960 freemarker.cache debug - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Dreams/.m2/repository/com/relevantcodes/extentreports/2.41.1/extentreports-2.41.1.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+[INFO] 2018-11-15 17:38:03,279 com.yosi.util.Log info - Landing Page
+[INFO] 2018-11-15 17:38:03,297 com.yosi.util.Log info - Appoinment Time 
+Appointment Confirmed
+11/15/2018 @ 4:45 PM
+90 Broad St - 1002, New York, NY 10004
+
+View map
+[INFO] 2018-11-15 17:38:12,993 com.yosi.util.Log info - Doctor is selected
+[INFO] 2018-11-15 17:38:13,994 com.yosi.util.Log info - Adult is clicked
+[INFO] 2018-11-15 17:38:13,998 com.yosi.util.Log info - Patient verification Page
+[INFO] 2018-11-15 17:38:14,004 com.yosi.util.Log info - DOG entered: 02/02/1992
+[INFO] 2018-11-15 17:38:14,004 com.yosi.util.Log info - Gender entered:Female
+[INFO] 2018-11-15 17:38:16,243 com.yosi.util.Log info - PATIENT INFORMATION
+[INFO] 2018-11-15 17:38:17,050 com.yosi.util.Log info - First Name of the patient Taylor
+[INFO] 2018-11-15 17:38:17,051 com.yosi.util.Log info -  First Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-15 17:38:17,076 com.yosi.util.Log info -  Last Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-15 17:38:17,076 com.yosi.util.Log info - Last Name of the patient Test
+[INFO] 2018-11-15 17:38:17,114 com.yosi.util.Log info - Gender: Male
+[INFO] 2018-11-15 17:38:17,138 com.yosi.util.Log info - DOB: 02/02/1992
+[INFO] 2018-11-15 17:38:17,138 com.yosi.util.Log info - Patient Details 
+Taylor
+Test
+Male
+02/02/1992
+[INFO] 2018-11-15 17:38:19,794 com.yosi.util.Log info - Address of the patient 
+31, River cross road,Texas,10036.

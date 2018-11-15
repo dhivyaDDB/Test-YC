@@ -24,10 +24,10 @@
 		
 		<style>
 				
-            
-                
-            
+      
         
+      
+    
 		</style>
 	</head>
 	
@@ -43,17 +43,18 @@
 			</div>
 			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+					<li class='analysis waves-effect'><a href='#!' class='exceptions-view' onclick="_updateCurrentStage(2)"><i class='mdi-action-bug-report'></i>Exceptions</a></li>
 				<li class='analysis waves-effect'>
 					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
 				</li>
 			</ul>
-			<span class='report-name'>Automation Report</span> <span class='report-headline'></span>
+			<span class='report-name'></span> <span class='report-headline'>Automation Report</span>
 			<ul class='right hide-on-med-and-down nav-right'>
 				<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2018-11-08 14:34:01</span>
+					<span class='suite-started-time'>2018-11-15 17:10:26</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -83,25 +84,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 36s+887ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 0m 56s+437ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 36s+887ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 0m 56s+437ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2018-11-08 14:33:24</span> 
+							<span class='panel-lead suite-started-time'>2018-11-15 17:09:30</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2018-11-08 14:34:01</span> 
+							<span class='panel-lead suite-ended-time'>2018-11-15 17:10:26</span> 
 						</div> 
 					</div>
 				</div>
@@ -210,6 +211,7 @@
 									<li class='pass'><a href='#!'>Pass</a></li>
 									<li class='fail'><a href='#!'>Fail</a></li>
 									<li class='skip'><a href='#!'>Skip</a></li>
+										<li class='unknown'><a href='#!'>Unknown</a></li>
 									<li class='divider'></li>
 									<li class='clear'><a href='#!'>Clear Filters</a></li>
 								</ul>
@@ -241,7 +243,7 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active pass ' extentid='38387ca2-51bf-4dda-bfae-65c488e6f70f'>
+										<li class='collection-item test displayed active pass ' extentid='a7dbe985-5330-4e88-b5e5-c6c185703bb3'>
 											<div class='test-head'>
 												<span class='test-name'>Start Paperwork </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
@@ -249,9 +251,9 @@
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:33:32</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:33:36</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 4s+97ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-15 17:10:06</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-15 17:10:15</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 9s+131ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -268,7 +270,7 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:33:36</td>
+																	<td class='timestamp'>17:10:15</td>
 																	<td class='step-details'>Test Case is Passed</td>
 																</tr>
 														</tbody>
@@ -278,17 +280,17 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='297f0810-ee38-42d9-9b90-33d45d4d7ae1'>
+										<li class='collection-item test displayed active pass ' extentid='2848b99f-d3c2-4b60-ba36-54b85bc641c1'>
 											<div class='test-head'>
-												<span class='test-name'>Select Doctor test </span>
+												<span class='test-name'>Select the Doctor test </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:33:38</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:33:39</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+800ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-15 17:10:17</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-15 17:10:18</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+999ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -305,7 +307,7 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:33:39</td>
+																	<td class='timestamp'>17:10:18</td>
 																	<td class='step-details'>Test Case is Passed</td>
 																</tr>
 														</tbody>
@@ -315,7 +317,7 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='9496780a-f09d-4d3d-b7da-f621222afa4a'>
+										<li class='collection-item test displayed active pass ' extentid='4c34a8ca-2cd9-4d22-add6-0fb9ecaaa2c5'>
 											<div class='test-head'>
 												<span class='test-name'>Patient Verify page </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
@@ -323,9 +325,9 @@
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:33:40</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:33:40</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+150ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-15 17:10:20</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-15 17:10:20</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+214ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -342,7 +344,7 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:33:40</td>
+																	<td class='timestamp'>17:10:20</td>
 																	<td class='step-details'>Test Case is Passed</td>
 																</tr>
 														</tbody>
@@ -352,16 +354,16 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='d138c785-34ae-49ba-975f-7fdc46f349f7'>
+										<li class='collection-item test displayed active pass ' extentid='732929c2-0f83-4b99-b61c-009c7fe9e73c'>
 											<div class='test-head'>
-												<span class='test-name'>Zipcode Validation In PATIENT INFO PAGE </span>
+												<span class='test-name'>First Name Validation In PATIENT INFO PAGE </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:33:42</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:33:42</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-15 17:10:21</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-15 17:10:21</span>
 													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
 												</div>
 												<div class='test-desc'></div>
@@ -379,8 +381,8 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:33:42</td>
-																	<td class='step-details'>The specified US ZIP Code is valid</td>
+																	<td class='timestamp'>17:10:21</td>
+																	<td class='step-details'>The name Taylor  is contains char only</td>
 																</tr>
 														</tbody>
 													</table>
@@ -389,53 +391,16 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='9f934e4d-56e7-4f46-a303-c41862ed6630'>
+										<li class='collection-item test displayed active pass ' extentid='61221172-907e-4caa-8e3a-015f6a10b8f4'>
 											<div class='test-head'>
-												<span class='test-name'>Patient Info page </span>
+												<span class='test-name'>Last Name Validation In PATIENT INFO PAGE </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:33:42</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:33:42</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+145ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:33:42</td>
-																	<td class='step-details'>Test Case is Passed</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='255e78f4-e343-4702-96e6-c3a5eb56b5a2'>
-											<div class='test-head'>
-												<span class='test-name'>Zipcode Validation In GUARANTOR INFO PAGE </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:33:54</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:33:54</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-15 17:10:21</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-15 17:10:21</span>
 													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
 												</div>
 												<div class='test-desc'></div>
@@ -453,8 +418,8 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:33:54</td>
-																	<td class='step-details'>The specified US ZIP Code is valid</td>
+																	<td class='timestamp'>17:10:21</td>
+																	<td class='step-details'>The name Test  is contains char only</td>
 																</tr>
 														</tbody>
 													</table>
@@ -463,17 +428,17 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='b24c5043-1e5c-4666-95c0-f6f6576b0a90'>
+										<li class='collection-item test displayed active pass ' extentid='c070f3f3-2049-4e40-bc95-0e5119820c95'>
 											<div class='test-head'>
-												<span class='test-name'>Guantor Info page </span>
+												<span class='test-name'>Zipcode Validation </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:33:54</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:33:54</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+164ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-15 17:10:23</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-15 17:10:23</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -490,8 +455,8 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:33:54</td>
-																	<td class='step-details'>Test Case is Passed</td>
+																	<td class='timestamp'>17:10:23</td>
+																	<td class='step-details'>The US ZIP-10036 Code is valid</td>
 																</tr>
 														</tbody>
 													</table>
@@ -500,17 +465,17 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='a37a1bd7-ed99-4121-a84e-b25ae105304a'>
+										<li class='collection-item test displayed active fail ' extentid='0310f602-706f-483c-a42c-ae56b05d3bd0'>
 											<div class='test-head'>
-												<span class='test-name'>Zipcode Validation In GUARANTOR INFO PAGE </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='test-name'>Patient Info page <i class='tooltipped mdi-alert-error' data-position='top' data-delay='50' data-tooltip='Close was called before test could end safely using EndTest.'></i></span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:33:58</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:33:58</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+1ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-15 17:10:23</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-15 17:10:26</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 3s+350ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -526,9 +491,39 @@
 														</thead>
 														<tbody>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:33:58</td>
-																	<td class='step-details'>The specified US ZIP Code is valid</td>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>17:10:26</td>
+																	<td class='step-details'><pre>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
+	at com.relevantcodes.extentreports.Report.terminate(Report.java:421)
+	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:920)
+	at com.yosi.testscript.Desktop_Zipcode_Test.afterClass(Desktop_Zipcode_Test.java:1366)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:208)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
 																</tr>
 														</tbody>
 													</table>
@@ -537,17 +532,17 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='9cf9196f-1160-458c-ae45-1e3ba012b3cd'>
+										<li class='collection-item test displayed active fail ' extentid='2450a1a0-973d-4f8e-b830-c9a300ed5f87'>
 											<div class='test-head'>
-												<span class='test-name'>Insurance page </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='test-name'>Patient LifeStyle page <i class='tooltipped mdi-alert-error' data-position='top' data-delay='50' data-tooltip='Close was called before test could end safely using EndTest.'></i></span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:33:58</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:33:58</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+169ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-15 17:10:25</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-15 17:10:26</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+647ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -563,46 +558,39 @@
 														</thead>
 														<tbody>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:33:58</td>
-																	<td class='step-details'>Test Case is Passed</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='03c0d10e-d45a-4614-b625-1ca48d505670'>
-											<div class='test-head'>
-												<span class='test-name'>Patient Additional page </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2018-11-08 14:34:01</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2018-11-08 14:34:01</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+106ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:34:01</td>
-																	<td class='step-details'>Test Case is Passed</td>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>17:10:26</td>
+																	<td class='step-details'><pre>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
+	at com.relevantcodes.extentreports.Report.terminate(Report.java:421)
+	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:920)
+	at com.yosi.testscript.Desktop_Zipcode_Test.afterClass(Desktop_Zipcode_Test.java:1366)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:208)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
 																</tr>
 														</tbody>
 													</table>
@@ -642,6 +630,98 @@
 			<!-- /categories -->
 			
 			<!-- exceptions -->
+				<div id='exceptions-view' class='row _addedTable hide'>
+					<div class='col _addedCell1'>
+						<div class='contents'>
+							<div class='card-panel heading'>
+								<h5>Defects</h5>
+							</div>
+							<div class='card-panel filters'>
+								<div class='search' alt='Search tests' title='Search tests'>
+									<div class='input-field left'>
+										<input id='searchTests' type='text' class='validate' placeholder='Search tests...'>
+									</div>
+									<a href="#" class='btn-floating btn-small waves-effect waves-light blue lighten-1'>
+										<i class='mdi-action-search'></i>
+									</a>
+								</div>
+							</div>
+							<div class='card-panel no-padding-h no-padding-v'>
+								<div class='wrapper'>
+									<ul id='exception-collection' class='exception-collection'>
+											<li class='exception-item displayed'>
+												<div class='exception-head'>
+													<span class='exception-name'>com.relevantcodes.extentreports.ExtentTestInterruptedException</span>
+												</div>
+												<div class='exception-test-count'>
+													<span class='fail label'>1</span>
+												</div>
+												<div class='exception-body'>
+													<div class='exception-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Exception</th>
+																</tr>
+															</thead>
+															<tbody>
+                                                                   <tr class='fail'>
+                                                                       <td>2018-11-15 17:10:23</td>
+                                                                       <td><span class='exception-link linked' extentid='0310f602-706f-483c-a42c-ae56b05d3bd0'>Patient Info page</span></td>
+                                                                       <td><pre class='exception-message'>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
+	at com.relevantcodes.extentreports.Report.terminate(Report.java:421)
+	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:920)
+	at com.yosi.testscript.Desktop_Zipcode_Test.afterClass(Desktop_Zipcode_Test.java:1366)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:208)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+                                                                   </tr>
+                                                            </tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id='exception-details-wrapper' class='col _addedCell2'>
+						<div class='contents'>
+							<div class='card-panel details-view'>
+								<h5 class='exception-name'></h5>
+								<div class='exception-container'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			<!-- /exceptions -->
 			
 			<!-- testrunner logs -->
@@ -708,12 +788,12 @@
 		<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
 		<script>
 				
-            
-                $(document).ready(function() {
-                    
-                });
-            
-        
+      
+        $(document).ready(function() {
+          
+        });
+      
+    
 		</script>
 	</body>
 </html>

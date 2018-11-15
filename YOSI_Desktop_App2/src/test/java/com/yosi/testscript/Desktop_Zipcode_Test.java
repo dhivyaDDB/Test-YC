@@ -326,9 +326,9 @@ public void patient_info() throws InterruptedException {
 							{*/
 							
 			logger = extent.startTest("Patient Info page"); 
-			 if(driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[9]/div[1]/input")).isDisplayed() == true)
+			 if(driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[10]/div[1]/input")).isDisplayed() == true)
 			 {
-					driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[9]/div[1]/input")).click();	
+					driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[10]/div[1]/input")).click();	
 					logger.log(LogStatus.PASS, "Test Case is Passed");
 			 }
 			 else
@@ -421,9 +421,9 @@ public void patient_guarantor() throws InterruptedException
 			driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
 
 		logger = extent.startTest("Guantor Info page"); 
-			 if(driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div[1]/div[11]/div/input")).isDisplayed() == true)
+			 if(driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[11]/div/input")).isDisplayed() == true)
 			 {
-					driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div[1]/div[11]/div/input")).click();
+					driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[11]/div/input")).click();
 					logger.log(LogStatus.PASS, "Test Case is Passed");
 			 }
 			 else
@@ -844,9 +844,9 @@ public void insurance_info() throws InterruptedException
 
 			
 			logger = extent.startTest("Insurance page"); 
-			 if(driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]")).isDisplayed() == true)
+			 if(driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]/input")).isDisplayed() == true)
 			 {
-					driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]")).click();
+					driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]/input")).click();
 					logger.log(LogStatus.PASS, "Test Case is Passed");
 			 }
 			 else
