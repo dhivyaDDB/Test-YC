@@ -64,7 +64,7 @@ public class Desktop_Zipcode_Test {
 			extent.loadConfig(new File(System.getProperty("user.dir")+"/extent-config.xml"));
 			
 			DOMConfigurator.configure("log4j.xml");
-			//System.setProperty("driver.chrome.driver","D:\\Automation testing\\AutomationTestingPR\\chromedriver.exe");
+			System.setProperty("driver.chrome.driver","D:\\Automation testing\\AutomationTestingPR\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.get(prop1.getProperty("url"));
 			driver.manage().deleteAllCookies();
