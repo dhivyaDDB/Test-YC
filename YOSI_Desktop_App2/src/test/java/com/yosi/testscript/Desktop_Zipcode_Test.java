@@ -61,7 +61,7 @@ public class Desktop_Zipcode_Test {
 			extent
 			                .addSystemInfo("Host Name", "SoftwareTestingMaterial")
 			                .addSystemInfo("Environment", "Automation Testing");
-			extent.loadConfig(new File(System.getProperty("user.dir")+"\"C:/Users/Dreams/Jenkins/workspace/Desktop/YOSI_Desktop_App2/extent-config.xml"));
+			extent.loadConfig(new File(System.getProperty("user.dir")+"/extent-config.xml"));
 			
 			DOMConfigurator.configure("log4j.xml");
 			//System.setProperty("driver.chrome.driver","D:\\Automation testing\\AutomationTestingPR\\chromedriver.exe");
