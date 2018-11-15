@@ -12,6 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <suiteXmlFile>${basedir}/testng.xml</suiteXmlFile>
+    <skipTests>true</skipTests>
   </properties>
   <profiles>
         <profile>
@@ -36,6 +38,8 @@
 
 
     </profiles>
+    
+
 
   <dependencies>
     <dependency>
