@@ -338,7 +338,7 @@ public void patient_guarantor()
 			driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
 
 			logger = extent.startTest("Guantor Info page"); 
-			 if(driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\\\"]/div/div[11]/div/input")).isDisplayed() == true)
+			 if(driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[11]/div/input")).isDisplayed() == true)
 			 {
 					driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[11]/div/input")).click();
 					logger.log(LogStatus.PASS, "Test Case is Passed");
