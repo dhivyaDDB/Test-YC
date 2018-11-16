@@ -42,7 +42,7 @@ public class Desktop_Appoinment_Type1 {
 	@BeforeClass
 	 public void beforeClass() {
 		  
-			File file = new File("C:\\Users\\Dreams\\Jenkins\\workspace\\Desktop\\YOSI_Desktop_App2\\src\\main\\java\\com\\yosi\\config");
+			File file = new File("src/main/java/com/yosi/config/config.properties");
 			FileInputStream fileInput = null;
 			try {
 				fileInput = new FileInputStream(file);
@@ -61,10 +61,10 @@ public class Desktop_Appoinment_Type1 {
 			extent
 			                .addSystemInfo("Host Name", "SoftwareTestingMaterial")
 			                .addSystemInfo("Environment", "Automation Testing");
-			extent.loadConfig(new File(System.getProperty("user.dir")+"D:/Automation testing/YOSI_Desktop_App/extent-config.xml"));
+			extent.loadConfig(new File(System.getProperty("user.dir")+"/extent-config.xml"));
 			
 			DOMConfigurator.configure("log4j.xml");
-			System.setProperty("driver.chrome.driver","D:\\Automation testing\\AutomationTestingPR\\chromedriver.exe");
+			//System.setProperty("driver.chrome.driver","chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.get(prop1.getProperty("url"));
 			driver.manage().deleteAllCookies();
