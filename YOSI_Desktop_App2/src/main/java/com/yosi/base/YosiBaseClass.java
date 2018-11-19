@@ -68,7 +68,7 @@ public static void endTest()
 	public static void desktop_init() 
 	{
 		
-		File file = new File("D:/Automation testing/YOSI_Desktop_App/src/main/java/com/yosi/config/config.properties");
+		File file = new File("src/main/java/com/yosi/config/config.properties");
 		FileInputStream fileInput = null;
 		try {
 			fileInput = new FileInputStream(file);
@@ -90,7 +90,7 @@ public static void endTest()
 		extent.loadConfig(new File(System.getProperty("user.dir")+"D:/Automation testing/YOSI_Desktop_App/extent-config.xml"));
 		
 		DOMConfigurator.configure("log4j.xml");
-		System.setProperty("driver.chrome.driver","D:\\Automation testing\\AutomationTestingPR\\chromedriver.exe");
+		System.setProperty("driver.chrome.driver","chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(prop1.getProperty("url"));
 		driver.manage().deleteAllCookies();

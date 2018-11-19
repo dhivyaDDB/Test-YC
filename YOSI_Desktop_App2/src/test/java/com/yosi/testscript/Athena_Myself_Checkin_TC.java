@@ -42,7 +42,7 @@ public class Athena_Myself_Checkin_TC extends YosiBaseClass {
 	@BeforeClass
 	 public void beforeClass() {
 		  
-			File file = new File("D:/Automation testing/YOSI_Desktop_App/src/main/java/com/yosi/config/config.properties");
+			File file = new File("src/main/java/com/yosi/config/config.properties");
 			FileInputStream fileInput = null;
 			try {
 				fileInput = new FileInputStream(file);
@@ -301,147 +301,579 @@ public void patient_guarantor_type1()
 public void insurance_info_type1()
 {
 	//INSURANCE INFORMATION PAGE
-			System.out.println("INSURANCE PAGE");
-			
-			driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
-			driver.findElement(By.id("primary_companyname_wrap")).click();
-			driver.findElement(By.id("primary_companyname_wrap")).click();
-			driver.findElement(By.xpath("//*[@id=\"primary_companyname\"]")).sendKeys("Aethna");
-			driver.findElement(By.xpath("//*[@id=\"primary_policynumber\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"primary_policynumber\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"primary_policynumber\"]")).sendKeys("DPY9261");
-			
-			//
-			driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[2]/div/div/div[2]/div/div[1]")).click();
-
-			System.out.println("Secondary INSURANCE ");
+	System.out.println("INSURANCE PAGE");
+	Log.info("INSURANCE PAGE");
+	driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
 	
-			driver.findElement(By.xpath("//*[@id=\"secondary_insuredfname\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"secondary_insuredfname\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"secondary_insuredfname\"]")).sendKeys("FRED");
-			driver.findElement(By.xpath("//*[@id=\"secondary_insuredlname\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"secondary_insuredlname\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"secondary_insuredlname\"]")).sendKeys("TEST");
-			driver.findElement(By.xpath("//*[@id=\"secondary_insureddob\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"secondary_insureddob\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"secondary_insureddob\"]")).sendKeys("12/12/2007");
-			driver.findElement(By.xpath("//*[@id=\"secondary_genterradio_wrap\"]/div[1]")).click();
-			driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).sendKeys("252525252");
-			driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
-			driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).sendKeys("21,kindy Apartment");
-			driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).sendKeys("DS");
-			driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("10036");
-			String s_zipcode_ele =driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).getAttribute("value");
-			 System.out.println("Zipcode"+s_zipcode_ele);
-			
-			System.out.println("Zipcode"+s_zipcode_ele);
-			logger = extent.startTest("Zipcode Validation In GUARANTOR INFO PAGE");
-			
-			String regex = "^[0-9]{5}(?:-[0-9]{4})?$";
-			
-			 
-			Pattern pattern = Pattern.compile(regex);
+	driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[1]/div/div[2]/div/div/div[1]/label")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_insuredfname\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_insuredfname\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"primary_insuredfname\"]")).sendKeys("Gamly");
+	String p_fname=driver.findElement(By.xpath("//*[@id=\"primary_insuredfname\"]")).getAttribute("value");
+	Log.info("Secondary Fname entered : \n"+driver.findElement(By.xpath("//*[@id=\"primary_insuredfname\"]")).getAttribute("value"));
+	Log.info("First Name of the patient " +p_fname);
+	
+	
+	String p_regx = "[a-zA-Z]+\\.?";
+    Pattern pf_pattern = Pattern.compile(p_regx,Pattern.CASE_INSENSITIVE);
+    Matcher pf_matcher = pf_pattern.matcher(p_fname);
+    Boolean pf_bol =pf_matcher.find();
+    System.out.println(pf_matcher.find()); 
+	logger = extent.startTest("Primary First Name Validation In Insurance INFO PAGE");
+	Log.info(" Primary First Name Validation In Insurance INFO PAGE");
+
+		
+		if ( pf_bol == true )
+		{
+			logger.log(LogStatus.PASS, "The name "+p_fname+"  is contains char only");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "The name "+p_fname+" is Invalid");
+		}
+		
+		 extent.endTest(logger);
+	driver.findElement(By.xpath("//*[@id=\"primary_insuredlname\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_insuredlname\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"primary_insuredlname\"]")).sendKeys("Tests");
+	
+	String p_lname=driver.findElement(By.xpath("//*[@id=\"primary_insuredlname\"]")).getAttribute("value");
+	System.out.println(p_lname);
+	Log.info("Last Name of the patient " +p_lname);
+	
+	
+	
+    Pattern pl_pattern = Pattern.compile(p_regx,Pattern.CASE_INSENSITIVE);
+    Matcher pl_matcher = pl_pattern.matcher(p_lname);
+    Boolean pl_bol =pl_matcher.find();
+    System.out.println(pl_matcher.find()); 
+	logger = extent.startTest("Primary Last Name Validation In INSURANCE  PAGE");
+	Log.info("Primary Last Name Validation In INSURANCE  PAGE");
+
+		
+		if ( pl_bol == true )
+		{
+			logger.log(LogStatus.PASS, "The name "+p_lname+"  is contains char only");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "The name "+p_lname+" is Invalid");
+		}
+		
+		 extent.endTest(logger);
+	
+
+	Log.info("Primary policy number entered : "+driver.findElement(By.xpath("//*[@id=\"primary_insuredlname\"]")).getAttribute("value"));
+	driver.findElement(By.xpath("//*[@id=\"primary_insureddob\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_insureddob\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"primary_insureddob\"]")).sendKeys("12/12/2007");
+	Log.info("Secondary DOB entered : \n"+driver.findElement(By.xpath("//*[@id=\"primary_insureddob\"]")).getAttribute("value"));
+	String p_dob  =driver.findElement(By.xpath("//*[@id=\"primary_insureddob\"]")).getAttribute("value");
+	 System.out.println("DOB"+p_dob);
+	
+	
+	logger = extent.startTest("DOB validation in INSURANCE  PAGE");
+	
+	String pdob_regex = "^((?:0[0-9])|(?:[1-2][0-9])|(?:3[0-1]))/((?:0[1-9])|(?:1[0-2]))/((?:19|20)\\d{2})$";
+	
+	 
+	Pattern pdob_pattern = Pattern.compile(pdob_regex);
+
+
+	    Matcher pdob_matcher = pdob_pattern.matcher(p_dob);
+	    Boolean pdob_match=pdob_matcher.matches();
+	    System.out.println(pdob_matcher.matches());
+	
+	 System.out.println("DOB"+p_dob);
+		
+		if (pdob_match == true )
+		{
+			logger.log(LogStatus.PASS, "DOB is valid"+p_dob);
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "DOB is invalid"+p_dob);
+		}
+		
+		extent.endTest(logger);
+	driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[1]/label")).click();
+	Log.info("Secondary Gender entered : \n"+driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[1]/label")).getText());
+	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).sendKeys("252525252");
+	Log.info("Secondary SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getAttribute("value"));
+	String p_ssn =driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getAttribute("value");
+	 System.out.println("SSN"+p_ssn);
+	
+	
+	logger = extent.startTest("SSN Validation in INSURANCE  PAGE");
+	
+	String pregex = "^[0-9]{3}[-]([0-9]{2})[-]([0-9]{4})$";
+	
+	 
+	Pattern ppattern1 = Pattern.compile(pregex);
+
+
+	    Matcher pmatcher1 = ppattern1.matcher(p_ssn);
+	    Boolean pssn_match=pmatcher1.matches();
+	    System.out.println(pmatcher1.matches());
+	
+	    System.out.println("SSN"+p_ssn);
+		
+		if (pssn_match == true )
+		{
+			logger.log(LogStatus.PASS, "SSN is valid");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "SSN is invalid");
+		}
+		
+		 extent.endTest(logger);
+	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
+	
+	Select p_relationship = new Select(driver.findElement(By.xpath("//*[@id=\"primary_relationship\"]")));
+	p_relationship.selectByIndex(1);
+	driver.findElement(By.xpath("//*[@id=\"primary_address1\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_address1\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"primary_address1\"]")).sendKeys("21,kindy Apartment");
+	String p_addr1=driver.findElement(By.xpath("//*[@id=\"primary_address1\"]")).getAttribute("value");
+	driver.findElement(By.xpath("//*[@id=\"primary_address2\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_address2\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"primary_address2\"]")).sendKeys("DS");
+	String p_addr2=driver.findElement(By.xpath("//*[@id=\"primary_address2\"]")).getAttribute("value");
+	driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).sendKeys("10036");
+	
+/*//PDCS40- city state pop-up
+	
+	WebElement doc = driver.findElement(By.xpath("//*[@id=\"statecity_Modal\"]"));
+	Actions action =    new Actions(driver);
+	Thread.sleep(2000);
+	action.moveToElement(doc).build().perform();
+	
+	
+	Select city_select= new Select(driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
+	city_select.selectByIndex(0);
+	//*[@id="submitpinfo_statecity"]
+	WebElement doc1 = driver.findElement(By.xpath("//*[@id='submitpinfo_statecity']"));
+	Actions action1 =    new Actions(driver);
+	Thread.sleep(2000);
+	
+	action1.click(doc1).perform();*/
+	String p_zip=driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).getAttribute("value");
+	Log.info("Secondary Address entered \n" +p_addr1+","+p_addr2+","+p_zip+".");
+	
+	String pzipcode_ele =driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).getAttribute("value");
+	
+	 
+	logger = extent.startTest("Zipcode Validation in INSURANCE  PAGE");
+	
+	String pregex1 = "^[0-9]{5}(?:-[0-9]{4})?$";
+	Pattern ppattern = Pattern.compile(pregex1);
+
+	    Matcher pmatcher = ppattern.matcher(pzipcode_ele);
+	    Boolean pzip_match=pmatcher.matches();
+	    System.out.println(pmatcher.matches());
+	
+	 System.out.println("Zipcode"+pzipcode_ele);
+		
+		if (pzip_match == true )
+		{
+			logger.log(LogStatus.PASS, "The entered "+pzipcode_ele+" ZIP Code is valid");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "The entered "+pzipcode_ele+" ZIP Code is invalid");
+		}
+		
+		 extent.endTest(logger);
+		 
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0,1000);");
+	
+	driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
+
+	driver.findElement(By.xpath("//*[@id=\"primary_companyname\"]")).click();
+	driver.findElement(By.id("primary_companyname_wrap")).click();
+	
+	driver.findElement(By.xpath("//*[@id=\"primary_companyname\"]")).sendKeys("Aethna");
+	
+	Log.info("Primary insurance selected : "+driver.findElement(By.xpath("//*[@id=\"primary_companyname\"]")).getAttribute("value"));
+	
+	driver.findElement(By.xpath("//*[@id=\"primary_policynumber\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_policynumber\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"primary_policynumber\"]")).sendKeys("DPY9261");
+	
+	////////****************************** CLICK ON YES BUTTON ********************************************
+	driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[2]/div/div/div[2]/div/div[1]")).click();
+
+	
+	/////////////
+	
+	///*****************************************************SECONDAY INSURANCE *************************************************\\\\
+	System.out.println("Secondary INSURANCE ");
+
+	driver.findElement(By.xpath("//*[@id=\"secondary_insuredfname\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_insuredfname\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"secondary_insuredfname\"]")).sendKeys("FRED");
+	String s_fname=driver.findElement(By.xpath("//*[@id=\"secondary_insuredfname\"]")).getAttribute("value");
+	Log.info("Secondary Fname entered : \n"+driver.findElement(By.xpath("//*[@id=\"secondary_insuredfname\"]")).getAttribute("value"));
+	Log.info("First Name of the patient " +s_fname);
+	
+	
+	String regx = "[a-zA-Z]+\\.?";
+    Pattern f_pattern = Pattern.compile(regx,Pattern.CASE_INSENSITIVE);
+    Matcher f_matcher = f_pattern.matcher(s_fname);
+    Boolean f_bol =f_matcher.find();
+    System.out.println(f_matcher.find()); 
+	logger = extent.startTest("First Name Validation In PATIENT INFO PAGE");
+	Log.info(" First Name Validation In PATIENT INFO PAGE");
+
+		
+		if ( f_bol == true )
+		{
+			logger.log(LogStatus.PASS, "The name "+s_fname+"  is contains char only");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "The name "+s_fname+" is Invalid");
+		}
+		
+		 extent.endTest(logger);
+	driver.findElement(By.xpath("//*[@id=\"secondary_insuredlname\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_insuredlname\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"secondary_insuredlname\"]")).sendKeys("TEST");
+	String s_lname=driver.findElement(By.xpath("//*[@id=\"secondary_insuredlname\"]")).getAttribute("value");
+	System.out.println(s_lname);
+	Log.info("Last Name of the patient " +s_lname);
+	
+	
+	
+    Pattern l_pattern = Pattern.compile(regx,Pattern.CASE_INSENSITIVE);
+    Matcher l_matcher = l_pattern.matcher(s_lname);
+    Boolean l_bol =l_matcher.find();
+    System.out.println(l_matcher.find()); 
+	logger = extent.startTest("Last Name Validation In INSURANCE  PAGE");
+	Log.info(" Last Name Validation In INSURANCE  PAGE");
+
+		
+		if ( l_bol == true )
+		{
+			logger.log(LogStatus.PASS, "The name "+s_lname+"  is contains char only");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "The name "+s_lname+" is Invalid");
+		}
+		
+		 extent.endTest(logger);
+	
+	Log.info("Secondary Lname entered : \n"+driver.findElement(By.xpath("//*[@id=\"secondary_insuredlname\"]")).getAttribute("value"));
+	driver.findElement(By.xpath("//*[@id=\"secondary_insureddob\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_insureddob\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"secondary_insureddob\"]")).sendKeys("12/12/2007");
+	Log.info("Secondary DOB entered : \n"+driver.findElement(By.xpath("//*[@id=\"secondary_insureddob\"]")).getAttribute("value"));
+	String s_dob  =driver.findElement(By.xpath("//*[@id=\"secondary_insureddob\"]")).getAttribute("value");
+	 System.out.println("DOB"+s_dob);
+	
+	
+	logger = extent.startTest("DOB validation in INSURANCE  PAGE");
+	
+	String dob_regex = "^((?:0[0-9])|(?:[1-2][0-9])|(?:3[0-1]))/((?:0[1-9])|(?:1[0-2]))/((?:19|20)\\d{2})$";
+	
+	 
+	Pattern dob_pattern = Pattern.compile(dob_regex);
+
+
+	    Matcher dob_matcher = dob_pattern.matcher(s_dob);
+	    Boolean dob_match=dob_matcher.matches();
+	    System.out.println(dob_matcher.matches());
+	
+	 System.out.println("DOB"+s_dob);
+		
+		if (dob_match == true )
+		{
+			logger.log(LogStatus.PASS, "DOB is valid"+s_dob);
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "DOB is invalid"+s_dob);
+		}
+		
+		extent.endTest(logger);
+	driver.findElement(By.xpath("//*[@id=\"secondary_genterradio_wrap\"]/div[1]")).click();
+	Log.info("Secondary Gender entered : \n"+driver.findElement(By.xpath("//*[@id=\"secondary_genterradio_wrap\"]/div[1]")).getText());
+	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).sendKeys("252525252");
+	Log.info("Secondary SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).getAttribute("value"));
+	String s_ssn =driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).getAttribute("value");
+	 System.out.println("SSN"+s_ssn);
+	
+	
+	logger = extent.startTest("SSN Validation in INSURANCE  PAGE");
+	
+	String regex = "^[0-9]{3}[-]([0-9]{2})[-]([0-9]{4})$";
+	
+	 
+	Pattern pattern1 = Pattern.compile(regex);
+
+
+	    Matcher matcher1 = pattern1.matcher(s_ssn);
+	    Boolean ssn_match=matcher1.matches();
+	    System.out.println(matcher1.matches());
+	
+	    System.out.println("SSN"+s_ssn);
+		
+		if (ssn_match == true )
+		{
+			logger.log(LogStatus.PASS, "SSN is valid");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "SSN is invalid");
+		}
+		
+		 extent.endTest(logger);
+	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
+	driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).sendKeys("21,kindy Apartment");
+	String s_addr1=driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).getAttribute("value");
+	driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).sendKeys("DS");
+	String s_addr2=driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).getAttribute("value");
+	driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("10036");
+	
+/*	//PDCS40- city state pop-up
+	
+	WebElement sdoc = driver.findElement(By.xpath("//*[@id=\"secondary_statecity_Modal\"]"));
+	Actions saction =    new Actions(driver);
+	Thread.sleep(2000);
+	saction.moveToElement(sdoc).build().perform();
+	
+	
+	Select scity_select= new Select(driver.findElement(By.xpath("//*[@id=\"secondary_select_statecity\"]")));
+	scity_select.selectByIndex(1);
+	//*[@id="submitpinfo_statecity"]
+	WebElement sdoc1 = driver.findElement(By.xpath("//*[@id='secondary_submitpinfo_statecity']"));
+	Actions saction1 =    new Actions(driver);
+	Thread.sleep(2000);
+	
+	saction1.click(sdoc1).perform();*/
+	String s_zip=driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).getAttribute("value");
+	Log.info("Secondary Address entered \n" +s_addr1+","+s_addr2+","+s_zip+".");
+	
+	String szipcode_ele =driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).getAttribute("value");
+	 
+	logger = extent.startTest("Zipcode Validation in INSURANCE  PAGE");
+	
+	String sregex1 = "^[0-9]{5}(?:-[0-9]{4})?$";
+	Pattern spattern = Pattern.compile(sregex1);
+
+	    Matcher smatcher = spattern.matcher(szipcode_ele);
+	    Boolean szip_match=smatcher.matches();
+	    System.out.println(smatcher.matches());
+	
+	 System.out.println("Zipcode"+szipcode_ele);
+		
+		if (szip_match == true )
+		{
+			logger.log(LogStatus.PASS, "The entered "+szipcode_ele+" ZIP Code is valid");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "The entered "+szipcode_ele+" ZIP Code is invalid");
+		}
+		
+		 extent.endTest(logger);
+	
+	driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
+
+	
+	logger = extent.startTest("Insurance page"); 
+	 if(driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]/input")).isDisplayed() == true)
+	 {
+			driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]/input")).click();
+			logger.log(LogStatus.PASS, "Test Case is Passed");
+	 }
+	 else
+	 {
+		 logger.log(LogStatus.FAIL, "Test Case is Failed ");
+	 }
+	 extent.endTest(logger);
+	
+	
+	
+	//PATIENT ADDITIONAL INFORMATION
+	System.out.println("PATIENT ADDITIONAL INFORMATION");
+	Log.info("PATIENT ADDITIONAL INFORMATION");
+	driver.findElement(By.xpath("//*[@id=\"select_employed_wrap\"]/div[3]/label")).click();
+	
+	driver.findElement(By.xpath("//*[@id=\"generalinfo\"]/div[3]/div[2]")).click();
+	driver.findElement(By.xpath("//*[@id=\"ssn\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"ssn\"]")).sendKeys("444444444");
+	Log.info("SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"ssn\"]")).getAttribute("value"));
+	String ssn_ele =driver.findElement(By.xpath("//*[@id=\"ssn\"]")).getAttribute("value");
+	 System.out.println("SSN"+ssn_ele);
+	
+	
+	logger = extent.startTest("SSN Validation");
+	
+	String regex1 = "^[0-9]{3}[-]([0-9]{2})[-]([0-9]{4})$";
+	
+	 
+	Pattern p_pattern = Pattern.compile(regex1);
+
+
+	    Matcher matcher_ssn = p_pattern.matcher(ssn_ele);
+	    Boolean p_ssn_match=matcher_ssn.matches();
+	    System.out.println(matcher_ssn.matches());
+	
+	    System.out.println("SSN"+p_ssn_match);
+		
+		if (p_ssn_match == true )
+		{
+			logger.log(LogStatus.PASS, "SSN is valid");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "SSN is invalid");
+		}
+		
+		 extent.endTest(logger);
+		 driver.findElement(By.xpath("//*[@id=\"mobilenumber\"]")).click();
+		 driver.findElement(By.xpath("//*[@id=\"mobilenumber\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"mobilenumber\"]")).sendKeys("(503)4008675");
+	Log.info("Mobile number entered : \n"+driver.findElement(By.xpath("//*[@id=\"mobilenumber\"]")).getAttribute("value"));
+	String mob_number  =driver.findElement(By.xpath("//*[@id=\"mobilenumber\"]")).getAttribute("value");
+	 System.out.println("Mobile Number"+mob_number);
+	
+	
+	logger = extent.startTest("Mobile number");
+	
+	String regex11 = "^([0-9]{3})||[0-9]{3}[-][0-9]{4}$";
+	
+	 
+	Pattern pattern11 = Pattern.compile(regex11);
+
+
+	    Matcher matcher11 = pattern11.matcher(mob_number);
+	    Boolean mob_match=matcher11.matches();
+	    System.out.println(matcher11.matches());
+	
+	 System.out.println("Mobile Number"+mob_number);
+		
+		if (mob_match == true )
+		{
+			logger.log(LogStatus.PASS, "Mobile number  is valid");
+		}
+		
+		else
+		{
+			logger.log(LogStatus.FAIL, "Mobile number is invalid");
+		}
+		
+		 extent.endTest(logger);
+	List<WebElement> martial_list = driver.findElements(By.xpath("//*[@id=\"select_maritalstatus\"]"));
+	for(WebElement m_list : martial_list) {
+		 Log.info("Martial Drop Down value:\n"+m_list.getText());
+		}
+	Select martial_select = new Select(driver.findElement(By.xpath("//*[@id=\"select_maritalstatus\"]")));
+	martial_select.selectByIndex(3);
+	driver.manage().timeouts().implicitlyWait(8000,TimeUnit.SECONDS);
+
+	logger = extent.startTest("Patient Additional page"); 
+	 if(driver.findElement(By.xpath("//*[@id=\"submit_generalinfo\"]")).isDisplayed() == true)
+	 {
+			driver.findElement(By.xpath("//*[@id=\"submit_generalinfo\"]")).click();
+			logger.log(LogStatus.PASS, "Test Case is Passed");
+	 }
+	 else
+	 {
+		 logger.log(LogStatus.FAIL, "Test Case is Failed ");
+	 }
+	 extent.endTest(logger);
+	 
+	
+	//EMERGENCY CONTACT
+	System.out.println("EMERGENCY CONTACT");
+	driver.findElement(By.xpath("//*[@id=\"emc_firstname\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"emc_firstname\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"emc_firstname\"]")).sendKeys("Fredy");
+	Log.info("EMC Fname: \n"+driver.findElement(By.xpath("//*[@id=\"emc_firstname\"]")).getAttribute("value"));
+	
+	driver.findElement(By.xpath("//*[@id=\"emc_lastname\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"emc_lastname\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"emc_lastname\"]")).sendKeys("test");
+	Log.info("EMC Lname: \n"+driver.findElement(By.xpath("//*[@id=\"emc_lastname\"]")).getAttribute("value"));
+	driver.findElement(By.xpath("//*[@id=\"select2-select_emc_relationship-container\"]")).click();
+	Select se = new Select(driver.findElement(By.id("select_emc_relationship")));
+	se.selectByIndex(2);
+	driver.findElement(By.xpath("//*[@id=\"select2-select_emc_relationship-container\"]")).click();		
+	driver.findElement(By.xpath("//*[@id=\"emc_number\"]")).sendKeys("(555)5555555");
+	Log.info("EMC Contact Num : \n"+driver.findElement(By.xpath("//*[@id=\"emc_number\"]")).getAttribute("value"));
+	 
+	 
+	 
+		String mob_number1  =driver.findElement(By.xpath("//*[@id=\"emc_number\"]")).getAttribute("value");
+		 System.out.println("Mobile Number"+mob_number1);
 		
 		
-			    Matcher matcher = pattern.matcher(s_zipcode_ele);
-			    Boolean zip_match=matcher.matches();
-			    System.out.println(matcher.matches());
+		logger = extent.startTest("Mobile number");
+		
+		String regex12 = "^([0-9]{3})[0-9]{3}-[0-9]{4}$";
+		
+		 
+		Pattern pattern12 = Pattern.compile(regex12);
+	
+	
+		    Matcher matcher12 = pattern12.matcher(mob_number1);
+		    Boolean e_mob_match=matcher12.matches();
+		    System.out.println(matcher12.matches());
+		
+		 System.out.println("Mobile Number"+mob_number1);
 			
-			 System.out.println("Zipcode"+s_zipcode_ele);
-				
-				if (zip_match == true )
-				{
-					logger.log(LogStatus.PASS, "The specified US ZIP Code is valid");
-				}
-				
-				else
-				{
-					logger.log(LogStatus.FAIL, "The specified US ZIP Code is valid");
-				}
-				
-				 extent.endTest(logger);
+			if (e_mob_match == true )
+			{
+				logger.log(LogStatus.PASS, "Mobile number  is valid");
+			}
 			
+			else
+			{
+				logger.log(LogStatus.FAIL, "Mobile number is invalid");
+			}
 			
-			driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
-			
-			logger = extent.startTest("Insurance page"); 
-			 if(driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]")).isDisplayed() == true)
-			 {
-					driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]")).click();
-					logger.log(LogStatus.PASS, "Test Case is Passed");
-			 }
-			 else
-			 {
-				 logger.log(LogStatus.FAIL, "Test Case is Failed ");
-			 }
 			 extent.endTest(logger);
-			
-			
-			
-			//PATIENT ADDITIONAL INFORMATION
-			System.out.println("PATIENT ADDITIONAL INFORMATION");
-			
-			driver.findElement(By.xpath("//*[@id=\"select_employed_wrap\"]/div[3]/label")).click();
-			
-			driver.findElement(By.xpath("//*[@id=\"generalinfo\"]/div[3]/div[2]")).click();
-			driver.findElement(By.xpath("//*[@id=\"ssn\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"ssn\"]")).sendKeys("444444444");
-			//*[@id="mobilenumber"]
-			driver.findElement(By.xpath("//*[@id='mobilenumber']")).sendKeys("(503)4008675");
-			Select martial_select = new Select(driver.findElement(By.xpath("//*[@id=\"select_maritalstatus\"]")));
-			martial_select.selectByIndex(3);
-			driver.manage().timeouts().implicitlyWait(8000,TimeUnit.SECONDS);
-			
-			//*[@id="generalinfo"]/div[3]/div[6]/div[1]/input
-			logger = extent.startTest("Patient Additional page"); 
-			 if(driver.findElement(By.xpath("//*[@id='generalinfo']/div[3]/div[6]/div[1]/input")).isDisplayed() == true)
-			 {
-					driver.findElement(By.xpath("//*[@id='generalinfo']/div[3]/div[6]/div[1]/input")).click();
-					logger.log(LogStatus.PASS, "Test Case is Passed");
-			 }
-			 else
-			 {
-				 logger.log(LogStatus.FAIL, "Test Case is Failed ");
-			 }
-			 extent.endTest(logger);
-			 extent.flush();
-			 extent.close();
-			
-			
-			//EMERGENCY CONTACT
-			System.out.println("EMERGENCY CONTACT");
-			driver.findElement(By.xpath("//*[@id=\"emc_firstname\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"emc_firstname\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"emc_firstname\"]")).sendKeys("Fredy");
-			driver.findElement(By.xpath("//*[@id=\"emc_lastname\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"emc_lastname\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"emc_lastname\"]")).sendKeys("test");
-			driver.findElement(By.xpath("//*[@id=\"select2-select_emc_relationship-container\"]")).click();
-			Select se = new Select(driver.findElement(By.id("select_emc_relationship")));
-			se.selectByIndex(2);
-			driver.findElement(By.xpath("//*[@id=\"select2-select_emc_relationship-container\"]")).click();		
-			driver.findElement(By.xpath("//*[@id=\"emc_number\"]")).sendKeys("5555555555555");
-			driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-			logger = extent.startTest("Emergency page"); //*[@id="mycontact"]/div[8]/div/input
-			 if(driver.findElement(By.xpath("//*[@id=\"mycontact\"]/div[8]/div/input")).isDisplayed() == true)
-			 {
-					driver.findElement(By.xpath("//*[@id=\"mycontact\"]/div[8]/div/input")).click();
-					logger.log(LogStatus.PASS, "Test Case is Passed");
-			 }
-			 else
-			 {
-				 logger.log(LogStatus.FAIL, "Test Case is Failed ");
-			 }
-			 extent.endTest(logger);
-			
+	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
+	logger = extent.startTest("Emergency page"); 
+	 if(driver.findElement(By.xpath("//*[@id=\"mycontact\"]/div[8]/div/input")).isDisplayed() == true)
+	 {
+			driver.findElement(By.xpath("//*[@id=\"mycontact\"]/div[8]/div/input")).click();
+			logger.log(LogStatus.PASS, "Test Case is Passed");
+	 }
+	 else
+	 {
+		 logger.log(LogStatus.FAIL, "Test Case is Failed ");
+	 }
+	 extent.endTest(logger);
+	
 }
 
 @Test (priority = 6)

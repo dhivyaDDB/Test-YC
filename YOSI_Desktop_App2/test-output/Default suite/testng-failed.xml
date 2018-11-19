@@ -3,26 +3,29 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.yosi.testscript.Desktop_Zipcode_Test">
+      <class name="com.yosi.testscript.Desktop_Appoinment_Type1">
         <methods>
+          <include name="obgyn_question_page"/>
+          <include name="ros_page"/>
+          <include name="assignment_of_Benefits_page"/>
+          <include name="language_page"/>
           <include name="afterClass"/>
-          <include name="insurance_info"/>
-          <include name="medical_history_page"/>
-          <include name="policy2_page"/>
           <include name="signature_page"/>
-          <include name="phq_page"/>
-          <include name="beforeClass"/>
-          <include name="patient_guarantor"/>
-          <include name="patient_info"/>
-          <include name="gad_page"/>
-          <include name="policy1_page"/>
-          <include name="encounter_page"/>
-          <include name="patient_past_medical"/>
           <include name="patient_rx_info"/>
-          <include name="patient_lifestyle"/>
+          <include name="phq_page"/>
+          <include name="medical_history_page"/>
+          <include name="privacy_policy_page"/>
+          <include name="notice_of_privacy_page"/>
+          <include name="beforeClass"/>
+          <include name="gad_page"/>
+          <include name="athena_cust_question_page"/>
+          <include name="encounter_page"/>
+          <include name="vital_page"/>
+          <include name="patient_past_medical"/>
           <include name="addition_page"/>
+          <include name="notice_of_privacy_page2"/>
         </methods>
-      </class> <!-- com.yosi.testscript.Desktop_Zipcode_Test -->
+      </class> <!-- com.yosi.testscript.Desktop_Appoinment_Type1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

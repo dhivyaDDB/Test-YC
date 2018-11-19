@@ -20,12 +20,17 @@ import com.yosi.util.*;
 import io.appium.java_client.android.AndroidDriver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 
 public class Patient_Info_TC extends YosiBaseClass{
 	
-
+	 Xls_Reader xls_Reader ;
+		int colname;
+		 int rownum;
 
 	
 	 @BeforeClass
@@ -40,7 +45,7 @@ public class Patient_Info_TC extends YosiBaseClass{
 		                
 		                //loading the external xml file (i.e., extent-config.xml) which was placed under the base directory
 		                //You could find the xml file below. Create xml file in your project and copy past the code mentioned below
-		                extent.loadConfig(new File(System.getProperty("user.dir")+"D:\\Automation testing\\YOSI_Desktop_App\\extent-config.xml"));
+		                extent.loadConfig(new File(System.getProperty("user.dir")+"/extent-config.xml"));
 		  desktop_init();
 		  start_paperwork();
 		  select_doctor();
@@ -50,7 +55,7 @@ public class Patient_Info_TC extends YosiBaseClass{
 	  @DataProvider
 	  public Object[][] dp() throws Exception{
 		 
-		 String file_location = "D:/Automation testing/YOSI_Desktop_App/src/main/java/com/yosi/testdata/TestData.xlsx";
+		 String file_location = System.getProperty("user.dir") +"/src/main/java/com/yosi/testdata/TestData.xlsx";
 		 String SheetName = "Patient_info";
 		 
 		 Object[][] testObjArray = ExcelUtils.getTableArray(file_location,SheetName);
@@ -60,9 +65,10 @@ public class Patient_Info_TC extends YosiBaseClass{
 	  }
 	  	
 	    
-  @Test (dataProvider = "dp")
-  public void patient_info(String address1,String address2,String zipcode) 
- 
+  //@Test (dataProvider = "dp")
+  //public void patient_info(String address1,String address2,String zipcode) 
+	  @Test 
+  public void t_patient_info() throws Exception
   {		
 	System.out.println("PATIENT INFORMATION");
 	Log.info("Data prefilled in PAtient info page");
@@ -123,22 +129,112 @@ public class Patient_Info_TC extends YosiBaseClass{
 	  	
 		driver.findElement(By.id("address1")).click();
 		driver.findElement(By.id("address1")).clear();
-		driver.findElement(By.id("address1")).sendKeys(address1);
-		Log.info("Enter Address1 " +address1);
+		driver.findElement(By.id("address1")).sendKeys("river street");
+		//Log.info("Enter Address1 " +address1);
 		driver.findElement(By.id("address2")).click();
 		driver.findElement(By.id("address2")).clear();	
-		driver.findElement(By.id("address2")).sendKeys(address2);
-		Log.info("Enter Address2 " +address2);
+		driver.findElement(By.id("address2")).sendKeys("street");
+		//Log.info("Enter Address2 " +address2);
+		String zipcode_value =driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).getAttribute("value");
+		//String zipcode ;
+		if(zipcode_value == " ")
+		{
+			driver.findElement(By.id("zipcode")).click();
+			driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("1111",Keys.TAB);
+			
+			Log.info("Entered zipcode "+zipcode_value);
+			
+			Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"zipcode-error\"]")).isDisplayed();
+			
+			 if(zip_code)
+			 {
+				 Log.info("It is invalid zipcode");
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("10004");
+				 Log.info("Entered zipcode "+zipcode_value);
+				 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+				 Log.info("City State "+city_dropdown);
+				 
+			 }
+			 
+			 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+			 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"select_statecity\"]"));
+				Actions action =    new Actions(driver);
+				Thread.sleep(2000);
+				action.click(doc).perform();
+				Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
+				city_select.selectByValue("other");
+				Thread.sleep(2000);
+				String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+				String state = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+				if(City != "" && state!= "" )
+				{
+					Log.info("The text doent contain any value");
+					driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+					driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+				}
+				else
+				{
+					Log.info("The text  contain value");
+				}
+				Thread.sleep(2000);
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).click();
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("11111");
+				 Log.info("Entered zipcode "+zipcode_value);
+				 driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+				 driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+		}
+		else
+		{
 		driver.findElement(By.id("zipcode")).click();
 		driver.findElement(By.id("zipcode")).clear();
-		driver.findElement(By.id("zipcode")).sendKeys(zipcode);
+		driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("1111",Keys.TAB);
 		
-		if(driver.findElement(By.xpath("//*[@id=\"statecity_Modal\"]")).isDisplayed())
-		{
-			Select city_select= new Select(driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
-			city_select.selectByIndex(1);
-			
-		}
+		Log.info("Entered zipcode "+zipcode_value);
+		
+		Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"zipcode-error\"]")).isDisplayed();
+		
+		 if(zip_code)
+		 {
+			 Log.info("It is invalid zipcode");
+			 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+			 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("10004");
+			 Log.info("Entered zipcode "+zipcode_value);
+			 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+			 Log.info("City State "+city_dropdown);
+			 
+		 }
+		 
+		 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+		 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"select_statecity\"]"));
+			Actions action =    new Actions(driver);
+			Thread.sleep(2000);
+			action.click(doc).perform();
+			Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
+			city_select.selectByValue("other");
+			Thread.sleep(2000);
+			String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+			String state = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+			if(City != "" && state!= "" )
+			{
+				Log.info("The text doent contain any value");
+				driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+				driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+			}
+			else
+			{
+				Log.info("The text  contain value");
+			}
+			Thread.sleep(2000);
+			 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).click();
+			 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+			 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("11111");
+			 Log.info("Entered zipcode "+zipcode_value);
+			 driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+			 driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+	}
+		
 		String add1 = driver.findElement(By.id("address1")).getAttribute("value");
 		String add2 = driver.findElement(By.id("address2")).getAttribute("value");
 		String zip =driver.findElement(By.id("zipcode")).getAttribute("value");
@@ -175,15 +271,15 @@ public class Patient_Info_TC extends YosiBaseClass{
 
   
   
- 
+ /*
 
   @AfterClass
   public void afterClass() throws InterruptedException 
   {
 		logger = extent.startTest("Patient Info page"); 
-		 if(driver.findElement(By.xpath("//form[@id='form_mpersonal_info']/div/div[7]/div/input")).isDisplayed() == true)
+		 if(driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[10]/div[1]/input")).isDisplayed() == true)
 		 {
-				driver.findElement(By.xpath("//form[@id='form_mpersonal_info']/div/div[7]/div/input")).click();	
+				driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[10]/div[1]/input")).click();	
 				logger.log(LogStatus.PASS, "Test Case is Passed");
 		 }
 		 else
@@ -214,5 +310,5 @@ public class Patient_Info_TC extends YosiBaseClass{
 	 extent.close();
 	 driver.quit();
   }
-
+*/
 }
