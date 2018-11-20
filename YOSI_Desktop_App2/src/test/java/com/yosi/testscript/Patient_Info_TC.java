@@ -271,7 +271,7 @@ public class Patient_Info_TC extends YosiBaseClass{
 
   
   
- /*
+
 
   @AfterClass
   public void afterClass() throws InterruptedException 
@@ -310,5 +310,5 @@ public class Patient_Info_TC extends YosiBaseClass{
 	 extent.close();
 	 driver.quit();
   }
-*/
+
 }

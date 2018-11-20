@@ -1,12 +1,5 @@
 package com.yosi.testscript;
 
-import org.testng.annotations.Test;
-
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-import com.yosi.base.YosiBaseClass;
-import com.yosi.util.Log;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -21,6 +14,7 @@ import java.util.regex.Pattern;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,9 +22,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-public class Athena_Myself_Checkin_TC extends YosiBaseClass {
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import com.yosi.util.Log;
+import com.yosi.util.Validator;
 
+public class Athena_Myself_Checkin_TC {
+	
 	public WebDriver driver;
 	public static ExtentReports extent;
 	public static ExtentTest logger;
@@ -61,23 +62,23 @@ public class Athena_Myself_Checkin_TC extends YosiBaseClass {
 			extent
 			                .addSystemInfo("Host Name", "SoftwareTestingMaterial")
 			                .addSystemInfo("Environment", "Automation Testing");
-			extent.loadConfig(new File(System.getProperty("user.dir")+"D:\\Automation testing\\YOSI_Desktop_App\\extent-config.xml"));
+			extent.loadConfig(new File(System.getProperty("user.dir")+"/extent-config.xml"));
 			
 			DOMConfigurator.configure("log4j.xml");
-			System.setProperty("driver.chrome.driver","D:\\Automation testing\\AutomationTestingPR\\chromedriver.exe");
+			//System.setProperty("driver.chrome.driver","chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.get(prop1.getProperty("url"));
+			driver.get(prop1.getProperty("myself_invite"));
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
 	  }
 
  @Test(priority = 0)
- public void start_paperwork_type1() 
+ public void start_paperwork() 
  {
 	  //START PAPERWORK
 		String apt_time= driver.findElement(By.xpath("/html/body/div/div[2]/div")).getText();
-		System.out.println(apt_time);
-		//Log.info("Appoinment Time" +apt_time);
+		Log.info(driver.getTitle());
+		Log.info("Appoinment Time \n" +apt_time);
 		
 		logger = extent.startTest("Start Paperwork"); 
 		 if(driver.findElement(By.className("start_ppr")).isDisplayed())
@@ -95,18 +96,18 @@ public class Athena_Myself_Checkin_TC extends YosiBaseClass {
 
 @Test(priority = 1)
 
-public void select_doctor_type1() throws InterruptedException
+public void select_doctor() throws InterruptedException
 {
 	
 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"form_mchoosedoctor_info\"]/div/ul/li[2]/a"));
 	Actions action =    new Actions(driver);
-   Thread.sleep(2000);
-   action.click(doc).perform();
-   Log.info("Doctor is selected");
+	Thread.sleep(2000);
+	action.click(doc).perform();
+	Log.info("Doctor is selected");
    driver.manage().timeouts().implicitlyWait(15000,TimeUnit.SECONDS);
-	//Select the dependent
+
    
-   	logger = extent.startTest("Select Doctor test"); 
+   	logger = extent.startTest("Select the Doctor test"); 
 	 if(driver.findElement(By.xpath("//*[@id=\"clkadult\"]/div/div")).isDisplayed() == true)
 	 {
 			driver.findElement(By.xpath("//*[@id=\"clkadult\"]/div/div")).click();
@@ -126,12 +127,14 @@ public void select_doctor_type1() throws InterruptedException
 public void verify_page()
 {
 	// VERIFY THE PATIENT
-	 //Log.info("Patient verification Page");
+	 Log.info("Patient verification Page");
 	driver.manage().timeouts().implicitlyWait(8000,TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//*[@id=\"verify_date\"]")).sendKeys(prop1.getProperty("dob"));
+	Log.info("DOG entered: "+prop1.getProperty("myself_dob"));
+	Log.info("Gender entered:" +prop1.getProperty("myself_gender"));
+	driver.findElement(By.xpath("//*[@id=\"verify_date\"]")).sendKeys(prop1.getProperty("myself_dob"));
 	driver.findElement(By.xpath("//*[@id=\"select_gender_wrap\"]")).click();
 	Select se = new Select(driver.findElement(By.xpath("//*[@class=\"yc-input customdd select2-hidden-accessible\"]")));
-	if (prop1.getProperty("gender")=="Male")
+	if (prop1.getProperty("myself_gender")=="Male")
 	{
 		se.selectByIndex(0);
 	}
@@ -140,7 +143,7 @@ public void verify_page()
 		se.selectByIndex(1);
 	}
 	driver.findElement(By.xpath("//*[@id=\"select_gender_wrap\"]")).click();
-	//Log.info("Patient is verified");
+	
 	logger = extent.startTest("Patient Verify page"); 
 	 if(driver.findElement(By.xpath("//*[@id=\"proceed_login\"]")).isDisplayed() == true)
 	 {
@@ -160,63 +163,209 @@ public void verify_page()
 
 
 @Test (priority = 3)
-public void patient_info_type1() {
-		//TIENT INFORMATION
+public void patient_info() throws InterruptedException {
+		//PATIENT INFORMATION
 			Log.info("PATIENT INFORMATION");
 			System.out.println("PATIENT INFORMATION");
 			String fname = driver.findElement(By.xpath("//*[@id=\"firstname\"]")).getAttribute("value");
 			System.out.println(fname);
-			Log.info("Fname of the patient" +fname);
+			Log.info("First Name of the patient " +fname);
+			
+			
+			String regx = "[a-zA-Z]+\\.?";
+		    Pattern f_pattern = Pattern.compile(regx,Pattern.CASE_INSENSITIVE);
+		    Matcher f_matcher = f_pattern.matcher(fname);
+		    Boolean f_bol =f_matcher.find();
+		    System.out.println(f_matcher.find()); 
+			logger = extent.startTest("First Name Validation In PATIENT INFO PAGE");
+			Log.info(" First Name Validation In PATIENT INFO PAGE");
+
+				
+				if ( f_bol == true )
+				{
+					logger.log(LogStatus.PASS, "The name "+fname+"  is contains char only");
+				}
+				
+				else
+				{
+					logger.log(LogStatus.FAIL, "The name "+fname+" is Invalid");
+				}
+				
+				 extent.endTest(logger);
 			String lname = driver.findElement(By.xpath("//*[@id=\"lastname\"]")).getAttribute("value");
 			System.out.println(lname);
-			Log.info("Lname of the patient" +lname);
+			logger = extent.startTest("Last Name Validation In PATIENT INFO PAGE");
+			 Pattern l_pattern = Pattern.compile(regx,Pattern.CASE_INSENSITIVE);
+			    Matcher l_matcher = l_pattern.matcher(fname);
+			    Boolean l_bol =l_matcher.find();
+			    System.out.println(l_matcher.find()); 
+			Log.info(" Last Name Validation In PATIENT INFO PAGE");
+
+				
+				if ( l_bol == true )
+				{
+					logger.log(LogStatus.PASS, "The name "+lname+"  is contains char only");
+				}
+				
+				else
+				{
+					logger.log(LogStatus.FAIL, "The name "+lname+" is Invalid");
+				}
+				
+				 extent.endTest(logger);
+			
+			Log.info("Last Name of the patient " +lname);
+			
 			String gender = driver.findElement(By.xpath("//*[@id=\"select_gender_option1\"]")).getAttribute("value");
-			System.out.println(gender);
+			System.out.println("Gender: "+gender);
+			Log.info("Gender: "+gender);
 			String dob = driver.findElement(By.xpath("//*[@id=\"date\"]")).getAttribute("value");
-			System.out.println(dob);
+			System.out.println("DOB: "+dob);
+			Log.info("DOB: "+dob);
+			
+			Log.info("Patient Details \n"+fname+"\n"+lname+"\n"+gender+"\n"+dob);
 			driver.findElement(By.id("address1")).click();
 			driver.findElement(By.id("address1")).clear();
 			driver.findElement(By.id("address1")).sendKeys("31, River cross road");
 			driver.findElement(By.id("address2")).click();
 			driver.findElement(By.id("address2")).clear();	
 			driver.findElement(By.id("address2")).sendKeys("Texas");
+			
+			String zipcode_value =driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).getAttribute("value");
+			if(zipcode_value == " ")
+			{
+				driver.findElement(By.id("zipcode")).click();
+				driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("1111",Keys.TAB);
+				
+				Log.info("Entered zipcode "+zipcode_value);
+				
+				Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"zipcode-error\"]")).isDisplayed();
+				Thread.sleep(2000);
+				
+				 if(zip_code)
+				 {
+					 Log.info("It is invalid zipcode");
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("10004");
+					 Log.info("Entered zipcode "+zipcode_value);
+					 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+					 Log.info("City State "+city_dropdown);
+					 Thread.sleep(2000);
+					 
+				 }
+				 
+				 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+				 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"select_statecity\"]"));
+					Actions action =    new Actions(driver);
+					Thread.sleep(2000);
+					action.click(doc).perform();
+					Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
+					city_select.selectByValue("other");
+					Thread.sleep(2000);
+					String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+					String state = driver.findElement(By.xpath("//*[@id=\"statename\"]")).getAttribute("value");
+					if(City != "" && state!= "" )
+					{
+						Log.info("The text doent contain any value");
+						driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+						driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+					}
+					else
+					{
+						Log.info("The text  contain value");
+					}
+					Thread.sleep(2000);
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).click();
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("11111");
+					 Log.info("Entered zipcode "+zipcode_value);
+					 driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+					 driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+			}
+			else
+			{
 			driver.findElement(By.id("zipcode")).click();
 			driver.findElement(By.id("zipcode")).clear();
-			driver.findElement(By.id("zipcode")).sendKeys("10036");
+			driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("1111",Keys.TAB);
+			
+			Log.info("Entered zipcode "+zipcode_value);
+			
+			Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"zipcode-error\"]")).isDisplayed();
+			Thread.sleep(2000);
+			
+			 if(zip_code)
+			 {
+				 Log.info("It is invalid zipcode");
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("10004");
+				 Log.info("Entered zipcode "+zipcode_value);
+				 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+				 Log.info("City State "+city_dropdown);
+				 Thread.sleep(2000);
+				 
+			 }
+			 
+			 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+			 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"select_statecity\"]"));
+				Actions action =    new Actions(driver);
+				Thread.sleep(2000);
+				action.click(doc).perform();
+				Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
+				city_select.selectByValue("other");
+				Thread.sleep(2000);
+				String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+				String state = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+				if(City != "" && state!= "" )
+				{
+					Log.info("The text doent contain any value");
+					driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+					driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+				}
+				else
+				{
+					Log.info("The text  contain value");
+				}
+				Thread.sleep(2000);
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).click();
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("11111");
+				 Log.info("Entered zipcode "+zipcode_value);
+				 driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+				 driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+		}
+			String add1 = driver.findElement(By.id("address1")).getAttribute("value");
+			String add2 = driver.findElement(By.id("address2")).getAttribute("value");
+			String zip =driver.findElement(By.id("zipcode")).getAttribute("value");
+			Log.info("Address of the patient \n"+add1+ "," +add2+","+zip+".");
 			String zipcode_ele =driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).getAttribute("value");
 			String regex = "^[0-9]{5}(?:-[0-9]{4})?$";
-			
-			 
+
 			Pattern pattern = Pattern.compile(regex);
-		
 		
 			    Matcher matcher = pattern.matcher(zipcode_ele);
 			    Boolean zip_match=matcher.matches();
 			    System.out.println(matcher.matches());
 			
-			 System.out.println("Zipcode"+zipcode_ele);
-			logger = extent.startTest("Zipcode Validation In PATIENT INFO PAGE");
-			
-			//Boolean zip_match=zipcodevalidator.zipcode_validate(zipcode_ele);
-				   
-				
+			System.out.println("Zipcode"+zipcode_ele);
+			logger = extent.startTest("Zipcode Validation");
+
 				if (zip_match == true )
 				{
-					logger.log(LogStatus.PASS, "The specified US ZIP Code is valid");
+					logger.log(LogStatus.PASS, "The US ZIP-"+zipcode_ele+" Code is valid");
 				}
 				
 				else
 				{
-					logger.log(LogStatus.FAIL, "The specified US ZIP Code is valid");
+					logger.log(LogStatus.FAIL, "The US ZIP-"+zipcode_ele+" Code is invalid");
 				}
 				
 				 extent.endTest(logger);
 			 
 
 			logger = extent.startTest("Patient Info page"); 
-			 if(driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[9]/div[1]/input")).isDisplayed() == true)
+			 if(driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[10]/div[1]/input")).isDisplayed() == true)
 			 {
-					driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[9]/div[1]/input")).click();	
+					driver.findElement(By.xpath("//*[@id=\"form_mpersonal_info\"]/div/div[10]/div[1]/input")).click();	
 					logger.log(LogStatus.PASS, "Test Case is Passed");
 			 }
 			 else
@@ -229,40 +378,147 @@ public void patient_info_type1() {
 }
 
 @Test (priority = 4)
-public void patient_guarantor_type1()
+public void patient_guarantor() throws InterruptedException
 {
 	
 			// GUARANTOR INFORMATION PAGE
 			System.out.println("The PATIENT GUARANTOR  page");
-			System.out.println(driver.findElement(By.id("select_patientsame_access_wrap")).getText());
-			System.out.println(driver.findElement(By.id("firstname")).getText());
-			System.out.println(driver.findElement(By.id("lastname")).getText());
-			System.out.println(driver.findElement(By.id("select2-select_emc_relationship-container")).getText());
+			//Log.info("The PATIENT GUARANTOR  page/");
+			System.out.println("Radio button values "+driver.findElement(By.id("select_patientsame_access_wrap")).getText());
+			System.out.println("Guarantor Fname "+driver.findElement(By.id("firstname")).getAttribute("value"));
+			System.out.println("Guarantor Lname "+driver.findElement(By.id("lastname")).getAttribute("value"));
+			System.out.println("Guarantor Relationship "+driver.findElement(By.id("select2-select_emc_relationship-container")).getAttribute("value"));
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("scroll(0, 500);");
 			driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-			driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[8]/div/div/label")).click();		
+			Log.info("The PATIENT GUARANTOR  page");
+			Log.info("Radio button values"+driver.findElement(By.id("select_patientsame_access_wrap")).getText());
+			Log.info("Guarantor Fname"+driver.findElement(By.id("firstname")).getAttribute("value"));
+			Log.info("Guarantor Lname "+driver.findElement(By.id("lastname")).getAttribute("value"));
+			Log.info("Guarantor Relationship "+driver.findElement(By.id("select2-select_emc_relationship-container")).getAttribute("value"));
+			driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[8]/div/div/label")).click();
+			driver.findElement(By.xpath("//*[@id=\"select_my_insurance_wrap\"]/div[2]/label")).click();
+			
 			driver.findElement(By.id("address1")).click();
 			driver.findElement(By.id("address1")).clear();
 			driver.findElement(By.id("address1")).sendKeys("31,green road");
 			driver.findElement(By.id("address2")).click();
 			driver.findElement(By.id("address2")).clear();
 			driver.findElement(By.id("address2")).sendKeys("Dallas");
-			driver.findElement(By.id("zipcode")).click();
-			driver.findElement(By.id("zipcode")).clear();	
-			driver.findElement(By.id("zipcode")).sendKeys("10036");
-			String zipcode_ele =driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).getAttribute("value");
-			 System.out.println("Zipcode"+zipcode_ele);
 			
-			System.out.println("Zipcode"+zipcode_ele);
+			String zipcode_value =driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).getAttribute("value");
+			//String zipcode ;
+			if(zipcode_value == " ")
+			{
+				driver.findElement(By.id("zipcode")).click();
+				driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("1111",Keys.TAB);
+				
+				Log.info("Entered zipcode "+zipcode_value);
+				
+				Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"zipcode-error\"]")).isDisplayed();
+				Thread.sleep(2000);
+				
+				 if(zip_code)
+				 {
+					 Log.info("It is invalid zipcode");
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("10004");
+					 Log.info("Entered zipcode "+zipcode_value);
+					 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+					 Log.info("City State "+city_dropdown);
+					 
+				 }
+				 
+				 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+				 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"select_statecity\"]"));
+					Actions action =    new Actions(driver);
+					Thread.sleep(2000);
+					action.click(doc).perform();
+					Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
+					city_select.selectByValue("other");
+					Thread.sleep(2000);
+					String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+					String state = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+					if(City != "" && state!= "" )
+					{
+						Log.info("The text doent contain any value");
+						driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+						driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+					}
+					else
+					{
+						Log.info("The text  contain value");
+					}
+					Thread.sleep(2000);
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).click();
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+					 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("11111");
+					 Log.info("Entered zipcode "+zipcode_value);
+					 driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+					 driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+			}
+			else
+			{
+			driver.findElement(By.id("zipcode")).click();
+			driver.findElement(By.id("zipcode")).clear();
+			driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("1111",Keys.TAB);
+			
+			Log.info("Entered zipcode "+zipcode_value);
+			
+			Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"zipcode-error\"]")).isDisplayed();
+			Thread.sleep(2000);
+			
+			 if(zip_code)
+			 {
+				 Log.info("It is invalid zipcode");
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("10004");
+				 Log.info("Entered zipcode "+zipcode_value);
+				 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+				 Log.info("City State "+city_dropdown);
+				 
+			 }
+			 
+			 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+			 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"select_statecity\"]"));
+				Actions action =    new Actions(driver);
+				Thread.sleep(2000);
+				action.click(doc).perform();
+				Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
+				city_select.selectByValue("other");
+				Thread.sleep(2000);
+				String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+				String state = driver.findElement(By.xpath("//*[@id=\"statename\"]")).getAttribute("value");
+				if(City != "" && state!= "" )
+				{
+					Log.info("The text doent contain any value");
+					driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+					driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+				}
+				else
+				{
+					Log.info("The text  contain value");
+				}
+				Thread.sleep(2000);
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).click();
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).clear();
+				 driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).sendKeys("11111");
+				 Log.info("Entered zipcode "+zipcode_value);
+				 driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+				 driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+		}
+			String add1 = driver.findElement(By.id("address1")).getAttribute("value");
+			String add2 = driver.findElement(By.id("address2")).getAttribute("value");
+			String zip =driver.findElement(By.id("zipcode")).getAttribute("value");
+			Log.info("Address of the patient "+add1+ "," +add2+","+zip+".");
+			
+			String zipcode_ele =driver.findElement(By.xpath("//*[@id=\"zipcode\"]")).getAttribute("value");
+			 
 			logger = extent.startTest("Zipcode Validation In GUARANTOR INFO PAGE");
 			
 			String regex = "^[0-9]{5}(?:-[0-9]{4})?$";
-			
-			 
 			Pattern pattern = Pattern.compile(regex);
-		
-		
+
 			    Matcher matcher = pattern.matcher(zipcode_ele);
 			    Boolean zip_match=matcher.matches();
 			    System.out.println(matcher.matches());
@@ -271,12 +527,12 @@ public void patient_guarantor_type1()
 				
 				if (zip_match == true )
 				{
-					logger.log(LogStatus.PASS, "The specified US ZIP Code is valid");
+					logger.log(LogStatus.PASS, "The US ZIP-"+zipcode_ele+" Code is valid");
 				}
 				
 				else
 				{
-					logger.log(LogStatus.FAIL, "The specified US ZIP Code is valid");
+					logger.log(LogStatus.FAIL, "The US ZIP-"+zipcode_ele+" Code is invalid");
 				}
 				
 				 extent.endTest(logger);
@@ -298,7 +554,7 @@ public void patient_guarantor_type1()
 }
 
 @Test (priority = 5)
-public void insurance_info_type1()
+public void insurance_info() throws InterruptedException
 {
 	//INSURANCE INFORMATION PAGE
 	System.out.println("INSURANCE PAGE");
@@ -399,13 +655,14 @@ public void insurance_info_type1()
 		}
 		
 		extent.endTest(logger);
-	driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[1]/label")).click();
-	Log.info("Secondary Gender entered : \n"+driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[1]/label")).getText());
+	driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[2]/label")).click();
+	Log.info("Secondary Gender entered : \n"+driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[2]/label")).getText());
 	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).clear();
 	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).sendKeys("252525252");
-	Log.info("Secondary SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getAttribute("value"));
-	String p_ssn =driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getAttribute("value");
+	//Log.info("Secondary SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getAttribute("value"));
+	String p_ssn =driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getText();
+	Log.info("Secondary SSN entered : \n"+p_ssn);
 	 System.out.println("SSN"+p_ssn);
 	
 	
@@ -446,9 +703,112 @@ public void insurance_info_type1()
 	driver.findElement(By.xpath("//*[@id=\"primary_address2\"]")).clear();
 	driver.findElement(By.xpath("//*[@id=\"primary_address2\"]")).sendKeys("DS");
 	String p_addr2=driver.findElement(By.xpath("//*[@id=\"primary_address2\"]")).getAttribute("value");
+	
+	//driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).click();
+	//driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).clear();
+	//driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).sendKeys("10036");
+	 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("scroll(0,1000);");
+	String zipcode_value =driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).getAttribute("value");
+	//String zipcode ;
+	if(zipcode_value == " ")
+	{
+		driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).sendKeys("1111",Keys.TAB);
+		
+		Log.info("Entered zipcode "+zipcode_value);
+		
+		Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"primary_zipcode-error\"]")).isDisplayed();
+		Thread.sleep(2000);
+		
+		 if(zip_code)
+		 {
+			 Log.info("It is invalid zipcode");
+			 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).clear();
+			 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).sendKeys("10004");
+			 Log.info("Entered zipcode "+zipcode_value);
+			 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+			 Log.info("City State "+city_dropdown);
+			 
+		 }
+		 
+		 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+		 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"select_statecity\"]"));
+			Actions action =    new Actions(driver);
+			Thread.sleep(2000);
+			action.click(doc).perform();
+			Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
+			city_select.selectByValue("other");
+			Thread.sleep(2000);
+			String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+			String state = driver.findElement(By.xpath("//*[@id=\"statename\"]")).getAttribute("value");
+			if(City != "" && state!= "" )
+			{
+				Log.info("The text doent contain any value");
+				driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+				driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+			}
+			else
+			{
+				Log.info("The text  contain value");
+			}
+			Thread.sleep(2000);
+			 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).click();
+			 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).clear();
+			 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).sendKeys("11111");
+			 Log.info("Entered zipcode "+zipcode_value);
+			 driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+			 driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+	}
+	else
+	{
 	driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).clear();
-	driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).sendKeys("10036");
+	driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).sendKeys("1111",Keys.TAB);
+	
+	Log.info("Entered zipcode "+zipcode_value);
+	
+	Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"primary_zipcode-error\"]")).isDisplayed();
+	
+	 if(zip_code)
+	 {
+		 Log.info("It is invalid zipcode");
+		 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).clear();
+		 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).sendKeys("10004");
+		 Log.info("Entered zipcode "+zipcode_value);
+		 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+		 Log.info("City State "+city_dropdown);
+		 
+	 }
+	 
+	 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+	 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"select_statecity\"]"));
+		Actions action =    new Actions(driver);
+		Thread.sleep(2000);
+		action.click(doc).perform();
+		Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"select_statecity\"]")));
+		city_select.selectByValue("other");
+		Thread.sleep(2000);
+		String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+		String state = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+		if(City != "" && state!= "" )
+		{
+			Log.info("The text doent contain any value");
+			driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+			driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+		}
+		else
+		{
+			Log.info("The text  contain value");
+		}
+		Thread.sleep(2000);
+		 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).click();
+		 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).clear();
+		 driver.findElement(By.xpath("//*[@id=\"primary_zipcode\"]")).sendKeys("11111");
+		 Log.info("Entered zipcode "+zipcode_value);
+		 driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+		 driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+}
 	
 /*//PDCS40- city state pop-up
 	
@@ -495,7 +855,7 @@ public void insurance_info_type1()
 		
 		 extent.endTest(logger);
 		 
-		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		// JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("scroll(0,1000);");
 	
 	driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
@@ -616,8 +976,9 @@ public void insurance_info_type1()
 	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).sendKeys("252525252");
-	Log.info("Secondary SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).getAttribute("value"));
-	String s_ssn =driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).getAttribute("value");
+	
+	String s_ssn =driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).getText();
+	Log.info("Secondary SSN entered : \n"+s_ssn);
 	 System.out.println("SSN"+s_ssn);
 	
 	
@@ -655,9 +1016,110 @@ public void insurance_info_type1()
 	driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).clear();
 	driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).sendKeys("DS");
 	String s_addr2=driver.findElement(By.xpath("//*[@id=\"secondary_address2\"]")).getAttribute("value");
+	//driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).click();
+	//driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).clear();
+	//driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("10036");
+	String s_zipcode_value =driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).getAttribute("value");
+	//String zipcode ;
+	if(zipcode_value == " ")
+	{
+		driver.findElement(By.id("zipcode")).click();
+		driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("1111",Keys.TAB);
+		
+		Log.info("Entered zipcode "+zipcode_value);
+		
+		Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"secondary_zipcode-error\"]")).isDisplayed();
+		
+		 if(zip_code)
+		 {
+			 Log.info("It is invalid zipcode");
+			 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).clear();
+			 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("10004");
+			 Log.info("Entered zipcode "+zipcode_value);
+			 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+			 Log.info("City State "+city_dropdown);
+			 
+		 }
+		 
+		 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+		 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"secondary_select_statecity\"]"));
+			Actions action =    new Actions(driver);
+			Thread.sleep(2000);
+			action.click(doc).perform();
+			Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"secondary_select_statecity\"]")));
+			city_select.selectByValue("other");
+			Thread.sleep(2000);
+			String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+			String state = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+			if(City != "" && state!= "" )
+			{
+				Log.info("The text doent contain any value");
+				driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+				driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+			}
+			else
+			{
+				Log.info("The text  contain value");
+			}
+			Thread.sleep(2000);
+			 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).click();
+			 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).clear();
+			 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("11111");
+			 Log.info("Entered zipcode "+zipcode_value);
+			 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("NewYork");
+			 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("NY");
+	}
+	else
+	{
 	driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).clear();
-	driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("10036");
+	driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("1111",Keys.TAB);
+	
+	Log.info("Entered zipcode "+zipcode_value);
+	
+	Boolean zip_code= driver.findElement(By.xpath("//*[@id=\"secondary_zipcode-error\"]")).isDisplayed();
+	
+	 if(zip_code)
+	 {
+		 Log.info("It is invalid zipcode");
+		 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).clear();
+		 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("10004");
+		 Log.info("Entered zipcode "+zipcode_value);
+		 String city_dropdown = driver.findElement(By.xpath("//*[@id=\"select2-select_statecity-container\"]")).getText();
+		 Log.info("City State "+city_dropdown);
+		 
+	 }
+	 
+	 	driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS); 
+	 	WebElement doc = driver.findElement(By.xpath("//*[@id=\"secondary_select_statecity\"]"));
+		Actions action =    new Actions(driver);
+		Thread.sleep(2000);
+		action.click(doc).perform();
+		Select city_select = new Select( driver.findElement(By.xpath("//*[@id=\"secondary_select_statecity\"]")));
+		city_select.selectByValue("other");
+		
+		Thread.sleep(2000);
+		jse.executeScript("scroll(0,1000);");
+		String City = driver.findElement(By.xpath("//*[@id=\"cityname\"]")).getAttribute("value");
+		String state = driver.findElement(By.xpath("//*[@id=\"statename\"]")).getAttribute("value");
+		if(City != "" && state!= "" )
+		{
+			Log.info("The text doent contain any value");
+			driver.findElement(By.xpath("//*[@id=\"cityname\"]")).sendKeys("NewYork");
+			driver.findElement(By.xpath("//*[@id=\"statename\"]")).sendKeys("NY");
+		}
+		else
+		{
+			Log.info("The text  contain value");
+		}
+		Thread.sleep(2000);
+		 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).click();
+		 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).clear();
+		 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("11111");
+		 Log.info("Entered zipcode "+zipcode_value);
+		 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("NewYork");
+		 driver.findElement(By.xpath("//*[@id=\"secondary_zipcode\"]")).sendKeys("NY");
+}
 	
 /*	//PDCS40- city state pop-up
 	
@@ -705,7 +1167,16 @@ public void insurance_info_type1()
 	
 	driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
 
+	driver.findElement(By.xpath("//*[@id=\"secondary_companyname\"]")).click();
+	driver.findElement(By.id("secondary_companyname_wrap")).click();
 	
+	driver.findElement(By.xpath("//*[@id=\"secondary_companyname\"]")).sendKeys("Aethna");
+	
+	Log.info("Primary insurance selected : "+driver.findElement(By.xpath("//*[@id=\"secondary_companyname\"]")).getAttribute("value"));
+	
+	driver.findElement(By.xpath("//*[@id=\"secondary_policynumber\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_policynumber\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"secondary_policynumber\"]")).sendKeys("DPY9261");
 	logger = extent.startTest("Insurance page"); 
 	 if(driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]/input")).isDisplayed() == true)
 	 {
@@ -725,11 +1196,12 @@ public void insurance_info_type1()
 	Log.info("PATIENT ADDITIONAL INFORMATION");
 	driver.findElement(By.xpath("//*[@id=\"select_employed_wrap\"]/div[3]/label")).click();
 	
-	driver.findElement(By.xpath("//*[@id=\"generalinfo\"]/div[3]/div[2]")).click();
-	driver.findElement(By.xpath("//*[@id=\"ssn\"]")).clear();
-	driver.findElement(By.xpath("//*[@id=\"ssn\"]")).sendKeys("444444444");
-	Log.info("SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"ssn\"]")).getAttribute("value"));
-	String ssn_ele =driver.findElement(By.xpath("//*[@id=\"ssn\"]")).getAttribute("value");
+	driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).sendKeys("444444444");
+	//Log.info("SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).getAttribute("value"));
+	String ssn_ele =driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).getText();
+	Log.info("SSN entered : \n"+ssn_ele);
 	 System.out.println("SSN"+ssn_ele);
 	
 	
@@ -800,9 +1272,9 @@ public void insurance_info_type1()
 	driver.manage().timeouts().implicitlyWait(8000,TimeUnit.SECONDS);
 
 	logger = extent.startTest("Patient Additional page"); 
-	 if(driver.findElement(By.xpath("//*[@id=\"submit_generalinfo\"]")).isDisplayed() == true)
+	 if(driver.findElement(By.xpath("//*[@id=\"generalinfo\"]/div[3]/div[6]/div[1]/input")).isDisplayed() == true)
 	 {
-			driver.findElement(By.xpath("//*[@id=\"submit_generalinfo\"]")).click();
+			driver.findElement(By.xpath("//*[@id=\"generalinfo\"]/div[3]/div[6]/div[1]/input")).click();
 			logger.log(LogStatus.PASS, "Test Case is Passed");
 	 }
 	 else
@@ -879,9 +1351,25 @@ public void insurance_info_type1()
 @Test (priority = 6)
 public void patient_lifestyle()
 {
-	System.out.println("PATIENT LIFESTYLE");
+	System.out.println("PATIENT LIFE");
+	Log.info("PATIENT LIFESTYLE");
+	Select cigarettes_select = new Select(driver.findElement(By.xpath("//*[@id=\"select_smoking\"]")));
+	cigarettes_select.selectByIndex(3);
+	
+	List<WebElement> cigarettes_list = driver.findElements(By.xpath("//*[@id=\"select_smoking\"]"));
+	for(WebElement c_list : cigarettes_list) {
+		 Log.info("Cigarettes Drop Down value:\n"+c_list.getText());
+		}
+	List<WebElement> Alcoholic_list = driver.findElements(By.xpath("//*[@id=\"select_drink\"]"));
+	for(WebElement a_list : Alcoholic_list) {
+		 Log.info("Alcoholic Drop Down value:\n"+a_list.getText());
+		}
+	List<WebElement> Recreational_Drugs_list = driver.findElements(By.xpath("//*[@id=\"select_smoking\"]"));
+	for(WebElement r_list : Recreational_Drugs_list) {
+		 Log.info("Recreational Drugs Drop Down value:\n"+r_list.getText());
+		}
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-	logger = extent.startTest("Patient LifeStyle page"); 
+	logger = extent.startTest("Patient LifeStyle page"); //submit
 	 if(driver.findElement(By.xpath("//*[@id=\"lifestyle\"]/div[2]/div[4]/div/input")).isDisplayed() == true)
 	 {
 			driver.findElement(By.xpath("//*[@id=\"lifestyle\"]/div[2]/div[4]/div/input")).click();
@@ -896,75 +1384,90 @@ public void patient_lifestyle()
 	
 }
 @Test (priority = 7)
-public void patient_past_medical_type1() throws InterruptedException
+public void patient_past_medical() throws InterruptedException
 {
 	System.out.println("PATIENT PAST MEDICAL HX");
-/*	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-	Boolean b_pastmed = driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_add\"]")).isEnabled();
-	if (b_pastmed == true)
-	{
-	//Yes Button
+	Log.info("PATIENT PAST MEDICAL HX");
+	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
+	
 	driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_add\"]")).click();
-	//select-pastmedicalcondition1
+	
 	List<WebElement> medical_list = driver.findElements(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li"));
 	int count1=driver.findElements(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li")).size();
-
+	 Log.info("Past Medicalhistory List \n");
 	for(WebElement e : medical_list) {
-		  System.out.println(e.getText());
+		 Log.info(e.getText());
 		}
-	for (int i=1;i<=count1-45;i++)
+	Log.info("Past Medicalhistory Selected \n");
+	//pastmedicalhistory_search
+	for (int i=1;i<=5;i++)
 	{
-		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]")).click();
-		//pastmedicalnote_5012
-		//driver.findElement(By.id(""))
+		//driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div["+i+"]/li")).click();
+		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).click();
 		
+		Log.info(driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).getText());
 	}
 	
-	driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_search\"]")).sendKeys("a");
-	driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li[1]")).click();
-	driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li[2]")).click();
 	driver.findElement(By.xpath("//*[@id=\"add_medi_data1\"]")).click();
-	driver.findElement(By.xpath("//*[@id=\"add_medi_data1\"]")).click();
-	}
+	
+	JavascriptExecutor jse = (JavascriptExecutor)driver;
+	jse.executeScript("scroll(0,1000);");
 
-	driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_search\"]")).sendKeys("a");
-	driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li[1]")).click();
-	driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li[2]")).click();
-	driver.findElement(By.xpath("//*[@id=\"add_medi_data1\"]")).click();
 	
-	}
-	else
-	{
-	driver.findElement(By.xpath("//*[@id=\"medicalinfo_edit\"]")).click();
-	driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_search\"]")).sendKeys("b");
-	driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li[7]")).click();
-	driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li[6]")).click();
+/*	
 	
-	}
+		driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_add\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_search\"]")).sendKeys("a");
+		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div[1]/li")).click();
+		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div[2]/li")).click();
+		driver.findElement(By.xpath("//*[@id=\"add_medi_data1\"]")).click();*/
 	
-	Boolean b_surg = driver.findElement(By.xpath("//*[@id=\"surgicalhistory_add\"]")).isDisplayed();
-	if (b_surg == true)
-	{
-		driver.findElement(By.xpath("//*[@id=\"surgicalhistory_add\"]")).click();
-	}
-	else
-	{
-		driver.findElement(By.xpath("//*[@id=\"surgicalhistory_edit\"]")).click();
-	}
-	//*[@id="surgicalhistory_add"]
-	//*[@id="surgicalhistory_add"]
-	driver.findElement(By.xpath("//*[@id='surgicalhistory_add']")).click();
-	//*[@id="surgicalhistory_search"]
-	driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/li[4]")).click();
-	driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/li[7]")).click();
-	driver.findElement(By.xpath("//*[@id=\"surgicalhistory_dataadd\"]")).click();
-	driver.findElement(By.xpath("//*[@id=\"allergies_add\"]")).click();
-	driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[6]")).click();
-	driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[11]")).click();
-	driver.findElement(By.xpath("//*[@id=\"allergies_dataadd\"]")).click();
-	driver.findElement(By.xpath("//*[@id=\"familyhistory_none\"]")).click();
-	//driver.findElement(By.xpath("//*[@id=\"vaccinations_none\"]")).click();
-*/	logger = extent.startTest("Patient Past History page"); 
+	/*List<WebElement> surgry_list = driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/div"));
+	int count2=driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/div")).size();
+	 Log.info("Past Medicalhistory List \n");
+	for(WebElement e : medical_list) {
+		 Log.info(e.getText());*/
+		//}
+	//*[@id="select-surgicalhistory"]/li[1]/label
+	driver.findElement(By.xpath("//*[@id=\"surgicalhistory_add\"]")).click();
+	List<WebElement> surgical_list = driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/li"));
+		
+		int count2=driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/li")).size();
+		 Log.info("Past SurgicalHistory  List \n");
+		for(WebElement e : surgical_list) {
+			 Log.info(e.getText());
+			}
+		
+		Log.info("Past SurgicalHistory Selected \n");
+		
+		for (int i=1;i<=5;i++)
+		{
+			//*[@id="select-surgicalhistory"]/li[1]/label
+			driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/li["+i+"]/label")).click();
+			
+			Log.info(driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).getText());
+		}
+		
+		driver.findElement(By.xpath("//*[@id=\"surgicalhistory_dataadd\"]")).click();
+		
+	
+		/*driver.findElement(By.xpath("//*[@id=\"allergies_add\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[5]/label")).click();
+		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[11]/label")).click();
+		driver.findElement(By.xpath("//*[@id=\"allergies_dataadd\"]")).click();
+		*/
+	
+	/*	driver.findElement(By.xpath("//*[@id=\"familyhistory_add\"]")).click();
+		//*[@id="fh_1151"] //*[@id="select-familyhistory"]/li[3]/label
+		driver.findElement(By.xpath("//*[@id=\"select-familyhistory\"]/li[3]/label")).click();
+		driver.findElement(By.xpath("//*[@id=\"fhh_1151\"]/li[2]/span/span[2]/label")).click();
+		
+		driver.findElement(By.xpath("//*[@id=\"familyhistory_dataadd\"]")).click();*/
+		driver.findElement(By.xpath("//*[@id=\"vaccinations_none\"]")).click();
+		
+		
+		
+	logger = extent.startTest("Patient Past History page"); 
 	 if(driver.findElement(By.xpath("//*[@id=\"page_submitbtn\"]/div/input")).isDisplayed() == true)
 	 {
 			driver.findElement(By.xpath("//*[@id=\"page_submitbtn\"]/div/input")).click();
@@ -985,23 +1488,28 @@ public void patient_rx_info()
 
 {
 	System.out.println("PATIENT RX INFO");
+	Log.info("PATIENT RX INFO");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
 	driver.findElement(By.xpath("//*[@id=\"select_medication1_wrap\"]")).click();
 	
 	List<WebElement> medication_list = driver.findElements(By.xpath("//div[@class='option']"));
-/*	for(WebElement e : medication_list) {
-		  System.out.println(e.getText());
-		}*/
+	 Log.info("Medication list");
+	for(WebElement e : medication_list) {
+		 Log.info(e.getText());
+		}
+	//Random ran = new Random();
+	//int i =2;
+	//i=ran.nextInt();
+	driver.manage().timeouts().implicitlyWait(15000,TimeUnit.SECONDS);
 	Random ran = new Random();
 	int i =2;
-	//i=ran.nextInt();
-	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
 	driver.findElement(By.xpath("//*[@id=\"select_medication1_wrap\"]/div[1]/div[2]/div/div["+i+"]")).click();
-	//driver.findElement(By.xpath("//*[@id=\"select_medication1_wrap\"]/div[1]/div[2]/div/div["+ran.nextInt()+"]")).click();
+//driver.findElement(By.xpath("//*[@id=\"select_medication1_wrap\"]/div[1]/div[2]/div/div["+ran.nextInt()+"]")).click();
 	
 	
 	driver.findElement(By.xpath("//*[@id=\"add_medi_data\"]")).click();
-	logger = extent.startTest("Patient Past History page"); 
+
+	logger = extent.startTest("PATIENT RX INFO page"); 
 	 if(driver.findElement(By.xpath("//*[@id=\"pharmacy\"]/div[7]/div/input")).isDisplayed() == true)
 	 {
 			driver.findElement(By.xpath("//*[@id=\"pharmacy\"]/div[7]/div/input")).click();
@@ -1103,16 +1611,16 @@ public void gad_page()
 	jse.executeScript("scroll(0,2000);");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
 	logger = extent.startTest("GAD-7"); 
-	// if(driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[11]/div/input")).isDisplayed() == true)
-	// {
+	 if(driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[11]/div/input")).isDisplayed() == true)
+	 {
 			driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[11]/div/input")).click();
-			//logger.log(LogStatus.PASS, "Test Case is Passed");
-	// }
-	// else
-	// {
-	//	 logger.log(LogStatus.FAIL, "Test Case is Failed ");
-	// }
-	// extent.endTest(logger);
+			logger.log(LogStatus.PASS, "Test Case is Passed");
+	 }
+	 else
+	 {
+		 logger.log(LogStatus.FAIL, "Test Case is Failed ");
+	 }
+	 extent.endTest(logger);
 	
 	
 }
@@ -1140,13 +1648,19 @@ public void encounter_page()
 	
 	
 }
+
 //VITALS
 @Test (priority = 14)
 public void vital_page()
 
 {
+	//*[@id="feet_answer_2531-selectized"]
+	driver.findElement(By.xpath("//*[@id=\"feet_answer_2531-selectized\"]")).sendKeys("5",Keys.ENTER);
+	driver.findElement(By.xpath("//*[@id=\"inches_answer_2531-selectized\"]")).sendKeys("5",Keys.ENTER);
+	//*[@id="answer_2532"]
+	driver.findElement(By.xpath("//*[@id=\"answer_2532\"]")).sendKeys("234");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//*[@name='Vitals']")).click();
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[8]/div/input")).click();
 	//driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[3]/div/div[1]/div[1]/div[1]/div")).sendKeys("4",Keys.ENTER);
 }
 
@@ -1191,7 +1705,14 @@ public void athena_cust_question_page()
 	
 	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[4]/div/div[3]/label")).click();
 	
-	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[5]/div/div[1]/label")).click();
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[5]/div/div[2]/label")).click();
+	
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[6]/div/div[2]/label")).click();
+	
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[8]/div/div[1]/label")).click();
+	
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[9]/div/div[2]/label")).click();
+	
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
 	jse.executeScript("scroll(0,6000);");
 	
@@ -1233,7 +1754,9 @@ public void notice_of_privacy_page()
 	System.out.println("NOTICE_OF_PRIVACY_PRACTICES ");
 	Log.info("NOTICE_OF_PRIVACY_PRACTICES ");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//*[@id=\"agreeNOTICE_OF_PRIVACY_PRACTICES\"]")).click();
+	
+	driver.findElement(By.xpath("//*[@id=\"dynamicinfo_38\"]/div[2]/div/div/a[1]")).click();
+	//driver.findElement(By.xpath("//*[@id=\"agreeNOTICE_OF_PRIVACY_PRACTICES\"]")).click();
 					
 
 }
@@ -1246,20 +1769,23 @@ public void privacy_policy_page() throws InterruptedException
 	Log.info("PRIVACY POLICY");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
 	
-		 WebElement doc = driver.findElement(By.xpath("//*[@id=\"declinePrivacy_Policy\"]"));
+		//WebElement doc = driver.findElement(By.xpath("//*[@id=\"declinePrivacy_Policy\"]"));
+	WebElement doc = driver.findElement(By.xpath("//*[@id=\"dynamicinfo_39\"]/div[2]/div/div/a[2]"));
 			Actions action =    new Actions(driver);
 		   Thread.sleep(2000);
 		   action.click(doc).perform();	
 }
 
-@Test (priority = 21)
+/*@Test (priority = 21)
 public void notice_of_privacy_page2()
 
 {
 	System.out.println("NOTICE_OF_PRIVACY_PRACTICES ");
 	Log.info("NOTICE_OF_PRIVACY_PRACTICES ");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//*[@id=\"agreeNOTICE_OF_PRIVACY_PRACTICES\"]")).click();
+	//*[@id="dynamicinfo_110"]/div[2]/div/div/a
+	//driver.findElement(By.xpath("//*[@id=\"agreeNOTICE_OF_PRIVACY_PRACTICES\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"dynamicinfo_110\"]/div[2]/div/div/a")).click();
 					
 
 }
@@ -1272,12 +1798,13 @@ public void assignment_of_Benefits_page() throws InterruptedException
 	Log.info("Assignment_of_Benefits");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
 	
-		 WebElement doc = driver.findElement(By.xpath("//*[@id=\"agreeAssignment_of_Benefits\"]"));
+		// WebElement doc = driver.findElement(By.xpath("//*[@id=\"agreeAssignment_of_Benefits\"]"));
+	WebElement doc = driver.findElement(By.xpath("//*[@id=\"dynamicinfo_111\"]/div[2]/div/div/a"));
 			Actions action =    new Actions(driver);
 		   Thread.sleep(2000);
 		   action.click(doc).perform();	
 }
-
+*/
 
 
 /*@Test (priority = 17)
@@ -1289,7 +1816,7 @@ public void skip_page()
 	
 }*/
 
-@Test (priority = 20)
+@Test (priority = 21)
 public void signature_page()
 
 {
@@ -1321,8 +1848,8 @@ public void signature_page()
 @AfterClass
  public void afterClass() 
 {
-	extent.flush();
 	extent.close();
+	extent.flush();
 	 driver.quit();
 }
 

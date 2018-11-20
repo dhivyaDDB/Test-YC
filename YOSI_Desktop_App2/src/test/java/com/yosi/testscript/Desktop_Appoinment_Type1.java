@@ -67,7 +67,7 @@ public class Desktop_Appoinment_Type1 {
 			DOMConfigurator.configure("log4j.xml");
 			//System.setProperty("driver.chrome.driver","chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.get(prop1.getProperty("url"));
+			driver.get(prop1.getProperty("myself_invite"));
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
 	  }
@@ -396,7 +396,9 @@ public void patient_guarantor() throws InterruptedException
 			Log.info("Guarantor Fname"+driver.findElement(By.id("firstname")).getAttribute("value"));
 			Log.info("Guarantor Lname "+driver.findElement(By.id("lastname")).getAttribute("value"));
 			Log.info("Guarantor Relationship "+driver.findElement(By.id("select2-select_emc_relationship-container")).getAttribute("value"));
-			driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[8]/div/div/label")).click();		
+			driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[8]/div/div/label")).click();
+			driver.findElement(By.xpath("//*[@id=\"select_my_insurance_wrap\"]/div[2]/label")).click();
+			
 			driver.findElement(By.id("address1")).click();
 			driver.findElement(By.id("address1")).clear();
 			driver.findElement(By.id("address1")).sendKeys("31,green road");
@@ -653,13 +655,14 @@ public void insurance_info() throws InterruptedException
 		}
 		
 		extent.endTest(logger);
-	driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[3]/div/div[2]/label")).click();
-	Log.info("Secondary Gender entered : \n"+driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[3]/div/div[2]/label")).getText());
+	driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[2]/label")).click();
+	Log.info("Secondary Gender entered : \n"+driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[2]/label")).getText());
 	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).click();
-	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).clear();
 	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).sendKeys("252525252");
-	Log.info("Secondary SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getAttribute("value"));
-	String p_ssn =driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getAttribute("value");
+	//Log.info("Secondary SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getAttribute("value"));
+	String p_ssn =driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getText();
+	Log.info("Secondary SSN entered : \n"+p_ssn);
 	 System.out.println("SSN"+p_ssn);
 	
 	
@@ -973,8 +976,9 @@ public void insurance_info() throws InterruptedException
 	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).sendKeys("252525252");
-	Log.info("Secondary SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).getAttribute("value"));
-	String s_ssn =driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).getAttribute("value");
+	
+	String s_ssn =driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).getText();
+	Log.info("Secondary SSN entered : \n"+s_ssn);
 	 System.out.println("SSN"+s_ssn);
 	
 	
@@ -1163,7 +1167,16 @@ public void insurance_info() throws InterruptedException
 	
 	driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
 
+	driver.findElement(By.xpath("//*[@id=\"secondary_companyname\"]")).click();
+	driver.findElement(By.id("secondary_companyname_wrap")).click();
 	
+	driver.findElement(By.xpath("//*[@id=\"secondary_companyname\"]")).sendKeys("Aethna");
+	
+	Log.info("Primary insurance selected : "+driver.findElement(By.xpath("//*[@id=\"secondary_companyname\"]")).getAttribute("value"));
+	
+	driver.findElement(By.xpath("//*[@id=\"secondary_policynumber\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"secondary_policynumber\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"secondary_policynumber\"]")).sendKeys("DPY9261");
 	logger = extent.startTest("Insurance page"); 
 	 if(driver.findElement(By.xpath("//*[@id=\"form_minsurance_info\"]/div[3]/div/div/div/div[1]/input")).isDisplayed() == true)
 	 {
@@ -1183,11 +1196,12 @@ public void insurance_info() throws InterruptedException
 	Log.info("PATIENT ADDITIONAL INFORMATION");
 	driver.findElement(By.xpath("//*[@id=\"select_employed_wrap\"]/div[3]/label")).click();
 	
-	driver.findElement(By.xpath("//*[@id=\"generalinfo\"]/div[3]/div[2]")).click();
-	driver.findElement(By.xpath("//*[@id=\"ssn\"]")).clear();
-	driver.findElement(By.xpath("//*[@id=\"ssn\"]")).sendKeys("444444444");
-	Log.info("SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"ssn\"]")).getAttribute("value"));
-	String ssn_ele =driver.findElement(By.xpath("//*[@id=\"ssn\"]")).getAttribute("value");
+	driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).clear();
+	driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).sendKeys("444444444");
+	//Log.info("SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).getAttribute("value"));
+	String ssn_ele =driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).getText();
+	Log.info("SSN entered : \n"+ssn_ele);
 	 System.out.println("SSN"+ssn_ele);
 	
 	
@@ -1258,9 +1272,9 @@ public void insurance_info() throws InterruptedException
 	driver.manage().timeouts().implicitlyWait(8000,TimeUnit.SECONDS);
 
 	logger = extent.startTest("Patient Additional page"); 
-	 if(driver.findElement(By.xpath("//*[@id=\"submit_generalinfo\"]")).isDisplayed() == true)
+	 if(driver.findElement(By.xpath("//*[@id=\"generalinfo\"]/div[3]/div[6]/div[1]/input")).isDisplayed() == true)
 	 {
-			driver.findElement(By.xpath("//*[@id=\"submit_generalinfo\"]")).click();
+			driver.findElement(By.xpath("//*[@id=\"generalinfo\"]/div[3]/div[6]/div[1]/input")).click();
 			logger.log(LogStatus.PASS, "Test Case is Passed");
 	 }
 	 else
@@ -1340,7 +1354,7 @@ public void patient_lifestyle()
 	System.out.println("PATIENT LIFE");
 	Log.info("PATIENT LIFESTYLE");
 	Select cigarettes_select = new Select(driver.findElement(By.xpath("//*[@id=\"select_smoking\"]")));
-	cigarettes_select.selectByIndex(5);
+	cigarettes_select.selectByIndex(3);
 	
 	List<WebElement> cigarettes_list = driver.findElements(By.xpath("//*[@id=\"select_smoking\"]"));
 	for(WebElement c_list : cigarettes_list) {
@@ -1356,9 +1370,9 @@ public void patient_lifestyle()
 		}
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
 	logger = extent.startTest("Patient LifeStyle page"); //submit
-	 if(driver.findElement(By.xpath("//*[@id=\"lifestyleinfo\"]")).isDisplayed() == true)
+	 if(driver.findElement(By.xpath("//*[@id=\"lifestyle\"]/div[2]/div[4]/div/input")).isDisplayed() == true)
 	 {
-			driver.findElement(By.xpath("//*[@id=\"lifestyleinfo\"]")).click();
+			driver.findElement(By.xpath("//*[@id=\"lifestyle\"]/div[2]/div[4]/div/input")).click();
 			logger.log(LogStatus.PASS, "Test Case is Passed");
 	 }
 	 else
@@ -1378,8 +1392,8 @@ public void patient_past_medical() throws InterruptedException
 	
 	driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_add\"]")).click();
 	
-	List<WebElement> medical_list = driver.findElements(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div"));
-	int count1=driver.findElements(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div")).size();
+	List<WebElement> medical_list = driver.findElements(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li"));
+	int count1=driver.findElements(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li")).size();
 	 Log.info("Past Medicalhistory List \n");
 	for(WebElement e : medical_list) {
 		 Log.info(e.getText());
@@ -1387,11 +1401,13 @@ public void patient_past_medical() throws InterruptedException
 	Log.info("Past Medicalhistory Selected \n");
 	//pastmedicalhistory_search
 	for (int i=1;i<=5;i++)
-	{//*[@id="selected_pastmedical"]/div[3]/li/label
-		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div["+i+"]/li")).click();
-		//*[@id="selected_pastmedical"]/div/li/label
-		//Log.info(driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div["+i+"]/li")).getText());
+	{
+		//driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div["+i+"]/li")).click();
+		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).click();
+		
+		Log.info(driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).getText());
 	}
+	
 	driver.findElement(By.xpath("//*[@id=\"add_medi_data1\"]")).click();
 	
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -1412,24 +1428,45 @@ public void patient_past_medical() throws InterruptedException
 	for(WebElement e : medical_list) {
 		 Log.info(e.getText());*/
 		//}
-	
-		driver.findElement(By.xpath("//*[@id=\"surgicalhistory_add\"]")).click();
+	//*[@id="select-surgicalhistory"]/li[1]/label
+	driver.findElement(By.xpath("//*[@id=\"surgicalhistory_add\"]")).click();
+	List<WebElement> surgical_list = driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/li"));
 		
-		driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/div/div[1]/li/label")).click();
-		driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/div/div[2]/li/label")).click();
+		int count2=driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/li")).size();
+		 Log.info("Past SurgicalHistory  List \n");
+		for(WebElement e : surgical_list) {
+			 Log.info(e.getText());
+			}
+		
+		Log.info("Past SurgicalHistory Selected \n");
+		
+		for (int i=1;i<=5;i++)
+		{
+			//*[@id="select-surgicalhistory"]/li[1]/label
+			driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/li["+i+"]/label")).click();
+			
+			Log.info(driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).getText());
+		}
+		
 		driver.findElement(By.xpath("//*[@id=\"surgicalhistory_dataadd\"]")).click();
 		
 	
-		driver.findElement(By.xpath("//*[@id=\"allergies_add\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[6]")).click();
-		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[11]")).click();
+		/*driver.findElement(By.xpath("//*[@id=\"allergies_add\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[5]/label")).click();
+		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[11]/label")).click();
 		driver.findElement(By.xpath("//*[@id=\"allergies_dataadd\"]")).click();
-		
+		*/
 	
-		driver.findElement(By.xpath("//*[@id=\"familyhistory_add\"]")).click();
+	/*	driver.findElement(By.xpath("//*[@id=\"familyhistory_add\"]")).click();
+		//*[@id="fh_1151"] //*[@id="select-familyhistory"]/li[3]/label
 		driver.findElement(By.xpath("//*[@id=\"select-familyhistory\"]/li[3]/label")).click();
-		//*[@id="fhh_1151"]/li[1]/span[1]
-	
+		driver.findElement(By.xpath("//*[@id=\"fhh_1151\"]/li[2]/span/span[2]/label")).click();
+		
+		driver.findElement(By.xpath("//*[@id=\"familyhistory_dataadd\"]")).click();*/
+		driver.findElement(By.xpath("//*[@id=\"vaccinations_none\"]")).click();
+		
+		
+		
 	logger = extent.startTest("Patient Past History page"); 
 	 if(driver.findElement(By.xpath("//*[@id=\"page_submitbtn\"]/div/input")).isDisplayed() == true)
 	 {
@@ -1453,23 +1490,29 @@ public void patient_rx_info()
 	System.out.println("PATIENT RX INFO");
 	Log.info("PATIENT RX INFO");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-	//driver.findElement(By.xpath("//*[@id=\"select_medication1_wrap\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"select_medication1_wrap\"]")).click();
 	
-	//List<WebElement> medication_list = driver.findElements(By.xpath("//div[@class='option']"));
+	List<WebElement> medication_list = driver.findElements(By.xpath("//div[@class='option']"));
 	 Log.info("Medication list");
-	/*for(WebElement e : medication_list) {
+	for(WebElement e : medication_list) {
 		 Log.info(e.getText());
-		}*/
+		}
 	//Random ran = new Random();
 	//int i =2;
 	//i=ran.nextInt();
 	driver.manage().timeouts().implicitlyWait(15000,TimeUnit.SECONDS);
+	Random ran = new Random();
+	int i =2;
+	driver.findElement(By.xpath("//*[@id=\"select_medication1_wrap\"]/div[1]/div[2]/div/div["+i+"]")).click();
+//driver.findElement(By.xpath("//*[@id=\"select_medication1_wrap\"]/div[1]/div[2]/div/div["+ran.nextInt()+"]")).click();
 	
+	
+	driver.findElement(By.xpath("//*[@id=\"add_medi_data\"]")).click();
 
 	logger = extent.startTest("PATIENT RX INFO page"); 
-	 if(driver.findElement(By.xpath("//*[@id=\"medicationinfo\"]")).isDisplayed() == true)
+	 if(driver.findElement(By.xpath("//*[@id=\"pharmacy\"]/div[7]/div/input")).isDisplayed() == true)
 	 {
-			driver.findElement(By.xpath("//*[@id=\"medicationinfo\"]")).click();
+			driver.findElement(By.xpath("//*[@id=\"pharmacy\"]/div[7]/div/input")).click();
 			logger.log(LogStatus.PASS, "Test Case is Passed");
 	 }
 	 else
@@ -1611,8 +1654,13 @@ public void encounter_page()
 public void vital_page()
 
 {
+	//*[@id="feet_answer_2531-selectized"]
+	driver.findElement(By.xpath("//*[@id=\"feet_answer_2531-selectized\"]")).sendKeys("5",Keys.ENTER);
+	driver.findElement(By.xpath("//*[@id=\"inches_answer_2531-selectized\"]")).sendKeys("5",Keys.ENTER);
+	//*[@id="answer_2532"]
+	driver.findElement(By.xpath("//*[@id=\"answer_2532\"]")).sendKeys("234");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//*[@name='Vitals']")).click();
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[8]/div/input")).click();
 	//driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[3]/div/div[1]/div[1]/div[1]/div")).sendKeys("4",Keys.ENTER);
 }
 
@@ -1633,9 +1681,9 @@ public void ros_page()
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
 	jse.executeScript("scroll(0,6000);");
 	logger = extent.startTest("ROS Page"); 
-	 if(driver.findElement(By.xpath("//*[@name=\"Review_of_Systems\"]")).isDisplayed() == true)
+	 if(driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[51]/div/input")).isDisplayed() == true)
 	 {
-			driver.findElement(By.xpath("//*[@name=\"Review_of_Systems\"]")).click();
+			driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[51]/div/input")).click();
 			logger.log(LogStatus.PASS, "Test Case is Passed");
 	 }
 	 else
@@ -1655,9 +1703,9 @@ public void athena_cust_question_page()
 
 {
 	
-	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[4]/div/div[2]/label")).click();
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[4]/div/div[3]/label")).click();
 	
-	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[5]/div/div[1]/label")).click();
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[5]/div/div[2]/label")).click();
 	
 	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[6]/div/div[2]/label")).click();
 	
@@ -1668,7 +1716,7 @@ public void athena_cust_question_page()
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
 	jse.executeScript("scroll(0,6000);");
 	
-	driver.findElement(By.xpath("//*[@name=\"Athena_Custom_questions\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[14]/div/input")).click();
 	
 }
 
@@ -1676,7 +1724,7 @@ public void athena_cust_question_page()
 public void language_page()
 
 {
-	driver.findElement(By.xpath("//*[@name=\"Language_Details\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[3]/div/input")).click();
 }
 
 @Test (priority = 18)
@@ -1694,7 +1742,7 @@ public void obgyn_question_page()
 	driver.findElement(By.xpath("//*[@id=\"answer_2590\"]")).clear();
 	driver.findElement(By.xpath("//*[@id=\"answer_2590\"]")).sendKeys("67");
 	
-	driver.findElement(By.xpath("//*[@name=\"OBGYN_questions\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"form_mdynamicqadone\"]/div/div/div[26]/div/input")).click();
 	
 	
 }
@@ -1706,7 +1754,9 @@ public void notice_of_privacy_page()
 	System.out.println("NOTICE_OF_PRIVACY_PRACTICES ");
 	Log.info("NOTICE_OF_PRIVACY_PRACTICES ");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//*[@id=\"agreeNOTICE_OF_PRIVACY_PRACTICES\"]")).click();
+	
+	driver.findElement(By.xpath("//*[@id=\"dynamicinfo_38\"]/div[2]/div/div/a[1]")).click();
+	//driver.findElement(By.xpath("//*[@id=\"agreeNOTICE_OF_PRIVACY_PRACTICES\"]")).click();
 					
 
 }
@@ -1719,20 +1769,23 @@ public void privacy_policy_page() throws InterruptedException
 	Log.info("PRIVACY POLICY");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
 	
-		 WebElement doc = driver.findElement(By.xpath("//*[@id=\"declinePrivacy_Policy\"]"));
+		//WebElement doc = driver.findElement(By.xpath("//*[@id=\"declinePrivacy_Policy\"]"));
+	WebElement doc = driver.findElement(By.xpath("//*[@id=\"dynamicinfo_39\"]/div[2]/div/div/a[2]"));
 			Actions action =    new Actions(driver);
 		   Thread.sleep(2000);
 		   action.click(doc).perform();	
 }
 
-@Test (priority = 21)
+/*@Test (priority = 21)
 public void notice_of_privacy_page2()
 
 {
 	System.out.println("NOTICE_OF_PRIVACY_PRACTICES ");
 	Log.info("NOTICE_OF_PRIVACY_PRACTICES ");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//*[@id=\"agreeNOTICE_OF_PRIVACY_PRACTICES\"]")).click();
+	//*[@id="dynamicinfo_110"]/div[2]/div/div/a
+	//driver.findElement(By.xpath("//*[@id=\"agreeNOTICE_OF_PRIVACY_PRACTICES\"]")).click();
+	driver.findElement(By.xpath("//*[@id=\"dynamicinfo_110\"]/div[2]/div/div/a")).click();
 					
 
 }
@@ -1745,12 +1798,13 @@ public void assignment_of_Benefits_page() throws InterruptedException
 	Log.info("Assignment_of_Benefits");
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
 	
-		 WebElement doc = driver.findElement(By.xpath("//*[@id=\"agreeAssignment_of_Benefits\"]"));
+		// WebElement doc = driver.findElement(By.xpath("//*[@id=\"agreeAssignment_of_Benefits\"]"));
+	WebElement doc = driver.findElement(By.xpath("//*[@id=\"dynamicinfo_111\"]/div[2]/div/div/a"));
 			Actions action =    new Actions(driver);
 		   Thread.sleep(2000);
 		   action.click(doc).perform();	
 }
-
+*/
 
 
 /*@Test (priority = 17)
@@ -1762,7 +1816,7 @@ public void skip_page()
 	
 }*/
 
-@Test (priority = 23)
+@Test (priority = 21)
 public void signature_page()
 
 {
