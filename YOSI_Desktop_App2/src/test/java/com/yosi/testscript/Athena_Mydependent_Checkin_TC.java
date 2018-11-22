@@ -457,7 +457,10 @@ public void patient_guarantor() throws InterruptedException
 			
 			driver.findElement(By.xpath("//*[@id=\"date\"]")).click();
 			driver.findElement(By.xpath("//*[@id=\"date\"]")).sendKeys("02/02/1989");
-			driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[8]/div/div/label")).click();		
+			driver.findElement(By.xpath("//*[@id=\"select_my_insurance_wrap\"]/div[2]/label")).click();	
+			driver.findElement(By.xpath("//*[@id=\"form_parentguarantor_info\"]/div/div[8]/div/div/label")).click();	
+			
+			//*[@id="form_parentguarantor_info"]/div/div[8]/div/div/label
 			driver.findElement(By.id("address1")).click();
 			driver.findElement(By.id("address1")).clear();
 			driver.findElement(By.id("address1")).sendKeys("31,green road");

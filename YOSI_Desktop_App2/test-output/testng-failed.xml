@@ -8,13 +8,14 @@
           <include name="obgyn_question_page"/>
           <include name="patient_past_medical"/>
           <include name="patient_lifestyle"/>
-          <include name="notice_of_privacy_page2"/>
           <include name="athena_cust_question_page"/>
           <include name="notice_of_privacy_page"/>
           <include name="gad_page"/>
           <include name="encounter_page"/>
+          <include name="patient_info"/>
           <include name="vital_page"/>
           <include name="beforeClass"/>
+          <include name="patient_guarantor"/>
           <include name="insurance_info"/>
           <include name="medical_history_page"/>
           <include name="privacy_policy_page"/>
@@ -23,7 +24,6 @@
           <include name="phq_page"/>
           <include name="addition_page"/>
           <include name="afterClass"/>
-          <include name="assignment_of_Benefits_page"/>
           <include name="ros_page"/>
           <include name="signature_page"/>
         </methods>
