@@ -136,13 +136,13 @@ public void verify_page()
 	driver.findElement(By.xpath("//*[@id=\"verify_date\"]")).sendKeys(prop1.getProperty("myself_dob"));
 	driver.findElement(By.xpath("//*[@id=\"select_gender_wrap\"]")).click();
 	Select se = new Select(driver.findElement(By.xpath("//*[@class=\"yc-input customdd select2-hidden-accessible\"]")));
-	if (prop1.getProperty("myself_gender")=="Male")
+	if (prop1.getProperty("my_dependent_gender")=="Female")
 	{
-		se.selectByIndex(0);
+		se.selectByVisibleText("Female");
 	}
 	else
 	{
-		se.selectByIndex(1);
+		se.selectByVisibleText("Female");
 	}
 	driver.findElement(By.xpath("//*[@id=\"select_gender_wrap\"]")).click();
 	
@@ -660,7 +660,7 @@ public void insurance_info() throws InterruptedException
 	driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[2]/label")).click();
 	Log.info("Secondary Gender entered : \n"+driver.findElement(By.xpath("//*[@id=\"firstIns_dependent\"]/div[4]/div/div[2]/label")).getText());
 	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).click();
-	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).click();
+	//driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).sendKeys("252525252");
 	//Log.info("Secondary SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getAttribute("value"));
 	String p_ssn =driver.findElement(By.xpath("//*[@id=\"primary_ssn\"]")).getText();
@@ -976,7 +976,7 @@ public void insurance_info() throws InterruptedException
 	driver.findElement(By.xpath("//*[@id=\"secondary_genterradio_wrap\"]/div[1]")).click();
 	Log.info("Secondary Gender entered : \n"+driver.findElement(By.xpath("//*[@id=\"secondary_genterradio_wrap\"]/div[1]")).getText());
 	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
-	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
+	//driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).sendKeys("252525252");
 	
 	String s_ssn =driver.findElement(By.xpath("//*[@id=\"secondary_ssn\"]")).getText();
@@ -986,19 +986,19 @@ public void insurance_info() throws InterruptedException
 	
 	logger = extent.startTest("SSN Validation in INSURANCE  PAGE");
 	
-	String regex = "^[0-9]{3}[-]([0-9]{2})[-]([0-9]{4})$";
+	String s_regex = "^[0-9]{3}[-]([0-9]{2})[-]([0-9]{4})$";
 	
 	 
-	Pattern pattern1 = Pattern.compile(regex);
+	Pattern pattern1 = Pattern.compile(s_regex);
 
 
 	    Matcher matcher1 = pattern1.matcher(s_ssn);
-	    Boolean ssn_match=matcher1.matches();
+	    Boolean s_ssn_match=matcher1.matches();
 	    System.out.println(matcher1.matches());
 	
 	    System.out.println("SSN"+s_ssn);
 		
-		if (ssn_match == true )
+		if (s_ssn_match == true )
 		{
 			logger.log(LogStatus.PASS, "SSN is valid");
 		}
@@ -1010,6 +1010,8 @@ public void insurance_info() throws InterruptedException
 		
 		 extent.endTest(logger);
 	driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
+	Select s_relationship = new Select(driver.findElement(By.xpath("//*[@id=\"secondary_relationship\"]")));
+	s_relationship.selectByIndex(4);
 	driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).clear();
 	driver.findElement(By.xpath("//*[@id=\"secondary_address1\"]")).sendKeys("21,kindy Apartment");
@@ -1170,7 +1172,7 @@ public void insurance_info() throws InterruptedException
 	driver.manage().timeouts().implicitlyWait(10000,TimeUnit.SECONDS);
 
 	driver.findElement(By.xpath("//*[@id=\"secondary_companyname\"]")).click();
-	driver.findElement(By.id("secondary_companyname_wrap")).click();
+	//driver.findElement(By.id("secondary_companyname_wrap")).click();
 	
 	driver.findElement(By.xpath("//*[@id=\"secondary_companyname\"]")).sendKeys("Aethna");
 	
@@ -1199,7 +1201,7 @@ public void insurance_info() throws InterruptedException
 	driver.findElement(By.xpath("//*[@id=\"select_employed_wrap\"]/div[3]/label")).click();
 	
 	driver.findElement(By.xpath("//*[@id=\"ssn\"]")).click();
-	driver.findElement(By.xpath("//*[@id=\"ssn\"]")).click();
+	//driver.findElement(By.xpath("//*[@id=\"ssn\"]")).click();
 	driver.findElement(By.xpath("//*[@id=\"ssn\"]")).sendKeys("444444444");
 	//Log.info("SSN entered : \n"+driver.findElement(By.xpath("//*[@id=\"ssn1\"]")).getAttribute("value"));
 	String ssn_ele =driver.findElement(By.xpath("//*[@id=\"ssn\"]")).getText();
@@ -1409,6 +1411,23 @@ public void patient_past_medical() throws InterruptedException
 		
 		Log.info(driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).getText());
 	}
+	Thread.sleep(1000);
+	for (int i=1;i<=5;i++)
+	{
+		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).click();
+		
+	}
+	
+	Log.info("Past Medicalhistory Selected for the second time\n");
+	driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_search\"]")).sendKeys("a");
+	for (int i=1;i<=5;i++)
+	{
+		//driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div["+i+"]/li")).click();
+		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).click();
+		
+		Log.info(driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).getText());
+	}
+	
 	
 	driver.findElement(By.xpath("//*[@id=\"add_medi_data1\"]")).click();
 	
@@ -1416,21 +1435,7 @@ public void patient_past_medical() throws InterruptedException
 	jse.executeScript("scroll(0,1000);");
 
 	
-/*	
-	
-		driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_add\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_search\"]")).sendKeys("a");
-		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div[1]/li")).click();
-		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div[2]/li")).click();
-		driver.findElement(By.xpath("//*[@id=\"add_medi_data1\"]")).click();*/
-	
-	/*List<WebElement> surgry_list = driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/div"));
-	int count2=driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/div")).size();
-	 Log.info("Past Medicalhistory List \n");
-	for(WebElement e : medical_list) {
-		 Log.info(e.getText());*/
-		//}
-	//*[@id="select-surgicalhistory"]/li[1]/label
+//******************************************SURGICAL ***************************************************
 	driver.findElement(By.xpath("//*[@id=\"surgicalhistory_add\"]")).click();
 	List<WebElement> surgical_list = driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/li"));
 		
@@ -1444,23 +1449,41 @@ public void patient_past_medical() throws InterruptedException
 		
 		for (int i=1;i<=5;i++)
 		{
-			//*[@id="select-surgicalhistory"]/li[1]/label
+			
 			driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/li["+i+"]/label")).click();
 			
-			Log.info(driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/li["+i+"]/label")).getText());
+			Log.info(driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/li["+i+"]/label")).getText());
 		}
 		
+		
 		driver.findElement(By.xpath("//*[@id=\"surgicalhistory_dataadd\"]")).click();
+		//******************************************ALLERGIES ***************************************************
+		driver.findElement(By.xpath("//*[@id=\"allergies_add\"]")).click();
+		Log.info("allergies  List \n");
+		  List<WebElement> allergies_list = driver.findElements(By.xpath("//*[@id=\"select_allergies\"]/li"));
+		for(WebElement e : allergies_list) {
+			 Log.info(e.getText());
+			}
+		
+		Log.info("Past Allergies Selected \n");
+		
+		for (int i=1;i<=5;i++)
+		{
+			
+			driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li["+i+"]/label")).click();
+			
+			Log.info(driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li["+i+"]/label")).getText());
+		}
+		
+	/*
+		driver.findElement(By.xpath("//*[@id=\"allergies_add\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[2]/label")).click();
+		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[5]/label")).click();
+		driver.findElement(By.xpath("//*[@id=\"allergies_dataadd\"]")).click();
 		
 	
-		/*driver.findElement(By.xpath("//*[@id=\"allergies_add\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[5]/label")).click();
-		driver.findElement(By.xpath("//*[@id=\"select_allergies\"]/li[11]/label")).click();
-		driver.findElement(By.xpath("//*[@id=\"allergies_dataadd\"]")).click();
-		*/
-	
-	/*	driver.findElement(By.xpath("//*[@id=\"familyhistory_add\"]")).click();
-		//*[@id="fh_1151"] //*[@id="select-familyhistory"]/li[3]/label
+		driver.findElement(By.xpath("//*[@id=\"familyhistory_add\"]")).click();
+		
 		driver.findElement(By.xpath("//*[@id=\"select-familyhistory\"]/li[3]/label")).click();
 		driver.findElement(By.xpath("//*[@id=\"fhh_1151\"]/li[2]/span/span[2]/label")).click();
 		
@@ -1851,8 +1874,7 @@ public void signature_page()
 @AfterClass
  public void afterClass() 
 {
-	extent.close();
-	extent.flush();
+	
 	 driver.quit();
 }
 
