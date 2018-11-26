@@ -140,7 +140,7 @@ public void verify_page()
 	}
 	else
 	{
-		se.selectByVisibleText("Female");
+		se.selectByVisibleText("Male");
 	}
 	driver.findElement(By.xpath("//*[@id=\"select_gender_wrap\"]")).click();
 	
@@ -1482,25 +1482,8 @@ public void patient_past_medical() throws InterruptedException
 	
 	driver.findElement(By.xpath("//*[@id=\"add_medi_data1\"]")).click();
 	
-	JavascriptExecutor jse = (JavascriptExecutor)driver;
-	jse.executeScript("scroll(0,1000);");
-
+	//******************************************SURGICAL ***************************************************
 	
-/*	
-	
-		driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_add\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"pastmedicalhistory_search\"]")).sendKeys("a");
-		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div[1]/li")).click();
-		driver.findElement(By.xpath("//*[@id=\"select-pastmedicalcondition1\"]/div/div[2]/li")).click();
-		driver.findElement(By.xpath("//*[@id=\"add_medi_data1\"]")).click();*/
-	
-	/*List<WebElement> surgry_list = driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/div"));
-	int count2=driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/div")).size();
-	 Log.info("Past Medicalhistory List \n");
-	for(WebElement e : medical_list) {
-		 Log.info(e.getText());*/
-		//}
-	//*[@id="select-surgicalhistory"]/li[1]/label
 	driver.findElement(By.xpath("//*[@id=\"surgicalhistory_add\"]")).click();
 	List<WebElement> surgical_list = driver.findElements(By.xpath("//*[@id=\"select-surgicalhistory\"]/li"));
 		
@@ -1514,7 +1497,7 @@ public void patient_past_medical() throws InterruptedException
 		
 		for (int i=1;i<=5;i++)
 		{
-			//*[@id="select-surgicalhistory"]/li[1]/label //*[@id="select-surgicalhistory"]/li[1]/label //*[@id="select-surgicalhistory"]/li[2]/label
+
 			driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/li["+i+"]/label")).click();
 			
 			Log.info(driver.findElement(By.xpath("//*[@id=\"select-surgicalhistory\"]/li["+i+"]/label")).getText());
@@ -1523,7 +1506,9 @@ public void patient_past_medical() throws InterruptedException
 		
 	
 		driver.findElement(By.xpath("//*[@id=\"allergies_add\"]")).click();
-	
+		
+	//***************************************ALLERGIES*********************************************************
+		
 		
 		int count3=driver.findElements(By.xpath("//*[@id=\"select_allergies\"]/li")).size();
 		 Log.info("allergies  List \n");
@@ -1545,6 +1530,31 @@ public void patient_past_medical() throws InterruptedException
 		 
 	
 		driver.findElement(By.xpath("//*[@id=\"allergies_dataadd\"]")).click();
+		
+//***************************************** FAMILY HISTORY ****************************************
+		
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@id=\"familyhistory_add\"]")).click();
+		
+		int count4=driver.findElements(By.xpath("//*[@id=\"select-familyhistory\"]/li")).size();
+		 Log.info("Family History  List \n");
+		  List<WebElement> familyhistory_list = driver.findElements(By.xpath("//*[@id=\"select-familyhistory\"]/li"));
+		for(WebElement e : familyhistory_list) {
+			 Log.info(e.getText());
+			}
+		
+		Log.info("Family History Selected \n");
+		for (int i=2;i<=5;i++)
+		{
+			
+			driver.findElement(By.xpath("//*[@id=\"select-familyhistory\"]/li["+i+"]/label")).click();
+		
+			driver.findElement(By.xpath("//*[@id=\"select-familyhistory\"]/li["+i+"]/ul/li[1]/span[1]/label")).click();
+		}
+	
+		driver.findElement(By.xpath("//*[@id=\"familyhistory_dataadd\"]")).click();
+		
+		//***************************************** VACCINATION ****************************************		
 		
 		driver.findElement(By.xpath("//*[@id=\"vaccinations_none\"]")).click();
 		

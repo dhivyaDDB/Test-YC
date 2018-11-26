@@ -3,13 +3,21 @@
 <suite name="Suite" parallel="none">
   
   
-  <test name="ChromeTest">
+  <test name="MyselfTest">
 		<parameter name="browser" value="chrome" />
     <classes>
      <class name="com.yosi.testscript.Athena_Myself_Checkin_TC"/>
-    <class name="com.yosi.testscript.Athena_Mydependent_Checkin_TC"/>
+        </classes>
+        </test>
+        <test name="MyDependendTest">
+		<parameter name="browser" value="chrome" />
+    <classes>
+     <class name="com.yosi.testscript.Athena_Mydependent_Checkin_TC"/>
+        </classes>
+        </test>
+   <!-- <class name="com.yosi.testscript.Athena_Mydependent_Checkin_TC"/>
     
-       <!-- <class name="com.yosi.testscript.Patient_Info_TC"/>
+        <class name="com.yosi.testscript.Patient_Info_TC"/>
      <class name="com.yosi.testscript.Guantor_Info_TC"/> 
       <class name="com.yosi.testscript.Insurance_Page_TC"/>
       <class name="com.yosi.testscript.Patient_AddInfo_TC"/>
@@ -19,6 +27,6 @@
        <class name="com.yosi.testscript.Dynamic_Page_TC"/>
         <class name="com.yosi.testscript.Policy_Page_TC"/>
        <class name="com.yosi.testscript.Signature_Page_TC"/>  -->
-    </classes>
-  </test> <!-- Test -->
+    
+  
 </suite> <!-- Suite -->
