@@ -7812,3 +7812,1120 @@ Several days
 [INFO] 2018-11-26 13:09:49,438 com.yosi.util.Log info - Signature Page
 [INFO] 2018-11-26 13:09:50,299 com.yosi.util.Log info - Reason entered: 
 Fever
+[INFO] 2018-11-26 18:41:08,498 com.yosi.util.Log info - Landing Page
+[INFO] 2018-11-26 18:41:08,513 com.yosi.util.Log info - Appoinment Time 
+Appointment Confirmed
+11/26/2018 @ 2:46 PM
+90 Broad St - 1002, New York, NY 10004
+
+View map
+[INFO] 2018-11-26 18:41:17,336 com.yosi.util.Log info - Doctor is selected
+[INFO] 2018-11-26 18:41:18,120 com.yosi.util.Log info - Adult is clicked
+[INFO] 2018-11-26 18:41:18,124 com.yosi.util.Log info - Patient verification Page
+[INFO] 2018-11-26 18:41:18,130 com.yosi.util.Log info - DOG entered: 02/02/1992
+[INFO] 2018-11-26 18:41:18,130 com.yosi.util.Log info - Gender entered:Male
+[INFO] 2018-11-26 18:41:20,184 com.yosi.util.Log info - PATIENT INFORMATION
+[INFO] 2018-11-26 18:41:20,987 com.yosi.util.Log info - First Name of the patient Mace
+[INFO] 2018-11-26 18:41:20,989 com.yosi.util.Log info -  First Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-26 18:41:21,028 com.yosi.util.Log info -  Last Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-26 18:41:21,028 com.yosi.util.Log info - Last Name of the patient Test
+[INFO] 2018-11-26 18:41:21,069 com.yosi.util.Log info - Gender: Male
+[INFO] 2018-11-26 18:41:21,108 com.yosi.util.Log info - DOB: 02/02/1992
+[INFO] 2018-11-26 18:41:21,108 com.yosi.util.Log info - Patient Details 
+Mace
+Test
+Male
+02/02/1992
+[INFO] 2018-11-26 18:41:22,637 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:41:24,695 com.yosi.util.Log info - It is invalid zipcode
+[INFO] 2018-11-26 18:41:24,888 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:41:24,943 com.yosi.util.Log info - City State City, State
+[INFO] 2018-11-26 18:41:31,206 com.yosi.util.Log info - The text doent contain any value
+[INFO] 2018-11-26 18:41:33,785 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:41:35,021 com.yosi.util.Log info - Address of the patient 
+31, River cross road,Texas,11111.
+[INFO] 2018-11-26 18:41:36,379 com.yosi.util.Log info - The PATIENT GUARANTOR  page
+[INFO] 2018-11-26 18:41:36,402 com.yosi.util.Log info - Radio button valuesYes
+No
+[INFO] 2018-11-26 18:41:36,425 com.yosi.util.Log info - Guarantor FnameMace
+[INFO] 2018-11-26 18:41:36,438 com.yosi.util.Log info - Guarantor Lname Test
+[INFO] 2018-11-26 18:41:36,456 com.yosi.util.Log info - Guarantor Relationship null
+[INFO] 2018-11-26 18:41:37,897 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:41:39,939 com.yosi.util.Log info - It is invalid zipcode
+[INFO] 2018-11-26 18:41:40,151 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:41:40,236 com.yosi.util.Log info - City State City, State
+[INFO] 2018-11-26 18:41:44,505 com.yosi.util.Log info - The text doent contain any value
+[INFO] 2018-11-26 18:41:47,097 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:41:48,387 com.yosi.util.Log info - Address of the patient 31,green road,Dallas,11111.
+[INFO] 2018-11-26 18:41:48,616 com.yosi.util.Log info - INSURANCE PAGE
+[INFO] 2018-11-26 18:41:49,961 com.yosi.util.Log info - Secondary Fname entered : 
+Gamly
+[INFO] 2018-11-26 18:41:49,961 com.yosi.util.Log info - First Name of the patient Gamly
+[INFO] 2018-11-26 18:41:49,962 com.yosi.util.Log info -  Primary First Name Validation In Insurance INFO PAGE
+[INFO] 2018-11-26 18:41:50,321 com.yosi.util.Log info - Last Name of the patient Tests
+[INFO] 2018-11-26 18:41:50,321 com.yosi.util.Log info - Primary Last Name Validation In INSURANCE  PAGE
+[INFO] 2018-11-26 18:41:50,336 com.yosi.util.Log info - Primary policy number entered : Tests
+[INFO] 2018-11-26 18:41:50,769 com.yosi.util.Log info - Secondary DOB entered : 
+12/12/2007
+[INFO] 2018-11-26 18:41:50,941 com.yosi.util.Log info - Secondary Gender entered : 
+Female
+[INFO] 2018-11-26 18:41:51,243 com.yosi.util.Log info - Secondary SSN entered : 
+
+[INFO] 2018-11-26 18:41:52,686 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:41:52,728 com.yosi.util.Log info - It is invalid zipcode
+[INFO] 2018-11-26 18:41:52,947 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:41:52,992 com.yosi.util.Log info - City State City, State
+[INFO] 2018-11-26 18:41:57,255 com.yosi.util.Log info - The text doent contain any value
+[INFO] 2018-11-26 18:41:59,931 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:42:01,129 com.yosi.util.Log info - Secondary Address entered 
+21,kindy Apartment,DS,11111.
+[INFO] 2018-11-26 18:42:01,644 com.yosi.util.Log info - Primary insurance selected : Aethna
+[INFO] 2018-11-26 18:42:02,128 com.yosi.util.Log info - Secondary INSURANCE 
+[INFO] 2018-11-26 18:42:02,518 com.yosi.util.Log info - Secondary Fname entered : 
+FRED
+[INFO] 2018-11-26 18:42:02,519 com.yosi.util.Log info - First Name of the patient FRED
+[INFO] 2018-11-26 18:42:02,519 com.yosi.util.Log info -  First Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-26 18:42:02,838 com.yosi.util.Log info - Last Name of the patient TEST
+[INFO] 2018-11-26 18:42:02,838 com.yosi.util.Log info -  Last Name Validation In INSURANCE  PAGE
+[INFO] 2018-11-26 18:42:02,858 com.yosi.util.Log info - Secondary Lname entered : 
+TEST
+[INFO] 2018-11-26 18:42:03,305 com.yosi.util.Log info - Secondary DOB entered : 
+12/12/2007
+[INFO] 2018-11-26 18:42:03,493 com.yosi.util.Log info - Secondary Gender entered : 
+Male
+[INFO] 2018-11-26 18:42:03,812 com.yosi.util.Log info - Secondary SSN entered : 
+
+[INFO] 2018-11-26 18:42:05,183 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:42:05,240 com.yosi.util.Log info - It is invalid zipcode
+[INFO] 2018-11-26 18:42:05,437 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:42:05,480 com.yosi.util.Log info - City State 
+[INFO] 2018-11-26 18:42:09,783 com.yosi.util.Log info - The text doent contain any value
+[INFO] 2018-11-26 18:42:12,417 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:42:13,080 com.yosi.util.Log info - Secondary Address entered 
+21,kindy Apartment,DS,11111.
+[INFO] 2018-11-26 18:42:13,446 com.yosi.util.Log info - Primary insurance selected : Aethna
+[INFO] 2018-11-26 18:42:14,039 com.yosi.util.Log info - PATIENT ADDITIONAL INFORMATION
+[INFO] 2018-11-26 18:42:15,303 com.yosi.util.Log info - SSN entered : 
+
+[INFO] 2018-11-26 18:42:15,666 com.yosi.util.Log info - Mobile number entered : 
+(503) 400-8675
+[INFO] 2018-11-26 18:42:15,777 com.yosi.util.Log info - Martial Drop Down value:
+                                                            Single
+                                                            Married
+                                                            Divorced
+                                                            Separated
+                                                            Widowed
+                                                            Other
+                                                    
+[INFO] 2018-11-26 18:42:17,603 com.yosi.util.Log info - EMC Fname: 
+Fredy
+[INFO] 2018-11-26 18:42:17,860 com.yosi.util.Log info - EMC Lname: 
+test
+[INFO] 2018-11-26 18:42:18,494 com.yosi.util.Log info - EMC Contact Num : 
+(555) 555-5555
+[INFO] 2018-11-26 18:42:18,699 com.yosi.util.Log info - PATIENT LIFESTYLE
+[INFO] 2018-11-26 18:42:19,605 com.yosi.util.Log info - Cigarettes Drop Down value:
+              Select
+                                          Never
+                                          I Quit
+                                          1-10
+                                          11-20
+                                          20+
+                          
+[INFO] 2018-11-26 18:42:19,659 com.yosi.util.Log info - Alcoholic Drop Down value:
+              Select
+                                          Never
+                                          I Quit
+                                          1-5
+                                          5-10
+                                          10+
+                          
+[INFO] 2018-11-26 18:42:19,683 com.yosi.util.Log info - Recreational Drugs Drop Down value:
+              Select
+                                          Never
+                                          I Quit
+                                          1-10
+                                          11-20
+                                          20+
+                          
+[INFO] 2018-11-26 18:42:19,855 com.yosi.util.Log info - PATIENT PAST MEDICAL HX
+[INFO] 2018-11-26 18:42:21,046 com.yosi.util.Log info - Past Medicalhistory List 
+
+[INFO] 2018-11-26 18:42:21,064 com.yosi.util.Log info - Anemia
+[INFO] 2018-11-26 18:42:21,093 com.yosi.util.Log info - Anxiety Disorder
+[INFO] 2018-11-26 18:42:21,113 com.yosi.util.Log info - Aortic Aneurysm
+[INFO] 2018-11-26 18:42:21,134 com.yosi.util.Log info - Arrhythmia
+[INFO] 2018-11-26 18:42:21,156 com.yosi.util.Log info - Arthritis
+[INFO] 2018-11-26 18:42:21,183 com.yosi.util.Log info - Asthma
+[INFO] 2018-11-26 18:42:21,204 com.yosi.util.Log info - Atrial Fibrillation
+[INFO] 2018-11-26 18:42:21,224 com.yosi.util.Log info - Atrial Flutter
+[INFO] 2018-11-26 18:42:21,246 com.yosi.util.Log info - Blood Clot
+[INFO] 2018-11-26 18:42:21,278 com.yosi.util.Log info - Cancer
+[INFO] 2018-11-26 18:42:21,307 com.yosi.util.Log info - Cardiomyopathy
+[INFO] 2018-11-26 18:42:21,330 com.yosi.util.Log info - Carotid Disease
+[INFO] 2018-11-26 18:42:21,347 com.yosi.util.Log info - Cataracts
+[INFO] 2018-11-26 18:42:21,371 com.yosi.util.Log info - Celiac Disease
+[INFO] 2018-11-26 18:42:21,390 com.yosi.util.Log info - Chronic Back Pain
+[INFO] 2018-11-26 18:42:21,408 com.yosi.util.Log info - Chronic ear infections
+[INFO] 2018-11-26 18:42:21,431 com.yosi.util.Log info - Congenital Heart Disease
+[INFO] 2018-11-26 18:42:21,463 com.yosi.util.Log info - Congestive Heart Failure
+[INFO] 2018-11-26 18:42:21,501 com.yosi.util.Log info - Congestive Heart Failure (CHF)
+[INFO] 2018-11-26 18:42:21,538 com.yosi.util.Log info - COPD
+[INFO] 2018-11-26 18:42:21,559 com.yosi.util.Log info - Coronary Artery Disease
+[INFO] 2018-11-26 18:42:21,579 com.yosi.util.Log info - Deep Vein Thrombosis
+[INFO] 2018-11-26 18:42:21,597 com.yosi.util.Log info - dementia
+[INFO] 2018-11-26 18:42:21,640 com.yosi.util.Log info - Depression
+[INFO] 2018-11-26 18:42:21,676 com.yosi.util.Log info - Diabetes
+[INFO] 2018-11-26 18:42:21,704 com.yosi.util.Log info - Diabetes Type I
+[INFO] 2018-11-26 18:42:21,733 com.yosi.util.Log info - Diabetes Type II
+[INFO] 2018-11-26 18:42:21,758 com.yosi.util.Log info - Difficulty swallowing
+[INFO] 2018-11-26 18:42:21,782 com.yosi.util.Log info - Diverticulitis
+[INFO] 2018-11-26 18:42:21,811 com.yosi.util.Log info - Eyes
+[INFO] 2018-11-26 18:42:21,830 com.yosi.util.Log info - Fibromyalgia
+[INFO] 2018-11-26 18:42:21,859 com.yosi.util.Log info - Gastrointestinal Disease
+[INFO] 2018-11-26 18:42:21,878 com.yosi.util.Log info - Genitourinary Disease
+[INFO] 2018-11-26 18:42:21,898 com.yosi.util.Log info - GERD
+[INFO] 2018-11-26 18:42:21,920 com.yosi.util.Log info - GERD/Reflux
+[INFO] 2018-11-26 18:42:21,939 com.yosi.util.Log info - Gout
+[INFO] 2018-11-26 18:42:21,958 com.yosi.util.Log info - Has Pacemaker
+[INFO] 2018-11-26 18:42:21,983 com.yosi.util.Log info - Heart Disease
+[INFO] 2018-11-26 18:42:22,005 com.yosi.util.Log info - Heart Murmur
+[INFO] 2018-11-26 18:42:22,029 com.yosi.util.Log info - Heart Valve Replacement
+[INFO] 2018-11-26 18:42:22,056 com.yosi.util.Log info - Hematologic Disease
+[INFO] 2018-11-26 18:42:22,076 com.yosi.util.Log info - High Blood Pressure
+[INFO] 2018-11-26 18:42:22,098 com.yosi.util.Log info - High Cholesterol
+[INFO] 2018-11-26 18:42:22,121 com.yosi.util.Log info - Hyperlipidemia
+[INFO] 2018-11-26 18:42:22,143 com.yosi.util.Log info - Hypertension
+[INFO] 2018-11-26 18:42:22,166 com.yosi.util.Log info - Kidney Disease
+[INFO] 2018-11-26 18:42:22,188 com.yosi.util.Log info - Liver Disease
+[INFO] 2018-11-26 18:42:22,207 com.yosi.util.Log info - Meniere's disease
+[INFO] 2018-11-26 18:42:22,236 com.yosi.util.Log info - Meniere's disease
+[INFO] 2018-11-26 18:42:22,276 com.yosi.util.Log info - Myocardial Infarction
+[INFO] 2018-11-26 18:42:22,301 com.yosi.util.Log info - Nasal polyps
+[INFO] 2018-11-26 18:42:22,320 com.yosi.util.Log info - Neurologic Disorder
+[INFO] 2018-11-26 18:42:22,342 com.yosi.util.Log info - Osteoporosis
+[INFO] 2018-11-26 18:42:22,366 com.yosi.util.Log info - OTHER
+[INFO] 2018-11-26 18:42:22,386 com.yosi.util.Log info - Overactive Thyroid
+[INFO] 2018-11-26 18:42:22,418 com.yosi.util.Log info - Pacemaker
+[INFO] 2018-11-26 18:42:22,436 com.yosi.util.Log info - Peptic Ulcer Disease
+[INFO] 2018-11-26 18:42:22,459 com.yosi.util.Log info - Peripheral Arterial Disease
+[INFO] 2018-11-26 18:42:22,487 com.yosi.util.Log info - Peripheral edema
+[INFO] 2018-11-26 18:42:22,507 com.yosi.util.Log info - rabies
+[INFO] 2018-11-26 18:42:22,526 com.yosi.util.Log info - Sea Sickness
+[INFO] 2018-11-26 18:42:22,549 com.yosi.util.Log info - Sleep Apnea
+[INFO] 2018-11-26 18:42:22,569 com.yosi.util.Log info - Sleep Disorder
+[INFO] 2018-11-26 18:42:22,590 com.yosi.util.Log info - Sore thumb
+[INFO] 2018-11-26 18:42:22,612 com.yosi.util.Log info - Stroke
+[INFO] 2018-11-26 18:42:22,632 com.yosi.util.Log info - Thyroid Disease
+[INFO] 2018-11-26 18:42:22,651 com.yosi.util.Log info - TIA
+[INFO] 2018-11-26 18:42:22,675 com.yosi.util.Log info - Tuberculosis
+[INFO] 2018-11-26 18:42:22,696 com.yosi.util.Log info - Valvular Abnormalities
+[INFO] 2018-11-26 18:42:22,715 com.yosi.util.Log info - Valvular Heart Disease
+[INFO] 2018-11-26 18:42:22,739 com.yosi.util.Log info - Venous Insuffiency
+[INFO] 2018-11-26 18:42:22,757 com.yosi.util.Log info - Warfarin Management
+[INFO] 2018-11-26 18:42:22,778 com.yosi.util.Log info - No Past Medical History
+[INFO] 2018-11-26 18:42:22,778 com.yosi.util.Log info - Past Medicalhistory Selected 
+
+[INFO] 2018-11-26 18:42:22,985 com.yosi.util.Log info - Anemia
+[INFO] 2018-11-26 18:42:23,222 com.yosi.util.Log info - Anxiety Disorder
+[INFO] 2018-11-26 18:42:23,447 com.yosi.util.Log info - Aortic Aneurysm
+[INFO] 2018-11-26 18:42:23,647 com.yosi.util.Log info - Arrhythmia
+[INFO] 2018-11-26 18:42:23,860 com.yosi.util.Log info - Arthritis
+[INFO] 2018-11-26 18:42:24,266 com.yosi.util.Log info - Past SurgicalHistory  List 
+
+[INFO] 2018-11-26 18:42:24,291 com.yosi.util.Log info - Abdominal Surgery
+[INFO] 2018-11-26 18:42:24,323 com.yosi.util.Log info - AICD
+[INFO] 2018-11-26 18:42:24,355 com.yosi.util.Log info - Angioplasty
+[INFO] 2018-11-26 18:42:24,388 com.yosi.util.Log info - Appendectomy
+[INFO] 2018-11-26 18:42:24,424 com.yosi.util.Log info - Arthroscopy
+[INFO] 2018-11-26 18:42:24,458 com.yosi.util.Log info - Back Surgery
+[INFO] 2018-11-26 18:42:24,500 com.yosi.util.Log info - Bladder Surgery
+[INFO] 2018-11-26 18:42:24,524 com.yosi.util.Log info - Brain Surgery
+[INFO] 2018-11-26 18:42:24,559 com.yosi.util.Log info - Breast Surgery
+[INFO] 2018-11-26 18:42:24,587 com.yosi.util.Log info - CABG
+[INFO] 2018-11-26 18:42:24,613 com.yosi.util.Log info - Caesarean Section
+[INFO] 2018-11-26 18:42:24,637 com.yosi.util.Log info - Cardiac Catheterization
+[INFO] 2018-11-26 18:42:24,669 com.yosi.util.Log info - Cardiac Surgery
+[INFO] 2018-11-26 18:42:24,696 com.yosi.util.Log info - Cardioversion
+[INFO] 2018-11-26 18:42:24,727 com.yosi.util.Log info - Carpal Tunnel Surgery
+[INFO] 2018-11-26 18:42:24,754 com.yosi.util.Log info - Cataract Surgery
+[INFO] 2018-11-26 18:42:24,788 com.yosi.util.Log info - Cholecystectomy
+[INFO] 2018-11-26 18:42:24,827 com.yosi.util.Log info - Colonoscopy
+[INFO] 2018-11-26 18:42:24,861 com.yosi.util.Log info - Coronary Artery Stent
+[INFO] 2018-11-26 18:42:24,890 com.yosi.util.Log info - Ear Surgery
+[INFO] 2018-11-26 18:42:24,937 com.yosi.util.Log info - Esophagoduodenoscopy
+[INFO] 2018-11-26 18:42:24,969 com.yosi.util.Log info - Eye Surgery
+[INFO] 2018-11-26 18:42:25,008 com.yosi.util.Log info - Gastrointestinal Surgery
+[INFO] 2018-11-26 18:42:25,050 com.yosi.util.Log info - Genitourinary Surgery
+[INFO] 2018-11-26 18:42:25,078 com.yosi.util.Log info - Heart Valve Surgery
+[INFO] 2018-11-26 18:42:25,110 com.yosi.util.Log info - HEENT Surgery
+[INFO] 2018-11-26 18:42:25,149 com.yosi.util.Log info - Hernia Repair
+[INFO] 2018-11-26 18:42:25,180 com.yosi.util.Log info - Hernia Surgery
+[INFO] 2018-11-26 18:42:25,218 com.yosi.util.Log info - Hysterectomy
+[INFO] 2018-11-26 18:42:25,245 com.yosi.util.Log info - Knee Replacement
+[INFO] 2018-11-26 18:42:25,271 com.yosi.util.Log info - Lung Surgery
+[INFO] 2018-11-26 18:42:25,298 com.yosi.util.Log info - Masectomy
+[INFO] 2018-11-26 18:42:25,315 com.yosi.util.Log info - Oophorectomy
+[INFO] 2018-11-26 18:42:25,336 com.yosi.util.Log info - Orthopedic Surgery
+[INFO] 2018-11-26 18:42:25,359 com.yosi.util.Log info - Other
+[INFO] 2018-11-26 18:42:25,379 com.yosi.util.Log info - Pacemaker
+[INFO] 2018-11-26 18:42:25,399 com.yosi.util.Log info - Prostate Surgery
+[INFO] 2018-11-26 18:42:25,428 com.yosi.util.Log info - Sinus Surgery
+[INFO] 2018-11-26 18:42:25,453 com.yosi.util.Log info - Stent
+[INFO] 2018-11-26 18:42:25,472 com.yosi.util.Log info - tentacle reattachment
+[INFO] 2018-11-26 18:42:25,495 com.yosi.util.Log info - Thyroid Surgery
+[INFO] 2018-11-26 18:42:25,515 com.yosi.util.Log info - Tonsil removal
+[INFO] 2018-11-26 18:42:25,541 com.yosi.util.Log info - Tonsillectomy/Adenoidectomy
+[INFO] 2018-11-26 18:42:25,560 com.yosi.util.Log info - Tubal Ligation
+[INFO] 2018-11-26 18:42:25,584 com.yosi.util.Log info - Vascular Surgery
+[INFO] 2018-11-26 18:42:25,608 com.yosi.util.Log info - Vasectomy
+[INFO] 2018-11-26 18:42:25,635 com.yosi.util.Log info - I have no surgical history
+[INFO] 2018-11-26 18:42:25,635 com.yosi.util.Log info - Past SurgicalHistory Selected 
+
+[INFO] 2018-11-26 18:42:25,868 com.yosi.util.Log info - Abdominal Surgery
+[INFO] 2018-11-26 18:42:26,121 com.yosi.util.Log info - AICD
+[INFO] 2018-11-26 18:42:26,315 com.yosi.util.Log info - Angioplasty
+[INFO] 2018-11-26 18:42:26,522 com.yosi.util.Log info - Appendectomy
+[INFO] 2018-11-26 18:42:26,733 com.yosi.util.Log info - Arthroscopy
+[INFO] 2018-11-26 18:42:27,326 com.yosi.util.Log info - allergies  List 
+
+[INFO] 2018-11-26 18:42:27,461 com.yosi.util.Log info - No Known Allergies
+[INFO] 2018-11-26 18:42:27,509 com.yosi.util.Log info - 1,4-diaminobenzene
+[INFO] 2018-11-26 18:42:27,534 com.yosi.util.Log info - 1-Day
+[INFO] 2018-11-26 18:42:27,576 com.yosi.util.Log info - 4 Way Saline Moisturizing
+[INFO] 2018-11-26 18:42:27,608 com.yosi.util.Log info - 4-Aminoquinolines
+[INFO] 2018-11-26 18:42:27,667 com.yosi.util.Log info - 5-Alfa Reductase Inhibitor, Azasteroids
+[INFO] 2018-11-26 18:42:27,711 com.yosi.util.Log info - 50+ Adult Eye Health
+[INFO] 2018-11-26 18:42:27,742 com.yosi.util.Log info - 8-Mop
+[INFO] 2018-11-26 18:42:27,782 com.yosi.util.Log info - A & D Barrier
+[INFO] 2018-11-26 18:42:27,832 com.yosi.util.Log info - A & D Emollient
+[INFO] 2018-11-26 18:42:27,903 com.yosi.util.Log info - A and D Zinc Oxide Cream
+[INFO] 2018-11-26 18:42:27,938 com.yosi.util.Log info - A+D Cracked Skin Relief
+[INFO] 2018-11-26 18:42:27,978 com.yosi.util.Log info - A-Hydrocort
+[INFO] 2018-11-26 18:42:28,017 com.yosi.util.Log info - A-Methapred
+[INFO] 2018-11-26 18:42:28,052 com.yosi.util.Log info - A-Spas (dicyclomine)
+[INFO] 2018-11-26 18:42:28,085 com.yosi.util.Log info - A.E.R Traveler
+[INFO] 2018-11-26 18:42:28,134 com.yosi.util.Log info - A.E.R. Witch Hazel
+[INFO] 2018-11-26 18:42:28,166 com.yosi.util.Log info - A/B Otic
+[INFO] 2018-11-26 18:42:28,191 com.yosi.util.Log info - ACT Fluoride
+[INFO] 2018-11-26 18:42:28,223 com.yosi.util.Log info - AK-Dilate
+[INFO] 2018-11-26 18:42:28,252 com.yosi.util.Log info - AK-Pentolate
+[INFO] 2018-11-26 18:42:28,279 com.yosi.util.Log info - ASC Lotionized Cleanser
+[INFO] 2018-11-26 18:42:28,317 com.yosi.util.Log info - ASCOR
+[INFO] 2018-11-26 18:42:28,341 com.yosi.util.Log info - Abanatuss PED
+[INFO] 2018-11-26 18:42:28,369 com.yosi.util.Log info - Abaneu-SL
+[INFO] 2018-11-26 18:42:28,391 com.yosi.util.Log info - Abatinex
+[INFO] 2018-11-26 18:42:28,423 com.yosi.util.Log info - Abatrace
+[INFO] 2018-11-26 18:42:28,443 com.yosi.util.Log info - Abatuss DMX
+[INFO] 2018-11-26 18:42:28,468 com.yosi.util.Log info - Abbokinase
+[INFO] 2018-11-26 18:42:28,500 com.yosi.util.Log info - Abelcet
+[INFO] 2018-11-26 18:42:28,525 com.yosi.util.Log info - Abilify
+[INFO] 2018-11-26 18:42:28,559 com.yosi.util.Log info - Abitrexate (PF)
+[INFO] 2018-11-26 18:42:28,597 com.yosi.util.Log info - Abraxane
+[INFO] 2018-11-26 18:42:28,622 com.yosi.util.Log info - Abreva
+[INFO] 2018-11-26 18:42:28,659 com.yosi.util.Log info - Absorbase
+[INFO] 2018-11-26 18:42:28,691 com.yosi.util.Log info - Absorbine Jr.
+[INFO] 2018-11-26 18:42:28,718 com.yosi.util.Log info - Absorbine Pain Relieving
+[INFO] 2018-11-26 18:42:28,754 com.yosi.util.Log info - Absorica
+[INFO] 2018-11-26 18:42:28,786 com.yosi.util.Log info - Abstral
+[INFO] 2018-11-26 18:42:28,813 com.yosi.util.Log info - Acanya
+[INFO] 2018-11-26 18:42:28,836 com.yosi.util.Log info - Accolate
+[INFO] 2018-11-26 18:42:28,863 com.yosi.util.Log info - Accupril
+[INFO] 2018-11-26 18:42:28,890 com.yosi.util.Log info - Acerflex
+[INFO] 2018-11-26 18:42:28,915 com.yosi.util.Log info - Aceta-Gesic
+[INFO] 2018-11-26 18:42:28,943 com.yosi.util.Log info - Aceta-Gesic (with phenyltolox)
+[INFO] 2018-11-26 18:42:28,965 com.yosi.util.Log info - Actemra
+[INFO] 2018-11-26 18:42:28,991 com.yosi.util.Log info - Acthar H.P.
+[INFO] 2018-11-26 18:42:29,018 com.yosi.util.Log info - Actifed Cold-Allergy
+[INFO] 2018-11-26 18:42:29,040 com.yosi.util.Log info - Actigall
+[INFO] 2018-11-26 18:42:29,076 com.yosi.util.Log info - Actonel
+[INFO] 2018-11-26 18:42:29,106 com.yosi.util.Log info - Actoplus MET
+[INFO] 2018-11-26 18:42:29,130 com.yosi.util.Log info - Adacel(Tdap Adolesn/Adult)(PF)
+[INFO] 2018-11-26 18:42:29,157 com.yosi.util.Log info - Adreview
+[INFO] 2018-11-26 18:42:29,188 com.yosi.util.Log info - Adt Robitussin Night Nasal Rlf
+[INFO] 2018-11-26 18:42:29,211 com.yosi.util.Log info - Adult Robitussin Night M-S Cld
+[INFO] 2018-11-26 18:42:29,242 com.yosi.util.Log info - Advil Allergy Sinus
+[INFO] 2018-11-26 18:42:29,268 com.yosi.util.Log info - Ala-Cort
+[INFO] 2018-11-26 18:42:29,290 com.yosi.util.Log info - Ala-Quin
+[INFO] 2018-11-26 18:42:29,318 com.yosi.util.Log info - Ala-Scalp
+[INFO] 2018-11-26 18:42:29,342 com.yosi.util.Log info - Ala-Seb
+[INFO] 2018-11-26 18:42:29,371 com.yosi.util.Log info - Alamag
+[INFO] 2018-11-26 18:42:29,394 com.yosi.util.Log info - Alavert
+[INFO] 2018-11-26 18:42:29,424 com.yosi.util.Log info - Alavert D-12 Allergy-Sinus
+[INFO] 2018-11-26 18:42:29,450 com.yosi.util.Log info - Alaway
+[INFO] 2018-11-26 18:42:29,476 com.yosi.util.Log info - Albamycin
+[INFO] 2018-11-26 18:42:29,506 com.yosi.util.Log info - AlbuRx (Human) 5 %
+[INFO] 2018-11-26 18:42:29,537 com.yosi.util.Log info - Alka-Seltzer Plus Night-Time
+[INFO] 2018-11-26 18:42:29,570 com.yosi.util.Log info - All Clear
+[INFO] 2018-11-26 18:42:29,598 com.yosi.util.Log info - All Clear AR
+[INFO] 2018-11-26 18:42:29,627 com.yosi.util.Log info - Allclenz
+[INFO] 2018-11-26 18:42:29,657 com.yosi.util.Log info - Allegra
+[INFO] 2018-11-26 18:42:29,690 com.yosi.util.Log info - Allegra-D 12 Hour
+[INFO] 2018-11-26 18:42:29,717 com.yosi.util.Log info - Aller-Chlor
+[INFO] 2018-11-26 18:42:29,759 com.yosi.util.Log info - Allerfed Cold and Allergy
+[INFO] 2018-11-26 18:42:29,833 com.yosi.util.Log info - Altabax
+[INFO] 2018-11-26 18:42:29,864 com.yosi.util.Log info - Alyacen 1/35 (28)
+[INFO] 2018-11-26 18:42:29,887 com.yosi.util.Log info - Androgenic Anabolic Steroid
+[INFO] 2018-11-26 18:42:29,910 com.yosi.util.Log info - Anecream
+[INFO] 2018-11-26 18:42:29,938 com.yosi.util.Log info - Anexsia
+[INFO] 2018-11-26 18:42:29,960 com.yosi.util.Log info - Antivert
+[INFO] 2018-11-26 18:42:29,984 com.yosi.util.Log info - Aralen
+[INFO] 2018-11-26 18:42:30,011 com.yosi.util.Log info - Arzerra
+[INFO] 2018-11-26 18:42:30,045 com.yosi.util.Log info - Asacol
+[INFO] 2018-11-26 18:42:30,079 com.yosi.util.Log info - Asclera
+[INFO] 2018-11-26 18:42:30,116 com.yosi.util.Log info - Astelin
+[INFO] 2018-11-26 18:42:30,142 com.yosi.util.Log info - Astepro
+[INFO] 2018-11-26 18:42:30,168 com.yosi.util.Log info - Baciguent
+[INFO] 2018-11-26 18:42:30,193 com.yosi.util.Log info - Bactroban
+[INFO] 2018-11-26 18:42:30,220 com.yosi.util.Log info - Bayer Plus Extra Strength
+[INFO] 2018-11-26 18:42:30,250 com.yosi.util.Log info - Bear-E-Yum GI
+[INFO] 2018-11-26 18:42:30,273 com.yosi.util.Log info - Benadryl
+[INFO] 2018-11-26 18:42:30,300 com.yosi.util.Log info - Benadryl Allergy-Sinus-Headach
+[INFO] 2018-11-26 18:42:30,322 com.yosi.util.Log info - Beta-Blockers (Beta-Adrenergic Blocking Agts)
+[INFO] 2018-11-26 18:42:30,346 com.yosi.util.Log info - Blanche
+[INFO] 2018-11-26 18:42:30,376 com.yosi.util.Log info - Blocadren
+[INFO] 2018-11-26 18:42:30,403 com.yosi.util.Log info - CLA
+[INFO] 2018-11-26 18:42:30,433 com.yosi.util.Log info - Cal-G
+[INFO] 2018-11-26 18:42:30,459 com.yosi.util.Log info - Carbo Grabber
+[INFO] 2018-11-26 18:42:30,485 com.yosi.util.Log info - Codar GF
+[INFO] 2018-11-26 18:42:30,510 com.yosi.util.Log info - Colace
+[INFO] 2018-11-26 18:42:30,535 com.yosi.util.Log info - Colony Stimulating Factors
+[INFO] 2018-11-26 18:42:30,560 com.yosi.util.Log info - Comtrex Deep Chest Cold
+[INFO] 2018-11-26 18:42:30,585 com.yosi.util.Log info - Contac Day/Night Allergy/Sinus
+[INFO] 2018-11-26 18:42:30,614 com.yosi.util.Log info - Cotabflu
+[INFO] 2018-11-26 18:42:30,636 com.yosi.util.Log info - Cozaar
+[INFO] 2018-11-26 18:42:30,663 com.yosi.util.Log info - Debacterol
+[INFO] 2018-11-26 18:42:30,698 com.yosi.util.Log info - Deblitane
+[INFO] 2018-11-26 18:42:30,735 com.yosi.util.Log info - Debrisan
+[INFO] 2018-11-26 18:42:30,762 com.yosi.util.Log info - Debrox
+[INFO] 2018-11-26 18:42:30,798 com.yosi.util.Log info - Deca-Durabolin
+[INFO] 2018-11-26 18:42:30,826 com.yosi.util.Log info - Decadron
+[INFO] 2018-11-26 18:42:30,851 com.yosi.util.Log info - Decadron-Xylocaine
+[INFO] 2018-11-26 18:42:30,878 com.yosi.util.Log info - Depo-Testadiol
+[INFO] 2018-11-26 18:42:30,909 com.yosi.util.Log info - Diabeta
+[INFO] 2018-11-26 18:42:30,935 com.yosi.util.Log info - Draximage MAA
+[INFO] 2018-11-26 18:42:30,962 com.yosi.util.Log info - Durabac Forte
+[INFO] 2018-11-26 18:42:30,995 com.yosi.util.Log info - EZ FLU16-17(FLUZON QD PED)(PF)
+[INFO] 2018-11-26 18:42:31,021 com.yosi.util.Log info - Easprin
+[INFO] 2018-11-26 18:42:31,048 com.yosi.util.Log info - Egg Derived
+[INFO] 2018-11-26 18:42:31,076 com.yosi.util.Log info - Fabior
+[INFO] 2018-11-26 18:42:31,099 com.yosi.util.Log info - Flintstones Tab Chew
+[INFO] 2018-11-26 18:42:31,129 com.yosi.util.Log info - Fortesta
+[INFO] 2018-11-26 18:42:31,153 com.yosi.util.Log info - Habitrol
+[INFO] 2018-11-26 18:42:31,183 com.yosi.util.Log info - Hyzaar
+[INFO] 2018-11-26 18:42:31,207 com.yosi.util.Log info - JULUCA
+[INFO] 2018-11-26 18:42:31,236 com.yosi.util.Log info - Jinteli
+[INFO] 2018-11-26 18:42:31,260 com.yosi.util.Log info - Kadian
+[INFO] 2018-11-26 18:42:31,290 com.yosi.util.Log info - Maalox Advanced
+[INFO] 2018-11-26 18:42:31,314 com.yosi.util.Log info - Maalox Max Quick Dissolve
+[INFO] 2018-11-26 18:42:31,338 com.yosi.util.Log info - Maalox RS
+[INFO] 2018-11-26 18:42:31,366 com.yosi.util.Log info - Maalox Total Relief (bismuth)
+[INFO] 2018-11-26 18:42:31,390 com.yosi.util.Log info - Nulojix
+[INFO] 2018-11-26 18:42:31,413 com.yosi.util.Log info - Nutramigen AA Lipil
+[INFO] 2018-11-26 18:42:31,441 com.yosi.util.Log info - Orabase (benzocaine)
+[INFO] 2018-11-26 18:42:31,475 com.yosi.util.Log info - Orlaam
+[INFO] 2018-11-26 18:42:31,505 com.yosi.util.Log info - Pacerone
+[INFO] 2018-11-26 18:42:31,528 com.yosi.util.Log info - Primatene Asthma
+[INFO] 2018-11-26 18:42:31,555 com.yosi.util.Log info - RabAvert (PF)
+[INFO] 2018-11-26 18:42:31,577 com.yosi.util.Log info - Rabano Yodado
+[INFO] 2018-11-26 18:42:31,606 com.yosi.util.Log info - Sabril
+[INFO] 2018-11-26 18:42:31,631 com.yosi.util.Log info - Saccharomyces boulardii
+[INFO] 2018-11-26 18:42:31,663 com.yosi.util.Log info - Seasonale contraceptive
+[INFO] 2018-11-26 18:42:31,697 com.yosi.util.Log info - Seasonique
+[INFO] 2018-11-26 18:42:31,731 com.yosi.util.Log info - Sebaclear
+[INFO] 2018-11-26 18:42:31,757 com.yosi.util.Log info - Sebizon
+[INFO] 2018-11-26 18:42:31,797 com.yosi.util.Log info - Sulfa (Sulfonamide Antibiotics)
+[INFO] 2018-11-26 18:42:31,827 com.yosi.util.Log info - Tears Again
+[INFO] 2018-11-26 18:42:31,850 com.yosi.util.Log info - Teslascan
+[INFO] 2018-11-26 18:42:31,877 com.yosi.util.Log info - Testim
+[INFO] 2018-11-26 18:42:31,907 com.yosi.util.Log info - Tracrium
+[INFO] 2018-11-26 18:42:31,937 com.yosi.util.Log info - Zorbtive
+[INFO] 2018-11-26 18:42:31,960 com.yosi.util.Log info - abaloparatide
+[INFO] 2018-11-26 18:42:31,989 com.yosi.util.Log info - abarelix
+[INFO] 2018-11-26 18:42:32,018 com.yosi.util.Log info - abatacept
+[INFO] 2018-11-26 18:42:32,048 com.yosi.util.Log info - abciximab
+[INFO] 2018-11-26 18:42:32,071 com.yosi.util.Log info - abobotulinumtoxinA
+[INFO] 2018-11-26 18:42:32,098 com.yosi.util.Log info - acacia
+[INFO] 2018-11-26 18:42:32,124 com.yosi.util.Log info - acai
+[INFO] 2018-11-26 18:42:32,149 com.yosi.util.Log info - acetarsol
+[INFO] 2018-11-26 18:42:32,178 com.yosi.util.Log info - alacepril
+[INFO] 2018-11-26 18:42:32,208 com.yosi.util.Log info - allantoin
+[INFO] 2018-11-26 18:42:32,235 com.yosi.util.Log info - astemizole
+[INFO] 2018-11-26 18:42:32,260 com.yosi.util.Log info - bean
+[INFO] 2018-11-26 18:42:32,283 com.yosi.util.Log info - beeswax
+[INFO] 2018-11-26 18:42:32,311 com.yosi.util.Log info - belatacept
+[INFO] 2018-11-26 18:42:32,338 com.yosi.util.Log info - benzylparaben
+[INFO] 2018-11-26 18:42:32,366 com.yosi.util.Log info - betadex
+[INFO] 2018-11-26 18:42:32,392 com.yosi.util.Log info - black pepper
+[INFO] 2018-11-26 18:42:32,426 com.yosi.util.Log info - butabarbital
+[INFO] 2018-11-26 18:42:32,452 com.yosi.util.Log info - butylparaben
+[INFO] 2018-11-26 18:42:32,477 com.yosi.util.Log info - cabbage
+[INFO] 2018-11-26 18:42:32,508 com.yosi.util.Log info - cedar leaf
+[INFO] 2018-11-26 18:42:32,531 com.yosi.util.Log info - ceftazidime (anhydrous)
+[INFO] 2018-11-26 18:42:32,558 com.yosi.util.Log info - chicken derived
+[INFO] 2018-11-26 18:42:32,584 com.yosi.util.Log info - clostebol
+[INFO] 2018-11-26 18:42:32,617 com.yosi.util.Log info - codeine
+[INFO] 2018-11-26 18:42:32,641 com.yosi.util.Log info - dabigatran etexilate
+[INFO] 2018-11-26 18:42:32,672 com.yosi.util.Log info - debrisoquine
+[INFO] 2018-11-26 18:42:32,697 com.yosi.util.Log info - febarbamate
+[INFO] 2018-11-26 18:42:32,719 com.yosi.util.Log info - fedrilate
+[INFO] 2018-11-26 18:42:32,748 com.yosi.util.Log info - gabapentin
+[INFO] 2018-11-26 18:42:32,774 com.yosi.util.Log info - golden seal
+[INFO] 2018-11-26 18:42:32,807 com.yosi.util.Log info - insulin aspart
+[INFO] 2018-11-26 18:42:32,836 com.yosi.util.Log info - ixabepilone
+[INFO] 2018-11-26 18:42:32,865 com.yosi.util.Log info - labetalol
+[INFO] 2018-11-26 18:42:32,891 com.yosi.util.Log info - lymphocyte immune globulin,rabbit
+[INFO] 2018-11-26 18:42:32,919 com.yosi.util.Log info - milk
+[INFO] 2018-11-26 18:42:32,944 com.yosi.util.Log info - nabumetone
+[INFO] 2018-11-26 18:42:32,968 com.yosi.util.Log info - peanut
+[INFO] 2018-11-26 18:42:33,001 com.yosi.util.Log info - rabbit dander
+[INFO] 2018-11-26 18:42:33,026 com.yosi.util.Log info - rabeprazole
+[INFO] 2018-11-26 18:42:33,053 com.yosi.util.Log info - rabies immune globulin
+[INFO] 2018-11-26 18:42:33,077 com.yosi.util.Log info - sebelipase alfa
+[INFO] 2018-11-26 18:42:33,120 com.yosi.util.Log info - sulfabenzamide
+[INFO] 2018-11-26 18:42:33,153 com.yosi.util.Log info - tea tree
+[INFO] 2018-11-26 18:42:33,188 com.yosi.util.Log info - tesamorelin
+[INFO] 2018-11-26 18:42:33,221 com.yosi.util.Log info - trabectedin
+[INFO] 2018-11-26 18:42:33,257 com.yosi.util.Log info - wasp venom
+[INFO] 2018-11-26 18:42:33,285 com.yosi.util.Log info - water chestnut
+[INFO] 2018-11-26 18:42:33,320 com.yosi.util.Log info - weed pollen
+[INFO] 2018-11-26 18:42:33,320 com.yosi.util.Log info - Past Allergies Selected 
+
+[INFO] 2018-11-26 18:42:33,656 com.yosi.util.Log info - No Known Allergies
+[INFO] 2018-11-26 18:42:33,923 com.yosi.util.Log info - 1,4-diaminobenzene
+[INFO] 2018-11-26 18:42:34,253 com.yosi.util.Log info - 1-Day
+[INFO] 2018-11-26 18:42:34,561 com.yosi.util.Log info - 4 Way Saline Moisturizing
+[INFO] 2018-11-26 18:42:34,854 com.yosi.util.Log info - 4-Aminoquinolines
+[INFO] 2018-11-26 18:42:36,339 com.yosi.util.Log info - Family History  List 
+
+[INFO] 2018-11-26 18:42:36,464 com.yosi.util.Log info - None
+[INFO] 2018-11-26 18:42:36,537 com.yosi.util.Log info - Allergy
+[INFO] 2018-11-26 18:42:36,578 com.yosi.util.Log info - Alzheimer's disease
+[INFO] 2018-11-26 18:42:36,626 com.yosi.util.Log info - Alzheimer's disease
+[INFO] 2018-11-26 18:42:36,664 com.yosi.util.Log info - Ankylosing spondylitis
+[INFO] 2018-11-26 18:42:36,707 com.yosi.util.Log info - Arthritis
+[INFO] 2018-11-26 18:42:36,743 com.yosi.util.Log info - Asthma
+[INFO] 2018-11-26 18:42:36,781 com.yosi.util.Log info - Blood coagulation disorder
+[INFO] 2018-11-26 18:42:36,812 com.yosi.util.Log info - Cerebrovascular accident
+[INFO] 2018-11-26 18:42:36,860 com.yosi.util.Log info - Chronic obstructive lung disease
+[INFO] 2018-11-26 18:42:36,900 com.yosi.util.Log info - Coronary arteriosclerosis
+[INFO] 2018-11-26 18:42:36,945 com.yosi.util.Log info - Crohn's disease
+[INFO] 2018-11-26 18:42:36,985 com.yosi.util.Log info - Crohn's disease
+[INFO] 2018-11-26 18:42:37,013 com.yosi.util.Log info - Dementia
+[INFO] 2018-11-26 18:42:37,037 com.yosi.util.Log info - Depressive disorder
+[INFO] 2018-11-26 18:42:37,067 com.yosi.util.Log info - Diabetes mellitus
+[INFO] 2018-11-26 18:42:37,095 com.yosi.util.Log info - Disease of liver
+[INFO] 2018-11-26 18:42:37,125 com.yosi.util.Log info - Disorder of endocrine system
+[INFO] 2018-11-26 18:42:37,153 com.yosi.util.Log info - Disorder of lung
+[INFO] 2018-11-26 18:42:37,184 com.yosi.util.Log info - Disorder of thyroid gland
+[INFO] 2018-11-26 18:42:37,216 com.yosi.util.Log info - Diverticular disease
+[INFO] 2018-11-26 18:42:37,247 com.yosi.util.Log info - Glaucoma
+[INFO] 2018-11-26 18:42:37,277 com.yosi.util.Log info - Gout
+[INFO] 2018-11-26 18:42:37,315 com.yosi.util.Log info - Heart disease
+[INFO] 2018-11-26 18:42:37,347 com.yosi.util.Log info - Heart failure
+[INFO] 2018-11-26 18:42:37,379 com.yosi.util.Log info - Hypercholesterolemia
+[INFO] 2018-11-26 18:42:37,410 com.yosi.util.Log info - Hyperlipidemia
+[INFO] 2018-11-26 18:42:37,438 com.yosi.util.Log info - Hypertensive disorder
+[INFO] 2018-11-26 18:42:37,466 com.yosi.util.Log info - Juvenile chronic arthritis
+[INFO] 2018-11-26 18:42:37,499 com.yosi.util.Log info - Kidney disease
+[INFO] 2018-11-26 18:42:37,528 com.yosi.util.Log info - Koilonychia
+[INFO] 2018-11-26 18:42:37,557 com.yosi.util.Log info - Leukemia (morphologic abnormality)
+[INFO] 2018-11-26 18:42:37,588 com.yosi.util.Log info - Lupus erythematosus
+[INFO] 2018-11-26 18:42:37,621 com.yosi.util.Log info - Malignant neoplasm of skin
+[INFO] 2018-11-26 18:42:37,647 com.yosi.util.Log info - Malignant neoplastic disease
+[INFO] 2018-11-26 18:42:37,676 com.yosi.util.Log info - Malignant tumor of breast
+[INFO] 2018-11-26 18:42:37,704 com.yosi.util.Log info - Malignant tumor of colon
+[INFO] 2018-11-26 18:42:37,734 com.yosi.util.Log info - Malignant tumor of lung
+[INFO] 2018-11-26 18:42:37,758 com.yosi.util.Log info - Malignant tumor of prostate
+[INFO] 2018-11-26 18:42:37,786 com.yosi.util.Log info - Myocardial infarction
+[INFO] 2018-11-26 18:42:37,821 com.yosi.util.Log info - Obesity
+[INFO] 2018-11-26 18:42:37,851 com.yosi.util.Log info - Osteoporosis
+[INFO] 2018-11-26 18:42:37,894 com.yosi.util.Log info - Rheumatoid arthritis
+[INFO] 2018-11-26 18:42:37,940 com.yosi.util.Log info - Sleep apnea
+[INFO] 2018-11-26 18:42:37,971 com.yosi.util.Log info - Substance abuse
+[INFO] 2018-11-26 18:42:38,007 com.yosi.util.Log info - Sudden cardiac death
+[INFO] 2018-11-26 18:42:38,007 com.yosi.util.Log info - Family History Selected 
+
+[INFO] 2018-11-26 18:42:40,589 com.yosi.util.Log info - PATIENT RX INFO
+[INFO] 2018-11-26 18:42:44,852 com.yosi.util.Log info - Medication list
+[INFO] 2018-11-26 18:42:45,384 com.yosi.util.Log info - Medication Selected : 
+
+[INFO] 2018-11-26 18:42:45,764 com.yosi.util.Log info - ADDITIONAL SOCIAL HISTORY
+[INFO] 2018-11-26 18:42:47,106 com.yosi.util.Log info - MEDICAL HISTORY FORM
+[INFO] 2018-11-26 18:42:48,614 com.yosi.util.Log info - Selected value :
+Blue lips or fingernails
+[INFO] 2018-11-26 18:42:48,835 com.yosi.util.Log info - PHQ-9
+[INFO] 2018-11-26 18:42:49,702 com.yosi.util.Log info - Selected value :
+Several days
+[INFO] 2018-11-26 18:42:49,920 com.yosi.util.Log info - GAD-7
+[INFO] 2018-11-26 18:42:51,796 com.yosi.util.Log info - ENCOUNTER QUESTIONNAIRE 
+[DEBUG] 2018-11-26 18:42:56,894 freemarker.cache debug - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2018-11-26 18:42:56,895 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+[DEBUG] 2018-11-26 18:42:56,897 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+[DEBUG] 2018-11-26 18:42:56,901 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+[DEBUG] 2018-11-26 18:42:56,901 freemarker.cache debug - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Dreams/.m2/repository/com/relevantcodes/extentreports/2.41.1/extentreports-2.41.1.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+[INFO] 2018-11-26 18:43:05,064 com.yosi.util.Log info - NOTICE_OF_PRIVACY_PRACTICES 
+[INFO] 2018-11-26 18:43:08,483 com.yosi.util.Log info - PRIVACY POLICY
+[INFO] 2018-11-26 18:43:10,580 com.yosi.util.Log info - Signature Page
+[INFO] 2018-11-26 18:43:11,490 com.yosi.util.Log info - Reason entered: 
+Fever
+[INFO] 2018-11-26 18:43:19,997 com.yosi.util.Log info - Landing Page
+[INFO] 2018-11-26 18:43:19,997 com.yosi.util.Log info - Appoinment Time 
+Appointment Confirmed
+11/26/2018 @ 3:45 PM
+90 Broad St - 1002, New York, NY 10004
+
+View map
+[INFO] 2018-11-26 18:43:26,536 com.yosi.util.Log info - Doctor is selected
+[INFO] 2018-11-26 18:43:27,269 com.yosi.util.Log info - Adult is clicked
+[INFO] 2018-11-26 18:43:27,270 com.yosi.util.Log info - Patient verification Page
+[INFO] 2018-11-26 18:43:27,273 com.yosi.util.Log info - DOG entered: 02/02/1992
+[INFO] 2018-11-26 18:43:27,274 com.yosi.util.Log info - Gender entered:Male
+[INFO] 2018-11-26 18:43:29,002 com.yosi.util.Log info - PATIENT INFORMATION
+[INFO] 2018-11-26 18:43:30,245 com.yosi.util.Log info - First Name of the patient Hafgrim
+[INFO] 2018-11-26 18:43:30,245 com.yosi.util.Log info -  First Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-26 18:43:30,280 com.yosi.util.Log info -  Last Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-26 18:43:30,280 com.yosi.util.Log info - Last Name of the patient Test
+[INFO] 2018-11-26 18:43:30,313 com.yosi.util.Log info - Gender: Male
+[INFO] 2018-11-26 18:43:30,346 com.yosi.util.Log info - DOB: 02/02/1992
+[INFO] 2018-11-26 18:43:30,346 com.yosi.util.Log info - Patient Details 
+Hafgrim
+Test
+Male
+02/02/1992
+[INFO] 2018-11-26 18:43:31,583 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:43:33,643 com.yosi.util.Log info - It is invalid zipcode
+[INFO] 2018-11-26 18:43:33,820 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:43:33,872 com.yosi.util.Log info - City State City, State
+[INFO] 2018-11-26 18:43:40,130 com.yosi.util.Log info - The text doent contain any value
+[INFO] 2018-11-26 18:43:42,672 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:43:43,906 com.yosi.util.Log info - Address of the patient 
+31, River cross road,Texas,11111.
+[INFO] 2018-11-26 18:43:44,150 com.yosi.util.Log info - The Parent1/Guardian Information
+[INFO] 2018-11-26 18:43:46,186 com.yosi.util.Log info - The Parent2/Guardian Information
+[INFO] 2018-11-26 18:43:47,417 com.yosi.util.Log info - The PATIENT GUARANTOR  page/
+[INFO] 2018-11-26 18:43:50,470 com.yosi.util.Log info - The PATIENT GUARANTOR  page/
+[INFO] 2018-11-26 18:43:50,515 com.yosi.util.Log info - Guarantor FnameDan
+[INFO] 2018-11-26 18:43:50,557 com.yosi.util.Log info - Guarantor Lname Test
+[INFO] 2018-11-26 18:43:50,586 com.yosi.util.Log info - Guarantor Relationship null
+[INFO] 2018-11-26 18:43:52,244 com.yosi.util.Log info - Address of the patient 31,green road,Dallas,.
+[INFO] 2018-11-26 18:43:52,537 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:43:54,585 com.yosi.util.Log info - It is invalid zipcode
+[INFO] 2018-11-26 18:43:54,797 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:43:54,866 com.yosi.util.Log info - City State City, State
+[INFO] 2018-11-26 18:44:01,098 com.yosi.util.Log info - The text doent contain any value
+[INFO] 2018-11-26 18:44:03,681 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:44:04,838 com.yosi.util.Log info - Address of the patient 
+31,green road,Dallas,.
+[INFO] 2018-11-26 18:44:05,059 com.yosi.util.Log info - INSURANCE PAGE
+[INFO] 2018-11-26 18:44:06,438 com.yosi.util.Log info - Secondary Fname entered : 
+Gamly
+[INFO] 2018-11-26 18:44:06,438 com.yosi.util.Log info - First Name of the patient Gamly
+[INFO] 2018-11-26 18:44:06,438 com.yosi.util.Log info -  Primary First Name Validation In Insurance INFO PAGE
+[INFO] 2018-11-26 18:44:06,793 com.yosi.util.Log info - Last Name of the patient Tests
+[INFO] 2018-11-26 18:44:06,793 com.yosi.util.Log info - Primary Last Name Validation In INSURANCE  PAGE
+[INFO] 2018-11-26 18:44:06,817 com.yosi.util.Log info - Primary policy number entered : Tests
+[INFO] 2018-11-26 18:44:07,269 com.yosi.util.Log info - Secondary DOB entered : 
+12/12/2007
+[INFO] 2018-11-26 18:44:07,464 com.yosi.util.Log info - Secondary Gender entered : 
+Female
+[INFO] 2018-11-26 18:44:07,760 com.yosi.util.Log info - Secondary SSN entered : 
+
+[INFO] 2018-11-26 18:44:09,358 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:44:09,408 com.yosi.util.Log info - It is invalid zipcode
+[INFO] 2018-11-26 18:44:09,595 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:44:09,642 com.yosi.util.Log info - City State City, State
+[INFO] 2018-11-26 18:44:13,865 com.yosi.util.Log info - The text doent contain any value
+[INFO] 2018-11-26 18:44:16,488 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:44:17,171 com.yosi.util.Log info - Secondary Address entered 
+21,kindy Apartment,DS,11111.
+[INFO] 2018-11-26 18:44:17,681 com.yosi.util.Log info - Primary insurance selected : Aethna
+[INFO] 2018-11-26 18:44:18,153 com.yosi.util.Log info - Secondary INSURANCE 
+[INFO] 2018-11-26 18:44:18,583 com.yosi.util.Log info - Secondary Fname entered : 
+FRED
+[INFO] 2018-11-26 18:44:18,583 com.yosi.util.Log info - First Name of the patient FRED
+[INFO] 2018-11-26 18:44:18,583 com.yosi.util.Log info -  First Name Validation In PATIENT INFO PAGE
+[INFO] 2018-11-26 18:44:18,930 com.yosi.util.Log info - Last Name of the patient TEST
+[INFO] 2018-11-26 18:44:18,931 com.yosi.util.Log info -  Last Name Validation In INSURANCE  PAGE
+[INFO] 2018-11-26 18:44:18,948 com.yosi.util.Log info - Secondary Lname entered : 
+TEST
+[INFO] 2018-11-26 18:44:19,384 com.yosi.util.Log info - Secondary DOB entered : 
+12/12/2007
+[INFO] 2018-11-26 18:44:19,589 com.yosi.util.Log info - Secondary Gender entered : 
+Male
+[INFO] 2018-11-26 18:44:19,912 com.yosi.util.Log info - Secondary SSN entered : 
+
+[INFO] 2018-11-26 18:44:21,343 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:44:21,384 com.yosi.util.Log info - It is invalid zipcode
+[INFO] 2018-11-26 18:44:21,581 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:44:21,625 com.yosi.util.Log info - City State 
+[INFO] 2018-11-26 18:44:25,933 com.yosi.util.Log info - The text doent contain any value
+[INFO] 2018-11-26 18:44:28,545 com.yosi.util.Log info - Entered zipcode 
+[INFO] 2018-11-26 18:44:29,202 com.yosi.util.Log info - Secondary Address entered 
+21,kindy Apartment,DS,11111.
+[INFO] 2018-11-26 18:44:29,582 com.yosi.util.Log info - Primary insurance selected : Aethna
+[INFO] 2018-11-26 18:44:30,178 com.yosi.util.Log info - PATIENT ADDITIONAL INFORMATION
+[INFO] 2018-11-26 18:44:31,901 com.yosi.util.Log info - SSN entered : 
+
+[INFO] 2018-11-26 18:44:32,232 com.yosi.util.Log info - Mobile number entered : 
+(503) 400-8675
+[INFO] 2018-11-26 18:44:32,304 com.yosi.util.Log info - Martial Drop Down value:
+                                                            Single
+                                                            Married
+                                                            Divorced
+                                                            Separated
+                                                            Widowed
+                                                            Other
+                                                    
+[INFO] 2018-11-26 18:44:33,671 com.yosi.util.Log info - EMC Fname: 
+Fredy
+[INFO] 2018-11-26 18:44:33,940 com.yosi.util.Log info - EMC Lname: 
+test
+[INFO] 2018-11-26 18:44:34,672 com.yosi.util.Log info - EMC Contact Num : 
+(555) 555-5555
+[INFO] 2018-11-26 18:44:34,860 com.yosi.util.Log info - PATIENT LIFESTYLE
+[INFO] 2018-11-26 18:44:35,795 com.yosi.util.Log info - Cigarettes Drop Down value:
+              Select
+                                          Never
+                                          I Quit
+                                          1-10
+                                          11-20
+                                          20+
+                          
+[INFO] 2018-11-26 18:44:35,840 com.yosi.util.Log info - Alcoholic Drop Down value:
+              Select
+                                          Never
+                                          I Quit
+                                          1-5
+                                          5-10
+                                          10+
+                          
+[INFO] 2018-11-26 18:44:35,864 com.yosi.util.Log info - Recreational Drugs Drop Down value:
+              Select
+                                          Never
+                                          I Quit
+                                          1-10
+                                          11-20
+                                          20+
+                          
+[INFO] 2018-11-26 18:44:36,033 com.yosi.util.Log info - PATIENT PAST MEDICAL HX
+[INFO] 2018-11-26 18:44:37,224 com.yosi.util.Log info - Past Medicalhistory List 
+
+[INFO] 2018-11-26 18:44:37,254 com.yosi.util.Log info - Anemia
+[INFO] 2018-11-26 18:44:37,274 com.yosi.util.Log info - Anxiety Disorder
+[INFO] 2018-11-26 18:44:37,300 com.yosi.util.Log info - Aortic Aneurysm
+[INFO] 2018-11-26 18:44:37,320 com.yosi.util.Log info - Arrhythmia
+[INFO] 2018-11-26 18:44:37,342 com.yosi.util.Log info - Arthritis
+[INFO] 2018-11-26 18:44:37,371 com.yosi.util.Log info - Asthma
+[INFO] 2018-11-26 18:44:37,388 com.yosi.util.Log info - Atrial Fibrillation
+[INFO] 2018-11-26 18:44:37,407 com.yosi.util.Log info - Atrial Flutter
+[INFO] 2018-11-26 18:44:37,432 com.yosi.util.Log info - Blood Clot
+[INFO] 2018-11-26 18:44:37,471 com.yosi.util.Log info - Cancer
+[INFO] 2018-11-26 18:44:37,498 com.yosi.util.Log info - Cardiomyopathy
+[INFO] 2018-11-26 18:44:37,518 com.yosi.util.Log info - Carotid Disease
+[INFO] 2018-11-26 18:44:37,544 com.yosi.util.Log info - Cataracts
+[INFO] 2018-11-26 18:44:37,561 com.yosi.util.Log info - Celiac Disease
+[INFO] 2018-11-26 18:44:37,582 com.yosi.util.Log info - Chronic Back Pain
+[INFO] 2018-11-26 18:44:37,605 com.yosi.util.Log info - Chronic ear infections
+[INFO] 2018-11-26 18:44:37,624 com.yosi.util.Log info - Congenital Heart Disease
+[INFO] 2018-11-26 18:44:37,651 com.yosi.util.Log info - Congestive Heart Failure
+[INFO] 2018-11-26 18:44:37,674 com.yosi.util.Log info - Congestive Heart Failure (CHF)
+[INFO] 2018-11-26 18:44:37,704 com.yosi.util.Log info - COPD
+[INFO] 2018-11-26 18:44:37,721 com.yosi.util.Log info - Coronary Artery Disease
+[INFO] 2018-11-26 18:44:37,744 com.yosi.util.Log info - Deep Vein Thrombosis
+[INFO] 2018-11-26 18:44:37,764 com.yosi.util.Log info - dementia
+[INFO] 2018-11-26 18:44:37,808 com.yosi.util.Log info - Depression
+[INFO] 2018-11-26 18:44:37,827 com.yosi.util.Log info - Diabetes
+[INFO] 2018-11-26 18:44:37,856 com.yosi.util.Log info - Diabetes Type I
+[INFO] 2018-11-26 18:44:37,889 com.yosi.util.Log info - Diabetes Type II
+[INFO] 2018-11-26 18:44:37,907 com.yosi.util.Log info - Difficulty swallowing
+[INFO] 2018-11-26 18:44:37,931 com.yosi.util.Log info - Diverticulitis
+[INFO] 2018-11-26 18:44:37,956 com.yosi.util.Log info - Eyes
+[INFO] 2018-11-26 18:44:37,978 com.yosi.util.Log info - Fibromyalgia
+[INFO] 2018-11-26 18:44:38,018 com.yosi.util.Log info - Gastrointestinal Disease
+[INFO] 2018-11-26 18:44:38,049 com.yosi.util.Log info - Genitourinary Disease
+[INFO] 2018-11-26 18:44:38,073 com.yosi.util.Log info - GERD
+[INFO] 2018-11-26 18:44:38,101 com.yosi.util.Log info - GERD/Reflux
+[INFO] 2018-11-26 18:44:38,131 com.yosi.util.Log info - Gout
+[INFO] 2018-11-26 18:44:38,151 com.yosi.util.Log info - Has Pacemaker
+[INFO] 2018-11-26 18:44:38,177 com.yosi.util.Log info - Heart Disease
+[INFO] 2018-11-26 18:44:38,194 com.yosi.util.Log info - Heart Murmur
+[INFO] 2018-11-26 18:44:38,216 com.yosi.util.Log info - Heart Valve Replacement
+[INFO] 2018-11-26 18:44:38,237 com.yosi.util.Log info - Hematologic Disease
+[INFO] 2018-11-26 18:44:38,258 com.yosi.util.Log info - High Blood Pressure
+[INFO] 2018-11-26 18:44:38,276 com.yosi.util.Log info - High Cholesterol
+[INFO] 2018-11-26 18:44:38,298 com.yosi.util.Log info - Hyperlipidemia
+[INFO] 2018-11-26 18:44:38,315 com.yosi.util.Log info - Hypertension
+[INFO] 2018-11-26 18:44:38,336 com.yosi.util.Log info - Kidney Disease
+[INFO] 2018-11-26 18:44:38,359 com.yosi.util.Log info - Liver Disease
+[INFO] 2018-11-26 18:44:38,380 com.yosi.util.Log info - Meniere's disease
+[INFO] 2018-11-26 18:44:38,408 com.yosi.util.Log info - Meniere's disease
+[INFO] 2018-11-26 18:44:38,436 com.yosi.util.Log info - Myocardial Infarction
+[INFO] 2018-11-26 18:44:38,458 com.yosi.util.Log info - Nasal polyps
+[INFO] 2018-11-26 18:44:38,480 com.yosi.util.Log info - Neurologic Disorder
+[INFO] 2018-11-26 18:44:38,504 com.yosi.util.Log info - Osteoporosis
+[INFO] 2018-11-26 18:44:38,523 com.yosi.util.Log info - OTHER
+[INFO] 2018-11-26 18:44:38,550 com.yosi.util.Log info - Overactive Thyroid
+[INFO] 2018-11-26 18:44:38,571 com.yosi.util.Log info - Pacemaker
+[INFO] 2018-11-26 18:44:38,589 com.yosi.util.Log info - Peptic Ulcer Disease
+[INFO] 2018-11-26 18:44:38,612 com.yosi.util.Log info - Peripheral Arterial Disease
+[INFO] 2018-11-26 18:44:38,629 com.yosi.util.Log info - Peripheral edema
+[INFO] 2018-11-26 18:44:38,652 com.yosi.util.Log info - rabies
+[INFO] 2018-11-26 18:44:38,676 com.yosi.util.Log info - Sea Sickness
+[INFO] 2018-11-26 18:44:38,696 com.yosi.util.Log info - Sleep Apnea
+[INFO] 2018-11-26 18:44:38,714 com.yosi.util.Log info - Sleep Disorder
+[INFO] 2018-11-26 18:44:38,745 com.yosi.util.Log info - Sore thumb
+[INFO] 2018-11-26 18:44:38,781 com.yosi.util.Log info - Stroke
+[INFO] 2018-11-26 18:44:38,811 com.yosi.util.Log info - Thyroid Disease
+[INFO] 2018-11-26 18:44:38,832 com.yosi.util.Log info - TIA
+[INFO] 2018-11-26 18:44:38,853 com.yosi.util.Log info - Tuberculosis
+[INFO] 2018-11-26 18:44:38,874 com.yosi.util.Log info - Valvular Abnormalities
+[INFO] 2018-11-26 18:44:38,894 com.yosi.util.Log info - Valvular Heart Disease
+[INFO] 2018-11-26 18:44:38,913 com.yosi.util.Log info - Venous Insuffiency
+[INFO] 2018-11-26 18:44:38,937 com.yosi.util.Log info - Warfarin Management
+[INFO] 2018-11-26 18:44:38,957 com.yosi.util.Log info - No Past Medical History
+[INFO] 2018-11-26 18:44:38,957 com.yosi.util.Log info - Past Medicalhistory Selected 
+
+[INFO] 2018-11-26 18:44:39,154 com.yosi.util.Log info - Anemia
+[INFO] 2018-11-26 18:44:39,351 com.yosi.util.Log info - Anxiety Disorder
+[INFO] 2018-11-26 18:44:39,547 com.yosi.util.Log info - Aortic Aneurysm
+[INFO] 2018-11-26 18:44:39,754 com.yosi.util.Log info - Arrhythmia
+[INFO] 2018-11-26 18:44:39,978 com.yosi.util.Log info - Arthritis
+[INFO] 2018-11-26 18:44:40,368 com.yosi.util.Log info - Past SurgicalHistory  List 
+
+[INFO] 2018-11-26 18:44:40,417 com.yosi.util.Log info - Abdominal Surgery
+[INFO] 2018-11-26 18:44:40,444 com.yosi.util.Log info - AICD
+[INFO] 2018-11-26 18:44:40,475 com.yosi.util.Log info - Angioplasty
+[INFO] 2018-11-26 18:44:40,503 com.yosi.util.Log info - Appendectomy
+[INFO] 2018-11-26 18:44:40,546 com.yosi.util.Log info - Arthroscopy
+[INFO] 2018-11-26 18:44:40,583 com.yosi.util.Log info - Back Surgery
+[INFO] 2018-11-26 18:44:40,619 com.yosi.util.Log info - Bladder Surgery
+[INFO] 2018-11-26 18:44:40,662 com.yosi.util.Log info - Brain Surgery
+[INFO] 2018-11-26 18:44:40,691 com.yosi.util.Log info - Breast Surgery
+[INFO] 2018-11-26 18:44:40,711 com.yosi.util.Log info - CABG
+[INFO] 2018-11-26 18:44:40,744 com.yosi.util.Log info - Caesarean Section
+[INFO] 2018-11-26 18:44:40,768 com.yosi.util.Log info - Cardiac Catheterization
+[INFO] 2018-11-26 18:44:40,804 com.yosi.util.Log info - Cardiac Surgery
+[INFO] 2018-11-26 18:44:40,835 com.yosi.util.Log info - Cardioversion
+[INFO] 2018-11-26 18:44:40,864 com.yosi.util.Log info - Carpal Tunnel Surgery
+[INFO] 2018-11-26 18:44:40,904 com.yosi.util.Log info - Cataract Surgery
+[INFO] 2018-11-26 18:44:40,944 com.yosi.util.Log info - Cholecystectomy
+[INFO] 2018-11-26 18:44:40,977 com.yosi.util.Log info - Colonoscopy
+[INFO] 2018-11-26 18:44:41,002 com.yosi.util.Log info - Coronary Artery Stent
+[INFO] 2018-11-26 18:44:41,036 com.yosi.util.Log info - Ear Surgery
+[INFO] 2018-11-26 18:44:41,067 com.yosi.util.Log info - Esophagoduodenoscopy
+[INFO] 2018-11-26 18:44:41,100 com.yosi.util.Log info - Eye Surgery
+[INFO] 2018-11-26 18:44:41,120 com.yosi.util.Log info - Gastrointestinal Surgery
+[INFO] 2018-11-26 18:44:41,160 com.yosi.util.Log info - Genitourinary Surgery
+[INFO] 2018-11-26 18:44:41,188 com.yosi.util.Log info - Heart Valve Surgery
+[INFO] 2018-11-26 18:44:41,224 com.yosi.util.Log info - HEENT Surgery
+[INFO] 2018-11-26 18:44:41,255 com.yosi.util.Log info - Hernia Repair
+[INFO] 2018-11-26 18:44:41,285 com.yosi.util.Log info - Hernia Surgery
+[INFO] 2018-11-26 18:44:41,317 com.yosi.util.Log info - Hysterectomy
+[INFO] 2018-11-26 18:44:41,342 com.yosi.util.Log info - Knee Replacement
+[INFO] 2018-11-26 18:44:41,368 com.yosi.util.Log info - Lung Surgery
+[INFO] 2018-11-26 18:44:41,393 com.yosi.util.Log info - Masectomy
+[INFO] 2018-11-26 18:44:41,423 com.yosi.util.Log info - Oophorectomy
+[INFO] 2018-11-26 18:44:41,442 com.yosi.util.Log info - Orthopedic Surgery
+[INFO] 2018-11-26 18:44:41,463 com.yosi.util.Log info - Other
+[INFO] 2018-11-26 18:44:41,489 com.yosi.util.Log info - Pacemaker
+[INFO] 2018-11-26 18:44:41,508 com.yosi.util.Log info - Prostate Surgery
+[INFO] 2018-11-26 18:44:41,529 com.yosi.util.Log info - Sinus Surgery
+[INFO] 2018-11-26 18:44:41,555 com.yosi.util.Log info - Stent
+[INFO] 2018-11-26 18:44:41,576 com.yosi.util.Log info - tentacle reattachment
+[INFO] 2018-11-26 18:44:41,598 com.yosi.util.Log info - Thyroid Surgery
+[INFO] 2018-11-26 18:44:41,620 com.yosi.util.Log info - Tonsil removal
+[INFO] 2018-11-26 18:44:41,640 com.yosi.util.Log info - Tonsillectomy/Adenoidectomy
+[INFO] 2018-11-26 18:44:41,661 com.yosi.util.Log info - Tubal Ligation
+[INFO] 2018-11-26 18:44:41,686 com.yosi.util.Log info - Vascular Surgery
+[INFO] 2018-11-26 18:44:41,706 com.yosi.util.Log info - Vasectomy
+[INFO] 2018-11-26 18:44:41,734 com.yosi.util.Log info - I have no surgical history
+[INFO] 2018-11-26 18:44:41,734 com.yosi.util.Log info - Past SurgicalHistory Selected 
+
+[INFO] 2018-11-26 18:44:41,933 com.yosi.util.Log info - Abdominal Surgery
+[INFO] 2018-11-26 18:44:42,152 com.yosi.util.Log info - AICD
+[INFO] 2018-11-26 18:44:42,365 com.yosi.util.Log info - Angioplasty
+[INFO] 2018-11-26 18:44:42,556 com.yosi.util.Log info - Appendectomy
+[INFO] 2018-11-26 18:44:42,786 com.yosi.util.Log info - Arthroscopy
+[INFO] 2018-11-26 18:44:43,401 com.yosi.util.Log info - allergies  List 
+
+[INFO] 2018-11-26 18:44:43,487 com.yosi.util.Log info - No Known Allergies
+[INFO] 2018-11-26 18:44:43,519 com.yosi.util.Log info - 1,4-diaminobenzene
+[INFO] 2018-11-26 18:44:43,577 com.yosi.util.Log info - 1-Day
+[INFO] 2018-11-26 18:44:43,615 com.yosi.util.Log info - 4 Way Saline Moisturizing
+[INFO] 2018-11-26 18:44:43,654 com.yosi.util.Log info - 4-Aminoquinolines
+[INFO] 2018-11-26 18:44:43,697 com.yosi.util.Log info - 5-Alfa Reductase Inhibitor, Azasteroids
+[INFO] 2018-11-26 18:44:43,743 com.yosi.util.Log info - 50+ Adult Eye Health
+[INFO] 2018-11-26 18:44:43,806 com.yosi.util.Log info - 8-Mop
+[INFO] 2018-11-26 18:44:43,867 com.yosi.util.Log info - A & D Barrier
+[INFO] 2018-11-26 18:44:43,939 com.yosi.util.Log info - A & D Emollient
+[INFO] 2018-11-26 18:44:43,990 com.yosi.util.Log info - A and D Zinc Oxide Cream
+[INFO] 2018-11-26 18:44:44,097 com.yosi.util.Log info - A+D Cracked Skin Relief
+[INFO] 2018-11-26 18:44:44,137 com.yosi.util.Log info - A-Hydrocort
+[INFO] 2018-11-26 18:44:44,170 com.yosi.util.Log info - A-Methapred
+[INFO] 2018-11-26 18:44:44,204 com.yosi.util.Log info - A-Spas (dicyclomine)
+[INFO] 2018-11-26 18:44:44,229 com.yosi.util.Log info - A.E.R Traveler
+[INFO] 2018-11-26 18:44:44,255 com.yosi.util.Log info - A.E.R. Witch Hazel
+[INFO] 2018-11-26 18:44:44,277 com.yosi.util.Log info - A/B Otic
+[INFO] 2018-11-26 18:44:44,308 com.yosi.util.Log info - ACT Fluoride
+[INFO] 2018-11-26 18:44:44,333 com.yosi.util.Log info - AK-Dilate
+[INFO] 2018-11-26 18:44:44,360 com.yosi.util.Log info - AK-Pentolate
+[INFO] 2018-11-26 18:44:44,387 com.yosi.util.Log info - ASC Lotionized Cleanser
+[INFO] 2018-11-26 18:44:44,410 com.yosi.util.Log info - ASCOR
+[INFO] 2018-11-26 18:44:44,438 com.yosi.util.Log info - Abanatuss PED
+[INFO] 2018-11-26 18:44:44,464 com.yosi.util.Log info - Abaneu-SL
+[INFO] 2018-11-26 18:44:44,498 com.yosi.util.Log info - Abatinex
+[INFO] 2018-11-26 18:44:44,526 com.yosi.util.Log info - Abatrace
+[INFO] 2018-11-26 18:44:44,556 com.yosi.util.Log info - Abatuss DMX
+[INFO] 2018-11-26 18:44:44,581 com.yosi.util.Log info - Abbokinase
+[INFO] 2018-11-26 18:44:44,613 com.yosi.util.Log info - Abelcet
+[INFO] 2018-11-26 18:44:44,637 com.yosi.util.Log info - Abilify
+[INFO] 2018-11-26 18:44:44,666 com.yosi.util.Log info - Abitrexate (PF)
+[INFO] 2018-11-26 18:44:44,697 com.yosi.util.Log info - Abraxane
+[INFO] 2018-11-26 18:44:44,720 com.yosi.util.Log info - Abreva
+[INFO] 2018-11-26 18:44:44,750 com.yosi.util.Log info - Absorbase
+[INFO] 2018-11-26 18:44:44,778 com.yosi.util.Log info - Absorbine Jr.
+[INFO] 2018-11-26 18:44:44,807 com.yosi.util.Log info - Absorbine Pain Relieving
+[INFO] 2018-11-26 18:44:44,837 com.yosi.util.Log info - Absorica
+[INFO] 2018-11-26 18:44:44,872 com.yosi.util.Log info - Abstral
+[INFO] 2018-11-26 18:44:44,901 com.yosi.util.Log info - Acanya
+[INFO] 2018-11-26 18:44:44,937 com.yosi.util.Log info - Accolate
+[INFO] 2018-11-26 18:44:44,960 com.yosi.util.Log info - Accupril
+[INFO] 2018-11-26 18:44:44,987 com.yosi.util.Log info - Acerflex
+[INFO] 2018-11-26 18:44:45,011 com.yosi.util.Log info - Aceta-Gesic
+[INFO] 2018-11-26 18:44:45,033 com.yosi.util.Log info - Aceta-Gesic (with phenyltolox)
+[INFO] 2018-11-26 18:44:45,061 com.yosi.util.Log info - Actemra
+[INFO] 2018-11-26 18:44:45,092 com.yosi.util.Log info - Acthar H.P.
+[INFO] 2018-11-26 18:44:45,121 com.yosi.util.Log info - Actifed Cold-Allergy
+[INFO] 2018-11-26 18:44:45,147 com.yosi.util.Log info - Actigall
+[INFO] 2018-11-26 18:44:45,179 com.yosi.util.Log info - Actonel
+[INFO] 2018-11-26 18:44:45,200 com.yosi.util.Log info - Actoplus MET
+[INFO] 2018-11-26 18:44:45,230 com.yosi.util.Log info - Adacel(Tdap Adolesn/Adult)(PF)
+[INFO] 2018-11-26 18:44:45,256 com.yosi.util.Log info - Adreview
+[INFO] 2018-11-26 18:44:45,279 com.yosi.util.Log info - Adt Robitussin Night Nasal Rlf
+[INFO] 2018-11-26 18:44:45,306 com.yosi.util.Log info - Adult Robitussin Night M-S Cld
+[INFO] 2018-11-26 18:44:45,330 com.yosi.util.Log info - Advil Allergy Sinus
+[INFO] 2018-11-26 18:44:45,383 com.yosi.util.Log info - Ala-Cort
+[INFO] 2018-11-26 18:44:45,409 com.yosi.util.Log info - Ala-Quin
+[INFO] 2018-11-26 18:44:45,438 com.yosi.util.Log info - Ala-Scalp
+[INFO] 2018-11-26 18:44:45,463 com.yosi.util.Log info - Ala-Seb
+[INFO] 2018-11-26 18:44:45,493 com.yosi.util.Log info - Alamag
+[INFO] 2018-11-26 18:44:45,521 com.yosi.util.Log info - Alavert
+[INFO] 2018-11-26 18:44:45,555 com.yosi.util.Log info - Alavert D-12 Allergy-Sinus
+[INFO] 2018-11-26 18:44:45,623 com.yosi.util.Log info - Alaway
+[INFO] 2018-11-26 18:44:45,650 com.yosi.util.Log info - Albamycin
+[INFO] 2018-11-26 18:44:45,684 com.yosi.util.Log info - AlbuRx (Human) 5 %
+[INFO] 2018-11-26 18:44:45,708 com.yosi.util.Log info - Alka-Seltzer Plus Night-Time
+[INFO] 2018-11-26 18:44:45,734 com.yosi.util.Log info - All Clear
+[INFO] 2018-11-26 18:44:45,755 com.yosi.util.Log info - All Clear AR
+[INFO] 2018-11-26 18:44:45,779 com.yosi.util.Log info - Allclenz
+[INFO] 2018-11-26 18:44:45,808 com.yosi.util.Log info - Allegra
+[INFO] 2018-11-26 18:44:45,832 com.yosi.util.Log info - Allegra-D 12 Hour
+[INFO] 2018-11-26 18:44:45,858 com.yosi.util.Log info - Aller-Chlor
+[INFO] 2018-11-26 18:44:45,880 com.yosi.util.Log info - Allerfed Cold and Allergy
+[INFO] 2018-11-26 18:44:45,906 com.yosi.util.Log info - Altabax
+[INFO] 2018-11-26 18:44:45,937 com.yosi.util.Log info - Alyacen 1/35 (28)
+[INFO] 2018-11-26 18:44:45,960 com.yosi.util.Log info - Androgenic Anabolic Steroid
+[INFO] 2018-11-26 18:44:45,991 com.yosi.util.Log info - Anecream
+[INFO] 2018-11-26 18:44:46,021 com.yosi.util.Log info - Anexsia
+[INFO] 2018-11-26 18:44:46,046 com.yosi.util.Log info - Antivert
+[INFO] 2018-11-26 18:44:46,070 com.yosi.util.Log info - Aralen
+[INFO] 2018-11-26 18:44:46,102 com.yosi.util.Log info - Arzerra
+[INFO] 2018-11-26 18:44:46,124 com.yosi.util.Log info - Asacol
+[INFO] 2018-11-26 18:44:46,148 com.yosi.util.Log info - Asclera
+[INFO] 2018-11-26 18:44:46,175 com.yosi.util.Log info - Astelin
+[INFO] 2018-11-26 18:44:46,198 com.yosi.util.Log info - Astepro
+[INFO] 2018-11-26 18:44:46,222 com.yosi.util.Log info - Baciguent
+[INFO] 2018-11-26 18:44:46,253 com.yosi.util.Log info - Bactroban
+[INFO] 2018-11-26 18:44:46,280 com.yosi.util.Log info - Bayer Plus Extra Strength
+[INFO] 2018-11-26 18:44:46,307 com.yosi.util.Log info - Bear-E-Yum GI
+[INFO] 2018-11-26 18:44:46,334 com.yosi.util.Log info - Benadryl
+[INFO] 2018-11-26 18:44:46,361 com.yosi.util.Log info - Benadryl Allergy-Sinus-Headach
+[INFO] 2018-11-26 18:44:46,393 com.yosi.util.Log info - Beta-Blockers (Beta-Adrenergic Blocking Agts)
+[INFO] 2018-11-26 18:44:46,429 com.yosi.util.Log info - Blanche
+[INFO] 2018-11-26 18:44:46,467 com.yosi.util.Log info - Blocadren
+[INFO] 2018-11-26 18:44:46,493 com.yosi.util.Log info - CLA
+[INFO] 2018-11-26 18:44:46,516 com.yosi.util.Log info - Cal-G
+[INFO] 2018-11-26 18:44:46,541 com.yosi.util.Log info - Carbo Grabber
+[INFO] 2018-11-26 18:44:46,578 com.yosi.util.Log info - Codar GF
+[INFO] 2018-11-26 18:44:46,607 com.yosi.util.Log info - Colace
+[INFO] 2018-11-26 18:44:46,632 com.yosi.util.Log info - Colony Stimulating Factors
+[INFO] 2018-11-26 18:44:46,655 com.yosi.util.Log info - Comtrex Deep Chest Cold
+[INFO] 2018-11-26 18:44:46,684 com.yosi.util.Log info - Contac Day/Night Allergy/Sinus
+[INFO] 2018-11-26 18:44:46,712 com.yosi.util.Log info - Cotabflu
+[INFO] 2018-11-26 18:44:46,740 com.yosi.util.Log info - Cozaar
+[INFO] 2018-11-26 18:44:46,765 com.yosi.util.Log info - Debacterol
+[INFO] 2018-11-26 18:44:46,795 com.yosi.util.Log info - Deblitane
+[INFO] 2018-11-26 18:44:46,821 com.yosi.util.Log info - Debrisan
+[INFO] 2018-11-26 18:44:46,844 com.yosi.util.Log info - Debrox
+[INFO] 2018-11-26 18:44:46,885 com.yosi.util.Log info - Deca-Durabolin
+[INFO] 2018-11-26 18:44:46,908 com.yosi.util.Log info - Decadron
+[INFO] 2018-11-26 18:44:46,938 com.yosi.util.Log info - Decadron-Xylocaine
+[INFO] 2018-11-26 18:44:46,961 com.yosi.util.Log info - Depo-Testadiol
+[INFO] 2018-11-26 18:44:46,989 com.yosi.util.Log info - Diabeta
+[INFO] 2018-11-26 18:44:47,014 com.yosi.util.Log info - Draximage MAA
+[INFO] 2018-11-26 18:44:47,036 com.yosi.util.Log info - Durabac Forte
+[INFO] 2018-11-26 18:44:47,064 com.yosi.util.Log info - EZ FLU16-17(FLUZON QD PED)(PF)
+[INFO] 2018-11-26 18:44:47,088 com.yosi.util.Log info - Easprin
+[INFO] 2018-11-26 18:44:47,116 com.yosi.util.Log info - Egg Derived
+[INFO] 2018-11-26 18:44:47,142 com.yosi.util.Log info - Fabior
+[INFO] 2018-11-26 18:44:47,168 com.yosi.util.Log info - Flintstones Tab Chew
+[INFO] 2018-11-26 18:44:47,204 com.yosi.util.Log info - Fortesta
+[INFO] 2018-11-26 18:44:47,239 com.yosi.util.Log info - Habitrol
+[INFO] 2018-11-26 18:44:47,271 com.yosi.util.Log info - Hyzaar
+[INFO] 2018-11-26 18:44:47,303 com.yosi.util.Log info - JULUCA
+[INFO] 2018-11-26 18:44:47,334 com.yosi.util.Log info - Jinteli
+[INFO] 2018-11-26 18:44:47,362 com.yosi.util.Log info - Kadian
+[INFO] 2018-11-26 18:44:47,388 com.yosi.util.Log info - Maalox Advanced
+[INFO] 2018-11-26 18:44:47,410 com.yosi.util.Log info - Maalox Max Quick Dissolve
+[INFO] 2018-11-26 18:44:47,438 com.yosi.util.Log info - Maalox RS
+[INFO] 2018-11-26 18:44:47,466 com.yosi.util.Log info - Maalox Total Relief (bismuth)
+[INFO] 2018-11-26 18:44:47,496 com.yosi.util.Log info - Nulojix
+[INFO] 2018-11-26 18:44:47,527 com.yosi.util.Log info - Nutramigen AA Lipil
+[INFO] 2018-11-26 18:44:47,559 com.yosi.util.Log info - Orabase (benzocaine)
+[INFO] 2018-11-26 18:44:47,587 com.yosi.util.Log info - Orlaam
+[INFO] 2018-11-26 18:44:47,615 com.yosi.util.Log info - Pacerone
+[INFO] 2018-11-26 18:44:47,638 com.yosi.util.Log info - Primatene Asthma
+[INFO] 2018-11-26 18:44:47,666 com.yosi.util.Log info - RabAvert (PF)
+[INFO] 2018-11-26 18:44:47,694 com.yosi.util.Log info - Rabano Yodado
+[INFO] 2018-11-26 18:44:47,718 com.yosi.util.Log info - Sabril
+[INFO] 2018-11-26 18:44:47,746 com.yosi.util.Log info - Saccharomyces boulardii
+[INFO] 2018-11-26 18:44:47,775 com.yosi.util.Log info - Seasonale contraceptive
+[INFO] 2018-11-26 18:44:47,811 com.yosi.util.Log info - Seasonique
+[INFO] 2018-11-26 18:44:47,834 com.yosi.util.Log info - Sebaclear
+[INFO] 2018-11-26 18:44:47,861 com.yosi.util.Log info - Sebizon
+[INFO] 2018-11-26 18:44:47,884 com.yosi.util.Log info - Sulfa (Sulfonamide Antibiotics)
+[INFO] 2018-11-26 18:44:47,912 com.yosi.util.Log info - Tears Again
+[INFO] 2018-11-26 18:44:47,942 com.yosi.util.Log info - Teslascan
+[INFO] 2018-11-26 18:44:47,966 com.yosi.util.Log info - Testim
+[INFO] 2018-11-26 18:44:47,996 com.yosi.util.Log info - Tracrium
+[INFO] 2018-11-26 18:44:48,021 com.yosi.util.Log info - Zorbtive
+[INFO] 2018-11-26 18:44:48,054 com.yosi.util.Log info - abaloparatide
+[INFO] 2018-11-26 18:44:48,080 com.yosi.util.Log info - abarelix
+[INFO] 2018-11-26 18:44:48,110 com.yosi.util.Log info - abatacept
+[INFO] 2018-11-26 18:44:48,133 com.yosi.util.Log info - abciximab
+[INFO] 2018-11-26 18:44:48,157 com.yosi.util.Log info - abobotulinumtoxinA
+[INFO] 2018-11-26 18:44:48,183 com.yosi.util.Log info - acacia
+[INFO] 2018-11-26 18:44:48,207 com.yosi.util.Log info - acai
+[INFO] 2018-11-26 18:44:48,234 com.yosi.util.Log info - acetarsol
+[INFO] 2018-11-26 18:44:48,259 com.yosi.util.Log info - alacepril
+[INFO] 2018-11-26 18:44:48,289 com.yosi.util.Log info - allantoin
+[INFO] 2018-11-26 18:44:48,319 com.yosi.util.Log info - astemizole
+[INFO] 2018-11-26 18:44:48,346 com.yosi.util.Log info - bean
+[INFO] 2018-11-26 18:44:48,379 com.yosi.util.Log info - beeswax
+[INFO] 2018-11-26 18:44:48,402 com.yosi.util.Log info - belatacept
+[INFO] 2018-11-26 18:44:48,430 com.yosi.util.Log info - benzylparaben
+[INFO] 2018-11-26 18:44:48,455 com.yosi.util.Log info - betadex
+[INFO] 2018-11-26 18:44:48,477 com.yosi.util.Log info - black pepper
+[INFO] 2018-11-26 18:44:48,504 com.yosi.util.Log info - butabarbital
+[INFO] 2018-11-26 18:44:48,528 com.yosi.util.Log info - butylparaben
+[INFO] 2018-11-26 18:44:48,558 com.yosi.util.Log info - cabbage
+[INFO] 2018-11-26 18:44:48,584 com.yosi.util.Log info - cedar leaf
+[INFO] 2018-11-26 18:44:48,621 com.yosi.util.Log info - ceftazidime (anhydrous)
+[INFO] 2018-11-26 18:44:48,653 com.yosi.util.Log info - chicken derived
+[INFO] 2018-11-26 18:44:48,688 com.yosi.util.Log info - clostebol
+[INFO] 2018-11-26 18:44:48,730 com.yosi.util.Log info - codeine
+[INFO] 2018-11-26 18:44:48,756 com.yosi.util.Log info - dabigatran etexilate
+[INFO] 2018-11-26 18:44:48,781 com.yosi.util.Log info - debrisoquine
+[INFO] 2018-11-26 18:44:48,812 com.yosi.util.Log info - febarbamate
+[INFO] 2018-11-26 18:44:48,835 com.yosi.util.Log info - fedrilate
+[INFO] 2018-11-26 18:44:48,863 com.yosi.util.Log info - gabapentin
+[INFO] 2018-11-26 18:44:48,886 com.yosi.util.Log info - golden seal
+[INFO] 2018-11-26 18:44:48,916 com.yosi.util.Log info - insulin aspart
+[INFO] 2018-11-26 18:44:48,981 com.yosi.util.Log info - ixabepilone
+[INFO] 2018-11-26 18:44:49,044 com.yosi.util.Log info - labetalol
+[INFO] 2018-11-26 18:44:49,076 com.yosi.util.Log info - lymphocyte immune globulin,rabbit
+[INFO] 2018-11-26 18:44:49,110 com.yosi.util.Log info - milk
+[INFO] 2018-11-26 18:44:49,137 com.yosi.util.Log info - nabumetone
+[INFO] 2018-11-26 18:44:49,160 com.yosi.util.Log info - peanut
+[INFO] 2018-11-26 18:44:49,188 com.yosi.util.Log info - rabbit dander
+[INFO] 2018-11-26 18:44:49,214 com.yosi.util.Log info - rabeprazole
+[INFO] 2018-11-26 18:44:49,242 com.yosi.util.Log info - rabies immune globulin
+[INFO] 2018-11-26 18:44:49,269 com.yosi.util.Log info - sebelipase alfa
+[INFO] 2018-11-26 18:44:49,298 com.yosi.util.Log info - sulfabenzamide
+[INFO] 2018-11-26 18:44:49,326 com.yosi.util.Log info - tea tree
+[INFO] 2018-11-26 18:44:49,350 com.yosi.util.Log info - tesamorelin
+[INFO] 2018-11-26 18:44:49,380 com.yosi.util.Log info - trabectedin
+[INFO] 2018-11-26 18:44:49,406 com.yosi.util.Log info - wasp venom
+[INFO] 2018-11-26 18:44:49,433 com.yosi.util.Log info - water chestnut
+[INFO] 2018-11-26 18:44:49,458 com.yosi.util.Log info - weed pollen
+[INFO] 2018-11-26 18:44:49,459 com.yosi.util.Log info - Past Allergies Selected 
+
+[INFO] 2018-11-26 18:44:49,686 com.yosi.util.Log info - No Known Allergies
+[INFO] 2018-11-26 18:44:50,022 com.yosi.util.Log info - 1,4-diaminobenzene
+[INFO] 2018-11-26 18:44:50,348 com.yosi.util.Log info - 1-Day
+[INFO] 2018-11-26 18:44:50,656 com.yosi.util.Log info - 4 Way Saline Moisturizing
+[INFO] 2018-11-26 18:44:50,914 com.yosi.util.Log info - 4-Aminoquinolines
+[INFO] 2018-11-26 18:44:52,443 com.yosi.util.Log info - Family History  List 
+
+[INFO] 2018-11-26 18:44:52,522 com.yosi.util.Log info - None
+[INFO] 2018-11-26 18:44:52,577 com.yosi.util.Log info - Allergy
+[INFO] 2018-11-26 18:44:52,641 com.yosi.util.Log info - Alzheimer's disease
+[INFO] 2018-11-26 18:44:52,733 com.yosi.util.Log info - Alzheimer's disease
+[INFO] 2018-11-26 18:44:52,780 com.yosi.util.Log info - Ankylosing spondylitis
+[INFO] 2018-11-26 18:44:52,820 com.yosi.util.Log info - Arthritis
+[INFO] 2018-11-26 18:44:52,853 com.yosi.util.Log info - Asthma
+[INFO] 2018-11-26 18:44:52,900 com.yosi.util.Log info - Blood coagulation disorder
+[INFO] 2018-11-26 18:44:52,931 com.yosi.util.Log info - Cerebrovascular accident
+[INFO] 2018-11-26 18:44:52,967 com.yosi.util.Log info - Chronic obstructive lung disease
+[INFO] 2018-11-26 18:44:53,009 com.yosi.util.Log info - Coronary arteriosclerosis
+[INFO] 2018-11-26 18:44:53,041 com.yosi.util.Log info - Crohn's disease
+[INFO] 2018-11-26 18:44:53,067 com.yosi.util.Log info - Crohn's disease
+[INFO] 2018-11-26 18:44:53,094 com.yosi.util.Log info - Dementia
+[INFO] 2018-11-26 18:44:53,132 com.yosi.util.Log info - Depressive disorder
+[INFO] 2018-11-26 18:44:53,158 com.yosi.util.Log info - Diabetes mellitus
+[INFO] 2018-11-26 18:44:53,192 com.yosi.util.Log info - Disease of liver
+[INFO] 2018-11-26 18:44:53,227 com.yosi.util.Log info - Disorder of endocrine system
+[INFO] 2018-11-26 18:44:53,254 com.yosi.util.Log info - Disorder of lung
+[INFO] 2018-11-26 18:44:53,278 com.yosi.util.Log info - Disorder of thyroid gland
+[INFO] 2018-11-26 18:44:53,308 com.yosi.util.Log info - Diverticular disease
+[INFO] 2018-11-26 18:44:53,342 com.yosi.util.Log info - Glaucoma
+[INFO] 2018-11-26 18:44:53,371 com.yosi.util.Log info - Gout
+[INFO] 2018-11-26 18:44:53,411 com.yosi.util.Log info - Heart disease
+[INFO] 2018-11-26 18:44:53,444 com.yosi.util.Log info - Heart failure
+[INFO] 2018-11-26 18:44:53,481 com.yosi.util.Log info - Hypercholesterolemia
+[INFO] 2018-11-26 18:44:53,515 com.yosi.util.Log info - Hyperlipidemia
+[INFO] 2018-11-26 18:44:53,548 com.yosi.util.Log info - Hypertensive disorder
+[INFO] 2018-11-26 18:44:53,575 com.yosi.util.Log info - Juvenile chronic arthritis
+[INFO] 2018-11-26 18:44:53,600 com.yosi.util.Log info - Kidney disease
+[INFO] 2018-11-26 18:44:53,631 com.yosi.util.Log info - Koilonychia
+[INFO] 2018-11-26 18:44:53,661 com.yosi.util.Log info - Leukemia (morphologic abnormality)
+[INFO] 2018-11-26 18:44:53,692 com.yosi.util.Log info - Lupus erythematosus
+[INFO] 2018-11-26 18:44:53,717 com.yosi.util.Log info - Malignant neoplasm of skin
+[INFO] 2018-11-26 18:44:53,748 com.yosi.util.Log info - Malignant neoplastic disease
+[INFO] 2018-11-26 18:44:53,778 com.yosi.util.Log info - Malignant tumor of breast
+[INFO] 2018-11-26 18:44:53,826 com.yosi.util.Log info - Malignant tumor of colon
+[INFO] 2018-11-26 18:44:53,863 com.yosi.util.Log info - Malignant tumor of lung
+[INFO] 2018-11-26 18:44:53,900 com.yosi.util.Log info - Malignant tumor of prostate
+[INFO] 2018-11-26 18:44:53,935 com.yosi.util.Log info - Myocardial infarction
+[INFO] 2018-11-26 18:44:53,961 com.yosi.util.Log info - Obesity
+[INFO] 2018-11-26 18:44:53,994 com.yosi.util.Log info - Osteoporosis
+[INFO] 2018-11-26 18:44:54,021 com.yosi.util.Log info - Rheumatoid arthritis
+[INFO] 2018-11-26 18:44:54,051 com.yosi.util.Log info - Sleep apnea
+[INFO] 2018-11-26 18:44:54,079 com.yosi.util.Log info - Substance abuse
+[INFO] 2018-11-26 18:44:54,119 com.yosi.util.Log info - Sudden cardiac death
+[INFO] 2018-11-26 18:44:54,119 com.yosi.util.Log info - Family History Selected 
+
+[INFO] 2018-11-26 18:44:56,776 com.yosi.util.Log info - PATIENT RX INFO
+[INFO] 2018-11-26 18:45:07,076 com.yosi.util.Log info - Medication list
+[INFO] 2018-11-26 18:45:07,588 com.yosi.util.Log info - Medication Selected : 
+
+[INFO] 2018-11-26 18:45:08,000 com.yosi.util.Log info - ADDITIONAL SOCIAL HISTORY
+[INFO] 2018-11-26 18:45:09,013 com.yosi.util.Log info - MEDICAL HISTORY FORM
+[INFO] 2018-11-26 18:45:10,541 com.yosi.util.Log info - Selected value :
+Blue lips or fingernails
+[INFO] 2018-11-26 18:45:10,755 com.yosi.util.Log info - PHQ-9
+[INFO] 2018-11-26 18:45:11,706 com.yosi.util.Log info - Selected value :
+Several days
+[INFO] 2018-11-26 18:45:11,955 com.yosi.util.Log info - GAD-7
+[INFO] 2018-11-26 18:45:13,849 com.yosi.util.Log info - ENCOUNTER QUESTIONNAIRE 
+[DEBUG] 2018-11-26 18:45:19,160 freemarker.cache debug - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+[DEBUG] 2018-11-26 18:45:19,161 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+[DEBUG] 2018-11-26 18:45:19,162 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+[DEBUG] 2018-11-26 18:45:19,163 freemarker.cache debug - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+[DEBUG] 2018-11-26 18:45:19,163 freemarker.cache debug - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Dreams/.m2/repository/com/relevantcodes/extentreports/2.41.1/extentreports-2.41.1.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+[INFO] 2018-11-26 18:45:27,874 com.yosi.util.Log info - NOTICE_OF_PRIVACY_PRACTICES 
+[INFO] 2018-11-26 18:45:31,245 com.yosi.util.Log info - PRIVACY POLICY
+[INFO] 2018-11-26 18:45:33,395 com.yosi.util.Log info - Signature Page
+[INFO] 2018-11-26 18:45:34,268 com.yosi.util.Log info - Reason entered: 
+Fever

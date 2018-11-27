@@ -15,18 +15,5 @@
      <class name="com.yosi.testscript.Athena_Mydependent_Checkin_TC"/>
         </classes>
         </test>
-   <!-- <class name="com.yosi.testscript.Athena_Mydependent_Checkin_TC"/>
-    
-        <class name="com.yosi.testscript.Patient_Info_TC"/>
-     <class name="com.yosi.testscript.Guantor_Info_TC"/> 
-      <class name="com.yosi.testscript.Insurance_Page_TC"/>
-      <class name="com.yosi.testscript.Patient_AddInfo_TC"/>
-      <class name="com.yosi.testscript.Emergency_Cont_TC"/>
-      <class name="com.yosi.testscript.Past_MediHx_TC"/>
-       <class name="com.yosi.testscript.Patient_RxInfo_TC"/>
-       <class name="com.yosi.testscript.Dynamic_Page_TC"/>
-        <class name="com.yosi.testscript.Policy_Page_TC"/>
-       <class name="com.yosi.testscript.Signature_Page_TC"/>  -->
-    
-  
+         
 </suite> <!-- Suite -->

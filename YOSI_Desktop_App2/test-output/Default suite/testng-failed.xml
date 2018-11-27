@@ -6,20 +6,12 @@
       <class name="com.yosi.testscript.Athena_Mydependent_Checkin_TC">
         <methods>
           <include name="obgyn_question_page"/>
-          <include name="patient_past_medical"/>
-          <include name="athena_cust_question_page"/>
-          <include name="notice_of_privacy_page"/>
-          <include name="gad_page"/>
-          <include name="encounter_page"/>
-          <include name="vital_page"/>
           <include name="beforeClass"/>
-          <include name="medical_history_page"/>
           <include name="privacy_policy_page"/>
           <include name="language_page"/>
-          <include name="phq_page"/>
-          <include name="addition_page"/>
+          <include name="athena_cust_question_page"/>
+          <include name="notice_of_privacy_page"/>
           <include name="afterClass"/>
-          <include name="ros_page"/>
           <include name="signature_page"/>
         </methods>
       </class> <!-- com.yosi.testscript.Athena_Mydependent_Checkin_TC -->
